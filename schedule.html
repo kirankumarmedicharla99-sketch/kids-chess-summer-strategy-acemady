@@ -1,0 +1,1196 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camp Schedule — Stratagem Kids Chess & Strategy Academy</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="description"
+    content="Explore summer camp sessions, age-cohort daily timetables, masterclasses, rapid tournaments, and special coaching events at Stratagem Kids Chess & Strategy Academy.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="navigation/header.css">
+  <link rel="stylesheet" href="navigation/footer.css">
+
+  <link rel="stylesheet" href="schedule.css">
+
+  <script defer src="navigation/header.js"></script>
+  <script defer src="navigation/footer.js"></script>
+  <script defer src="schedule.js"></script>
+</head>
+
+<body>
+
+  <header class="strata-header" id="strataHeader">
+    <div class="strata-header-glow"></div>
+    <div class="strata-header-container">
+
+      <a href="index.html" class="strata-brand" aria-label="Stratagem Kids Chess & Strategy Academy Home">
+        <div class="brand-crest-wrapper">
+          <img src="assets/knight-logo.png" alt="Stratagem Chess Academy Knight Logo" class="brand-crest">
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">STRATAGEM</span>
+          <span class="brand-tagline">CHESS &amp; STRATEGY ACADEMY</span>
+        </div>
+      </a>
+
+      <nav class="strata-nav-desktop" id="desktopNav" aria-label="Main Navigation">
+        <ul class="nav-list">
+
+          <li class="nav-item has-dropdown" id="navHomeDropdown">
+            <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              <span class="nav-text">Home</span>
+              <svg class="dropdown-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <div class="dropdown-menu">
+              <div class="dropdown-accent-line"></div>
+              <ul class="dropdown-list">
+                <li>
+                  <a href="index.html" class="dropdown-item">
+                    <div class="dropdown-icon-box">
+                      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 8.5L10 3L17 8.5V17H3V8.5Z" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8 17V11H12V17" stroke-linecap="round" />
+                      </svg>
+                    </div>
+                    <div class="dropdown-content">
+                      <span class="dropdown-title">Home 1 — Academy Overview</span>
+                      <span class="dropdown-desc">Grandmaster coaches, curriculum & campus philosophy</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="home2.html" class="dropdown-item highlighted">
+                    <div class="dropdown-icon-box">
+                      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M10 2L12.5 7L18 8L14 12L15 17.5L10 15L5 17.5L6 12L2 8L7.5 7L10 2Z"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <div class="dropdown-content">
+                      <span class="dropdown-title">
+                        Home 2 — Summer Camp Edition
+                        <span class="dropdown-badge">Exclusive</span>
+                      </span>
+                      <span class="dropdown-desc">Intensive camps, tactics workshops & tournament arenas</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="instructors.html" class="nav-link">
+              <span class="nav-text">Instructors</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="programs.html" class="nav-link">
+              <span class="nav-text">Programs</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="schedule.html" class="nav-link active" aria-current="page">
+              <span class="nav-text">Schedule</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">
+              <span class="nav-text">Contact</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="./dashboard.html" class="nav-link">
+              <span class="nav-text">Dashboard</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="strata-controls">
+
+        <button class="control-btn theme-toggle-btn circle-btn" id="themeToggleBtn" type="button"
+          aria-label="Toggle visual theme between Light and Dark mode" title="Toggle Light / Dark Mode">
+          <div class="icon-toggle-wrapper">
+            <svg class="theme-icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="theme-icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </div>
+        </button>
+
+        <button class="control-btn rtl-toggle-btn circle-btn" id="rtlToggleBtn" type="button"
+          aria-label="Toggle reading direction between LTR and RTL" title="Toggle RTL">
+          <span class="rtl-label" id="rtlLabel">RTL</span>
+        </button>
+
+        <a href="./login.html" class="strata-login-btn desktop-only" id="headerLoginBtn" aria-label="Login">
+          <span class="btn-shimmer" aria-hidden="true"></span>
+          <span class="btn-text">Login</span>
+        </a>
+
+        <button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open mobile navigation menu"
+          aria-controls="mobileDrawer" aria-expanded="false">
+          <span class="hamburger-box">
+            <span class="hamburger-line line-1"></span>
+            <span class="hamburger-line line-2"></span>
+            <span class="hamburger-line line-3"></span>
+          </span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <div class="strata-drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <aside class="strata-mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <span class="drawer-brand-title">STRATAGEM</span>
+        <span class="drawer-brand-sub">KIDS CHESS &amp; STRATEGY</span>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" type="button" aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <nav class="mobile-nav-menu">
+        <ul class="mobile-nav-list">
+
+          <li class="mobile-nav-item mobile-accordion" id="mobileHomeAccordion">
+            <button class="mobile-nav-link accordion-toggle" aria-expanded="false">
+              <span class="mobile-link-text">Home</span>
+              <svg class="accordion-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 6L8 10L12 6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="accordion-panel">
+              <a href="index.html" class="mobile-sublink">
+                <span class="sublink-dot"></span>
+                <span class="sublink-title">Home 1 — Academy Overview</span>
+              </a>
+              <a href="home2.html" class="mobile-sublink">
+                <span class="sublink-dot"></span>
+                <span class="sublink-title">Home 2 — Summer Camp Edition</span>
+                <span class="sublink-tag">Featured</span>
+              </a>
+            </div>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="instructors.html" class="mobile-nav-link">
+              <span class="mobile-link-text">Instructors</span>
+            </a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="programs.html" class="mobile-nav-link">
+              <span class="mobile-link-text">Programs</span>
+            </a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="schedule.html" class="mobile-nav-link active" aria-current="page">
+              <span class="mobile-link-text">Schedule</span>
+            </a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="contact.html" class="mobile-nav-link">
+              <span class="mobile-link-text">Contact</span>
+            </a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="./dashboard.html" class="mobile-nav-link">
+              <span class="mobile-link-text">Dashboard</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="drawer-footer-actions">
+        <a href="./login.html" class="strata-login-btn mobile-drawer-login" id="drawerLoginBtn">
+          <span>Login</span>
+        </a>
+
+        <div class="drawer-credentials-badge">
+          <span class="cred-icon" aria-hidden="true">
+            <svg class="cred-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="6" />
+              <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+            </svg>
+          </span>
+          <span class="cred-text">FIDE Certified Grandmaster Mentors &bull; Summer 2026</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="schedule-main" id="scheduleMain">
+
+    <section class="sch-hero-section" id="scheduleHero" aria-labelledby="schHeroTitle">
+      <div class="sch-container">
+
+        <div class="sch-hero-grid">
+
+          <div class="sch-hero-content reveal-on-scroll">
+
+            <div class="sch-eyebrow">
+              <span class="sch-eyebrow-pip" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+              </span>
+              <span>THE CAMP EXPERIENCE</span>
+            </div>
+
+            <h1 class="sch-hero-title" id="schHeroTitle">
+              EVERY MOVE HAS<br><span class="title-gold-accent highlight-gold">ITS MOMENT.</span>
+            </h1>
+
+            <p class="sch-hero-desc">
+              Discover a thoughtfully planned chess and strategy summer camp where every day brings new challenges,
+              <span class="highlight-gold-subtle">expert coaching</span>, exciting activities, and opportunities for
+              young minds to <span class="highlight-gold-subtle">grow</span>.
+            </p>
+
+            <div class="sch-hero-actions">
+              <a href="#scheduleExplorer" class="sch-btn-primary" id="heroExploreBtn">
+                <span>EXPLORE SCHEDULE</span>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"
+                  aria-hidden="true">
+                  <path d="M6 3L11 8L6 13" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a href="programs.html" class="sch-btn-secondary">
+                <span>VIEW PROGRAMS</span>
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" width="15" height="15"
+                  aria-hidden="true">
+                  <path d="M4 10h12M11 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="sch-hero-pills-row" aria-label="Camp Schedule Highlights">
+              <div class="sch-meta-pill">
+                <span class="meta-pill-dot" aria-hidden="true"></span>
+                <span>6 Age Cohorts (5–16)</span>
+              </div>
+              <div class="sch-meta-pill">
+                <span class="meta-pill-dot" aria-hidden="true"></span>
+                <span>6:1 Grandmaster Ratio</span>
+              </div>
+              <div class="sch-meta-pill">
+                <span class="meta-pill-dot" aria-hidden="true"></span>
+                <span>Morning &amp; Full-Day Options</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="sch-hero-visual-wrap reveal-on-scroll delay-1">
+            <div class="sch-hero-stage">
+
+              <div class="sch-hero-ambient-halo" aria-hidden="true"></div>
+
+              <div class="sch-hero-frame">
+                <img src="assets/chess-academy.jpg"
+                  alt="Stratagem chess camp students engaged in focused analytical play with mentor"
+                  class="sch-hero-img" width="560" height="420">
+                <div class="sch-hero-frame-overlay"></div>
+              </div>
+
+              <div class="sch-floating-schedule-card" id="heroLiveCard">
+                <div class="sch-live-card-header">
+                  <div class="sch-live-indicator">
+                    <span class="pulse-dot" aria-hidden="true"></span>
+                    <span class="pulse-label">SAMPLE DAILY TIMETABLE</span>
+                  </div>
+                  <span class="live-cohort-tag">Cohort Alpha • Ages 8–11</span>
+                </div>
+
+                <div class="sch-live-timeline-mini">
+                  <div class="mini-time-row is-done">
+                    <span class="mini-time">9:00 AM</span>
+                    <span class="mini-pip" aria-hidden="true"></span>
+                    <div class="mini-info">
+                      <strong class="mini-title">Tactical Warm-Up &amp; Board Geometry</strong>
+                      <span class="mini-status">Warm-up check-in completed</span>
+                    </div>
+                  </div>
+
+                  <div class="mini-time-row is-active">
+                    <span class="mini-time">10:30 AM</span>
+                    <span class="mini-pip live-pulse" aria-hidden="true"></span>
+                    <div class="mini-info">
+                      <strong class="mini-title">GM Opening Theory &amp; Tactics Lab</strong>
+                      <span class="mini-status active-text">Interactive Masterclass in progress</span>
+                    </div>
+                  </div>
+
+                  <div class="mini-time-row">
+                    <span class="mini-time">11:30 AM</span>
+                    <span class="mini-pip" aria-hidden="true"></span>
+                    <div class="mini-info">
+                      <strong class="mini-title">Clock-Timed Tournament Matches</strong>
+                      <span class="mini-status">Next: Notation &amp; Analysis</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sch-live-card-footer">
+                  <span class="card-footer-note">Mon–Fri Intensive &bull; Studio Alpha</span>
+                  <a href="#dailyTimeline" class="card-footer-link">Full Day Breakdown &darr;</a>
+                </div>
+              </div>
+
+              <div class="sch-floating-badge badge-top-right">
+                <div class="badge-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <path d="M12 2l3 7h-6zM7 21h10M8 17h8M9 9c0 3-1 5-1 8h8c0-3-1-5-1-8" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="badge-kicker">SUMMER 2026</span>
+                  <strong class="badge-val">Flexible 2-Wk Camps</strong>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="sch-explorer-section" id="scheduleExplorer" aria-labelledby="explorerHeading">
+      <div class="sch-container">
+
+        <div class="sch-section-header text-center reveal-on-scroll">
+          <div class="sch-eyebrow centered">
+            <span class="sch-eyebrow-pip" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </span>
+            <span>FIND YOUR PERFECT SESSION</span>
+          </div>
+
+          <h2 class="sch-section-title" id="explorerHeading">
+            A SCHEDULE DESIGNED<br>FOR EVERY <span class="highlight-gold">YOUNG STRATEGIST</span>.
+          </h2>
+
+          <p class="sch-section-subtitle">
+            Explore carefully structured learning sessions, <span class="highlight-gold-subtle">guided chess
+              practice</span>, strategic challenges, and engaging camp activities designed for different age groups and
+            <span class="highlight-gold-subtle">learning levels</span>.
+          </p>
+        </div>
+
+        <div class="sch-explorer-layout">
+
+          <aside class="sch-filter-sidebar reveal-on-scroll">
+            <div class="sch-filter-card">
+
+              <div class="filter-card-header">
+                <h3 class="filter-card-title">Filter Sessions</h3>
+                <button type="button" class="filter-reset-btn" id="filterResetBtn"
+                  title="Reset all schedule filters">Reset</button>
+              </div>
+
+              <div class="filter-group">
+                <label class="filter-label" for="schSearchInput">Search Topics or Mentors</label>
+                <div class="search-input-wrap">
+                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" class="search-icon"
+                    aria-hidden="true">
+                    <circle cx="9" cy="9" r="6" />
+                    <line x1="13.5" y1="13.5" x2="18" y2="18" />
+                  </svg>
+                  <input type="text" id="schSearchInput" class="filter-search-input"
+                    placeholder="e.g. Young Pawns, Endgame, Blitz...">
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <span class="filter-label">Age Cohort &amp; Program</span>
+                <div class="cohort-filter-pills" id="cohortFilterPills" role="radiogroup"
+                  aria-label="Select age cohort">
+                  <button type="button" class="cohort-pill active" data-cohort="all" aria-checked="true" role="radio">
+                    <span class="pill-name">All Cohorts</span>
+                    <span class="pill-age">Ages 5–16</span>
+                  </button>
+                  <button type="button" class="cohort-pill" data-cohort="young-pawns" aria-checked="false" role="radio">
+                    <span class="pill-name">Young Pawns</span>
+                    <span class="pill-age">Ages 5–7</span>
+                  </button>
+                  <button type="button" class="cohort-pill" data-cohort="junior-knights" aria-checked="false"
+                    role="radio">
+                    <span class="pill-name">Junior Knights</span>
+                    <span class="pill-age">Ages 7–9</span>
+                  </button>
+                  <button type="button" class="cohort-pill" data-cohort="tactical-bishops" aria-checked="false"
+                    role="radio">
+                    <span class="pill-name">Tactical Bishops</span>
+                    <span class="pill-age">Ages 8–11</span>
+                  </button>
+                  <button type="button" class="cohort-pill" data-cohort="strategic-rooks" aria-checked="false"
+                    role="radio">
+                    <span class="pill-name">Strategic Roks</span>
+                    <span class="pill-age">Ages 10–13</span>
+                  </button>
+                  <button type="button" class="cohort-pill" data-cohort="master-queens" aria-checked="false"
+                    role="radio">
+                    <span class="pill-name">Master Queens</span>
+                    <span class="pill-age">Ages 12–15</span>
+                  </button>
+                  <button type="button" class="cohort-pill" data-cohort="grandmaster-kings" aria-checked="false"
+                    role="radio">
+                    <span class="pill-name">Grandmaster Kings</span>
+                    <span class="pill-age">Ages 14–16</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <label class="filter-label" for="schLevelSelect">Skill Level</label>
+                <div class="select-wrapper">
+                  <select id="schLevelSelect" class="filter-select">
+                    <option value="all">All Skill Levels</option>
+                    <option value="novice">Novice &bull; First Moves</option>
+                    <option value="intermediate">Intermediate &bull; Tactical Play</option>
+                    <option value="advanced">Advanced &bull; Deep Strategy</option>
+                    <option value="tournament">Tournament &bull; FIDE Prep</option>
+                  </select>
+                  <span class="select-chevron" aria-hidden="true">&#9662;</span>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <label class="filter-label" for="schFormatSelect">Session Format</label>
+                <div class="select-wrapper">
+                  <select id="schFormatSelect" class="filter-select">
+                    <option value="all">All Formats</option>
+                    <option value="morning">Morning Intensive (9:00 AM – 12:30 PM)</option>
+                    <option value="full-day">Full-Day Immersion (9:00 AM – 3:30 PM)</option>
+                    <option value="afternoon">Afternoon Arena (1:00 PM – 4:00 PM)</option>
+                    <option value="weekend">Weekend Blitz (10:00 AM – 2:00 PM)</option>
+                  </select>
+                  <span class="select-chevron" aria-hidden="true">&#9662;</span>
+                </div>
+              </div>
+
+              <div class="filter-card-footer">
+                <div class="results-badge" id="resultsCounter">Showing 6 Sessions</div>
+                <p class="filter-micro-note">All camps run in small group studios with guaranteed 6:1 coach ratio.</p>
+              </div>
+
+            </div>
+          </aside>
+
+          <div class="sch-sessions-container">
+            <div class="sch-sessions-feed" id="schSessionsFeed" aria-live="polite">
+
+            </div>
+
+            <div class="sch-empty-state" id="schEmptyState" hidden>
+              <div class="empty-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="36" height="36">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                  <line x1="9" y1="9" x2="15" y2="15" />
+                  <line x1="15" y1="9" x2="9" y2="15" />
+                </svg>
+              </div>
+              <h4 class="empty-title">No Sessions Match Your Criteria</h4>
+              <p class="empty-desc">We couldn't find any camp sessions matching your current filter selections. Try
+                selecting another age cohort or resetting the filters.</p>
+              <button type="button" class="sch-btn-primary empty-reset-btn" id="emptyResetBtn">
+                <span>Reset All Filters</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="sch-daily-section" id="dailyTimeline" aria-labelledby="dailyHeading">
+      <div class="sch-container">
+
+        <div class="sch-section-header text-center reveal-on-scroll">
+          <div class="sch-eyebrow centered">
+            <span class="sch-eyebrow-pip" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </span>
+            <span>A DAY OF STRATEGY &amp; DISCOVERY</span>
+          </div>
+
+          <h2 class="sch-section-title" id="dailyHeading">
+            FROM THE FIRST MOVE<br>TO THE FINAL <span class="highlight-gold">CHECKMATE</span>.
+          </h2>
+
+          <p class="sch-section-subtitle">
+            Every camp day combines structured chess instruction, practical challenges, and interactive learning to help
+            children develop <span class="highlight-gold-subtle">strategic thinking</span> and <span
+              class="highlight-gold-subtle">confidence</span>.
+          </p>
+        </div>
+
+        <div class="sch-timeline-stage reveal-on-scroll">
+
+          <div class="sch-timeline-axis" aria-hidden="true">
+            <div class="sch-axis-line"></div>
+          </div>
+
+          <div class="sch-timeline-track" id="dailyTimelineTrack">
+
+          </div>
+
+        </div>
+
+        <div class="sch-daily-meta-bar reveal-on-scroll delay-1">
+          <div class="meta-bar-item">
+            <span class="bar-icon" aria-hidden="true">&#9670;</span>
+            <span><strong>Morning Cohort:</strong> 9:00 AM – 12:30 PM (Foundational &amp; Tactics Labs)</span>
+          </div>
+          <div class="meta-bar-item">
+            <span class="bar-icon" aria-hidden="true">&#9670;</span>
+            <span><strong>Full-Day Cohort:</strong> 9:00 AM – 3:30 PM (Includes Tournament Arena &amp; Strategy
+              Seminars)</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="sch-events-section" id="specialEvents" aria-labelledby="eventsHeading">
+      <div class="sch-container">
+
+        <div class="sch-section-header text-center reveal-on-scroll">
+          <div class="sch-eyebrow centered">
+            <span class="sch-eyebrow-pip" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+              </svg>
+            </span>
+            <span>BEYOND THE CHESSBOARD</span>
+          </div>
+
+          <h2 class="sch-section-title" id="eventsHeading">
+            MORE THAN LESSONS.<br>MOMENTS THAT <span class="highlight-gold">INSPIRE</span>.
+          </h2>
+
+          <p class="sch-section-subtitle">
+            From friendly chess tournaments to interactive strategy workshops, explore special activities that make
+            summer camp a <span class="highlight-gold-subtle">memorable learning experience</span>.
+          </p>
+
+          <div class="sch-event-tabs-bar" role="tablist" aria-label="Event Categories">
+            <button type="button" class="event-tab active" data-category="all" role="tab" aria-selected="true">
+              <span>All Events</span>
+            </button>
+            <button type="button" class="event-tab" data-category="tournament" role="tab" aria-selected="false">
+              <span>Tournaments</span>
+            </button>
+            <button type="button" class="event-tab" data-category="workshop" role="tab" aria-selected="false">
+              <span>Strategy Workshops</span>
+            </button>
+            <button type="button" class="event-tab" data-category="masterclass" role="tab" aria-selected="false">
+              <span>Special Coaching</span>
+            </button>
+            <button type="button" class="event-tab" data-category="activity" role="tab" aria-selected="false">
+              <span>Camp Arenas</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="sch-events-asymmetric-grid" id="eventsGridContainer">
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="sch-cta-section" id="scheduleCta" aria-labelledby="schCtaTitle">
+      <div class="sch-container">
+
+        <div class="sch-cta-card reveal-on-scroll">
+          <div class="sch-cta-glow" aria-hidden="true"></div>
+          <div class="sch-cta-accent-line" aria-hidden="true"></div>
+
+          <div class="sch-cta-layout">
+
+            <div class="sch-cta-visual-col">
+              <div class="sch-cta-knight-stage">
+                <div class="sch-cta-knight-halo" aria-hidden="true"></div>
+                <div class="sch-cta-knight-frame">
+                  <img src="assets/luxury-knight.jpg"
+                    alt="Handcrafted luxury Staunton chess knight sculpture in polished dark wood with brass accents"
+                    class="sch-cta-knight-img" width="280" height="280" loading="lazy">
+                </div>
+                <div class="sch-cta-knight-tag">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"
+                    aria-hidden="true">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                  <span>SUMMER 2026 COHORT</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sch-cta-content-col">
+
+              <div class="sch-cta-eyebrow">
+                <span class="sch-cta-eyebrow-dot" aria-hidden="true"></span>
+                <span>PLAN YOUR CHILD'S NEXT MOVE</span>
+              </div>
+
+              <h2 class="sch-cta-title" id="schCtaTitle">
+                GIVE EVERY DAY<br>A <span class="highlight-gold">STRATEGIC START</span>.
+              </h2>
+
+              <p class="sch-cta-desc">
+                Find the right camp schedule for your child and discover a summer filled with chess, creativity, <span
+                  class="highlight-gold-subtle">confidence</span>, and <span class="highlight-gold-subtle">meaningful
+                  learning</span> experiences with certified Grandmaster coaches.
+              </p>
+
+              <div class="sch-cta-features-pill-row" aria-label="Schedule guarantees">
+                <span class="sch-cta-feature-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"
+                    aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Ages 5–16 Cohorts</span>
+                </span>
+                <span class="sch-cta-feature-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"
+                    aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>6:1 Grandmaster Ratio</span>
+                </span>
+                <span class="sch-cta-feature-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"
+                    aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Flexible Morning &amp; Full Days</span>
+                </span>
+                <span class="sch-cta-feature-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"
+                    aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Daily Parent Progress Reports</span>
+                </span>
+              </div>
+
+              <div class="sch-cta-brass-line" aria-hidden="true"></div>
+
+              <div class="sch-cta-actions">
+                <a href="programs.html" class="sch-btn-primary">
+                  <span>EXPLORE PROGRAMS</span>
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"
+                    aria-hidden="true">
+                    <path d="M6 3L11 8L6 13" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+                <a href="contact.html" class="sch-btn-secondary">
+                  <span>CONTACT OUR TEAM</span>
+                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"
+                    aria-hidden="true">
+                    <path d="M7 17l5-5-5-5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div class="sch-modal-backdrop" id="sessionModalBackdrop" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="sessionModalTitle">
+    <div class="sch-modal-dialog">
+      <button class="sch-modal-close-btn" id="sessionModalClose" type="button"
+        aria-label="Close dialog">&times;</button>
+
+      <div class="sch-modal-header">
+        <span class="modal-badge-cohort" id="modalSessionCohort">Young Pawns • Ages 5–7</span>
+        <h3 class="sch-modal-title" id="sessionModalTitle">Session Details</h3>
+        <p class="sch-modal-sub" id="modalSessionSub">Complete breakdown of studio timings, coach curriculum &amp;
+          prerequisites.</p>
+      </div>
+
+      <div class="sch-modal-meta-grid">
+        <div class="modal-meta-box">
+          <span class="meta-label">Schedule Hours</span>
+          <strong class="meta-val" id="modalSessionTime">9:00 AM – 12:30 PM PST</strong>
+        </div>
+        <div class="modal-meta-box">
+          <span class="meta-label">Skill Bracket</span>
+          <strong class="meta-val" id="modalSessionLevel">Novice &bull; First Moves</strong>
+        </div>
+        <div class="modal-meta-box">
+          <span class="meta-label">Format &amp; Ratio</span>
+          <strong class="meta-val" id="modalSessionFormat">Studio Alpha &bull; Max 6:1 Ratio</strong>
+        </div>
+        <div class="modal-meta-box">
+          <span class="meta-label">Lead Mentor</span>
+          <strong class="meta-val" id="modalSessionInstructor">IM Elena Rostova</strong>
+        </div>
+      </div>
+
+      <div class="sch-modal-body">
+        <h4 class="modal-section-heading">Curriculum &amp; Daily Focus</h4>
+        <p class="modal-desc-text" id="modalSessionDesc">
+          Comprehensive curriculum notes detailing tactical opening demonstrations, spatial calculation puzzles, and
+          supervised tournament matches.
+        </p>
+
+        <h4 class="modal-section-heading">Included in This Camp Session</h4>
+        <ul class="modal-bullets-list" id="modalSessionBullets">
+
+        </ul>
+      </div>
+
+      <div class="sch-modal-footer">
+        <button class="sch-btn-primary modal-action-btn" id="modalEnrollBtn" type="button">
+          <span>Enroll in This Cohort</span>
+          <span aria-hidden="true">&rarr;</span>
+        </button>
+        <button class="sch-btn-secondary modal-cancel-btn" id="modalCloseActionBtn" type="button">
+          <span>Close Preview</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="sch-modal-backdrop" id="eventModalBackdrop" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="eventModalTitle">
+    <div class="sch-modal-dialog">
+      <button class="sch-modal-close-btn" id="eventModalClose" type="button" aria-label="Close dialog">&times;</button>
+
+      <div class="sch-modal-header">
+        <span class="modal-badge-cohort" id="modalEventCategory">TOURNAMENT EVENT</span>
+        <h3 class="sch-modal-title" id="eventModalTitle">Event Registration</h3>
+        <p class="sch-modal-sub" id="modalEventSub">Reserve a player seat for this special chess summer camp event.</p>
+      </div>
+
+      <div class="sch-modal-meta-grid">
+        <div class="modal-meta-box">
+          <span class="meta-label">Event Date</span>
+          <strong class="meta-val" id="modalEventDate">Saturday, July 18, 2026</strong>
+        </div>
+        <div class="modal-meta-box">
+          <span class="meta-label">Event Time</span>
+          <strong class="meta-val" id="modalEventTime">10:00 AM – 3:00 PM PST</strong>
+        </div>
+      </div>
+
+      <form class="sch-event-form" id="eventRegForm">
+        <div class="form-group">
+          <label class="form-label" for="regParentName">Parent / Guardian Full Name</label>
+          <input class="form-input" type="text" id="regParentName" required placeholder="e.g. Katherine Sterling">
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label" for="regParentEmail">Email Address</label>
+            <input class="form-input" type="email" id="regParentEmail" required
+              placeholder="e.g. katherine@example.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regParentPhone">Phone Number</label>
+            <input class="form-input" type="tel" id="regParentPhone" required placeholder="e.g. (415) 555-0199">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="regStudentInfo">Student Full Name &amp; Age</label>
+          <input class="form-input" type="text" id="regStudentInfo" required placeholder="e.g. Liam Sterling (Age 9)">
+        </div>
+
+        <button class="sch-btn-primary form-submit-btn" type="submit">
+          <span>Confirm Event Reservation</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="sch-toast" id="schToast" role="status" aria-live="polite"></div>
+
+  <footer class="strata-footer" id="strataFooter">
+
+    <div class="footer-top-accent">
+      <div class="accent-line"></div>
+      <div class="accent-chess-emblem" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L15 8H9L12 2Z" fill="#C6A15B" />
+          <circle cx="12" cy="10" r="1.8" fill="#E4C98A" />
+          <path d="M7 14C7 11.5 9 10 12 10C15 10 17 11.5 17 14C17 16 15.5 17.5 14 18H10C8.5 17.5 7 16 7 14Z"
+            fill="#C6A15B" />
+          <rect x="6" y="19" width="12" height="3" rx="1.5" fill="#E4C98A" />
+        </svg>
+      </div>
+      <div class="accent-line"></div>
+    </div>
+
+    <div class="strata-footer-container">
+
+      <div class="footer-grid">
+
+        <div class="footer-col col-brand">
+          <a href="index.html" class="footer-brand" aria-label="Stratagem Kids Chess Academy Home">
+            <div class="brand-crest-wrapper">
+              <img src="assets/knight-logo.png" alt="Stratagem Chess Academy Knight Logo" class="brand-crest">
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-title">STRATAGEM</span>
+              <span class="brand-tagline">CHESS &amp; STRATEGY ACADEMY</span>
+            </div>
+          </a>
+
+          <p class="brand-paratext">
+            Nurturing young minds through the venerable tradition of chess. We cultivate tactical foresight, resilient
+            critical thinking, and refined sportsmanship for the next generation of visionary thinkers.
+          </p>
+
+          <div class="social-links-wrapper" aria-label="Social media channels">
+
+            <a href="https://instagram.com" class="social-icon-btn" aria-label="Follow us on Instagram" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+
+            <a href="https://linkedin.com" class="social-icon-btn" aria-label="Connect on LinkedIn" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+
+            <a href="https://youtube.com" class="social-icon-btn" aria-label="Watch our Masterclasses on YouTube"
+              target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+
+            <a href="https://x.com" class="social-icon-btn" aria-label="Follow us on X" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+
+            <a href="https://facebook.com" class="social-icon-btn" aria-label="Visit our Facebook Community"
+              target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col col-programs">
+          <h3 class="col-heading">
+            <span class="heading-ornament" aria-hidden="true">
+              <svg class="footer-heading-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+              </svg>
+            </span>
+            Camp Programs
+          </h3>
+          <ul class="footer-nav-list">
+            <li>
+              <a href="programs-details.html?program=young-pawns" class="footer-nav-link">
+                <span class="link-label">Young Pawns</span>
+                <span class="link-meta">Ages 5–7</span>
+              </a>
+            </li>
+            <li>
+              <a href="programs-details.html?program=knight-tacticians" class="footer-nav-link">
+                <span class="link-label">Knight Tacticians</span>
+                <span class="link-meta">Ages 8–11</span>
+              </a>
+            </li>
+            <li>
+              <a href="programs-details.html?program=grandmaster-scholars" class="footer-nav-link">
+                <span class="link-label">Grandmaster Scholars</span>
+                <span class="link-meta">Ages 12–16</span>
+              </a>
+            </li>
+            <li>
+              <a href="programs-details.html?program=strategy-masterclass" class="footer-nav-link">
+                <span class="link-label">Masterclass Strategy Immersion</span>
+              </a>
+            </li>
+            <li>
+              <a href="programs-details.html?program=fide-tournament-prep" class="footer-nav-link">
+                <span class="link-label">FIDE Tournament Prep</span>
+              </a>
+            </li>
+            <li>
+              <a href="programs-details.html?program=weekend-blitz" class="footer-nav-link">
+                <span class="link-label">Summer Blitz &amp; Problem Solving</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col col-portals">
+          <h3 class="col-heading">
+            <span class="heading-ornament" aria-hidden="true">
+              <svg class="footer-heading-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </span>
+            Academy Portals
+          </h3>
+          <ul class="footer-nav-list">
+            <li>
+              <a href="coming-soon.html" class="footer-nav-link">
+                <span class="link-label">Coming Soon</span>
+                <span class="status-pill status-upcoming">Launch</span>
+              </a>
+            </li>
+            <li>
+              <a href="404.html" class="footer-nav-link">
+                <span class="link-label">404 Error Page</span>
+                <span class="status-pill status-demo">Interactive</span>
+              </a>
+            </li>
+            <li>
+              <a href="dashboard.html" class="footer-nav-link highlight-link">
+                <span class="link-label">Parent Dashboard</span>
+                <span class="status-pill status-portal">Portal</span>
+              </a>
+            </li>
+            <li>
+              <a href="signup.html" class="footer-nav-link highlight-link">
+                <span class="link-label">Sign Up / Register</span>
+                <span class="status-pill status-register">Enroll</span>
+              </a>
+            </li>
+            <li>
+              <a href="login.html" class="footer-nav-link">
+                <span class="link-label">Parent Login</span>
+                <span class="status-pill status-portal">Access</span>
+              </a>
+            </li>
+            <li>
+              <a href="index.html#curriculum" class="footer-nav-link">
+                <span class="link-label">FIDE Accredited Syllabus</span>
+              </a>
+            </li>
+            <li>
+              <a href="index.html#parent-faq" class="footer-nav-link">
+                <span class="link-label">Tuition &amp; Financial Aid FAQ</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col col-contact">
+          <h3 class="col-heading">
+            <span class="heading-ornament" aria-hidden="true">
+              <svg class="footer-heading-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5a9 9 0 0 1 18 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" />
+              </svg>
+            </span>
+            Camp Concierge
+          </h3>
+
+          <div class="contact-card-list">
+
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Academy Campus</span>
+                <address class="contact-value">
+                  742 Grandmaster Boulevard, Suite 500<br>
+                  Silicon Valley, CA 94025
+                </address>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Admissions &amp; Inquiries</span>
+                <a href="mailto:admissions@stratagemchess.com" class="contact-value contact-link">
+                  admissions@stratagemchess.com
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Direct Concierge</span>
+                <a href="tel:+18005432437" class="contact-value contact-link">
+                  +1 (800) 543-CHESS
+                </a>
+                <span class="contact-sub">+1 (415) 890-2437</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Academy &amp; Concierge Timings</span>
+                <span class="contact-value">
+                  Mon – Fri: 8:00 AM – 6:00 PM PST<br>
+                  Sat: 9:00 AM – 2:00 PM PST
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+
+        <div class="bottom-legal-copy">
+          <p class="copyright-text">
+            &copy; 2026 Stratagem Kids Chess &amp; Strategy Summer Camp. All Rights Reserved.
+          </p>
+          <p class="accreditation-text">
+            FIDE Certified Grandmaster Mentorship &bull; SafeSport Certified &bull; Official Youth Strategy Partner
+          </p>
+        </div>
+
+        <div class="bottom-utility-links">
+          <a href="index.html#privacy" class="utility-link">Privacy Policy</a>
+          <span class="sep-dot">&bull;</span>
+          <a href="index.html#terms" class="utility-link">Terms of Enrollment</a>
+          <span class="sep-dot">&bull;</span>
+          <a href="index.html#safeguarding" class="utility-link">Child Safeguarding</a>
+        </div>
+
+        <button class="scroll-top-btn" id="scrollTopBtn" type="button" aria-label="Return to top of page"
+          title="Scroll to top">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M10 15V5M5 10l5-5 5 5" />
+          </svg>
+        </button>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

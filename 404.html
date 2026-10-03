@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>404 — Page Not Found | Kids Chess &amp; Strategy Summer Camp</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="description" content="Oops! This move led nowhere. The requested page cannot be found. Return to the Stratagem Kids Chess &amp; Strategy Summer Camp homepage.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="404.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <script defer src="404.js"></script>
+</head>
+<body class="fullscreen-page">
+
+  <div class="page-ambient-mesh" aria-hidden="true">
+    <div class="glow-orb glow-orb-top"></div>
+    <div class="glow-orb glow-orb-bottom"></div>
+    <div class="board-grid-pattern"></div>
+  </div>
+
+  <div class="fullscreen-shell">
+
+    <header class="minimal-header" role="banner">
+      <div class="header-inner">
+
+        <a href="index.html" class="strata-brand" aria-label="Stratagem Kids Chess &amp; Strategy Academy Home">
+          <div class="brand-crest-wrapper">
+            <img src="assets/knight-logo.png" alt="Stratagem Chess Academy Knight Logo" class="brand-crest">
+          </div>
+          <div class="brand-text-block">
+            <span class="brand-title">STRATAGEM</span>
+            <span class="brand-tagline">CHESS &amp; STRATEGY ACADEMY</span>
+          </div>
+        </a>
+
+        <div class="strata-controls" role="toolbar" aria-label="Page display controls">
+
+          <button class="control-btn theme-toggle-btn circle-btn" id="themeToggleBtn" type="button" aria-label="Toggle visual theme between Light and Dark mode" title="Toggle Light / Dark Mode">
+            <div class="icon-toggle-wrapper">
+
+              <svg class="theme-icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+
+              <svg class="theme-icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </div>
+          </button>
+
+          <button class="control-btn rtl-toggle-btn circle-btn" id="rtlToggleBtn" type="button" aria-label="Toggle reading direction between LTR and RTL" title="Toggle RTL (Right-to-Left)">
+            <span class="rtl-label" id="rtlLabel">RTL</span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <main class="error-main-stage" id="mainContent">
+      <div class="error-center-container">
+
+        <div class="error-visual-row" aria-label="3D Chess King Animation">
+          <div class="chess-3d-stage" id="chess404Viewport">
+
+            <canvas id="chess404Canvas"></canvas>
+
+            <div class="stage-shadow-pedestal" aria-hidden="true"></div>
+
+            <div class="chess-fallback-visual" id="chessFallback" hidden aria-hidden="true">
+              <svg viewBox="0 0 100 140" fill="none" class="fallback-king-svg">
+                <defs>
+                  <linearGradient id="fallbackKingGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FAF9F5" />
+                    <stop offset="40%" stop-color="#E4C98A" />
+                    <stop offset="80%" stop-color="#C6A15B" />
+                    <stop offset="100%" stop-color="#8F7747" />
+                  </linearGradient>
+                </defs>
+                <path d="M48 6h4v18h-4zM41 12h18v4h-18z" fill="url(#fallbackKingGold)" />
+                <path d="M30 28c8-4 32-4 40 0l-5 16h-30z" fill="#073B3A" stroke="url(#fallbackKingGold)" stroke-width="2" />
+                <path d="M36 44h28v8H36z" fill="url(#fallbackKingGold)" />
+                <path d="M38 52c-4 18-12 36-16 56h56c-4-20-12-38-16-56z" fill="#0E5552" stroke="url(#fallbackKingGold)" stroke-width="2" />
+                <path d="M18 108h64v14H18z" fill="url(#fallbackKingGold)" />
+                <path d="M14 122h72v8H14z" fill="#073B3A" stroke="url(#fallbackKingGold)" stroke-width="2" />
+              </svg>
+              <span class="fallback-caption">The Lost King</span>
+            </div>
+          </div>
+        </div>
+
+        <section class="error-info-pane" aria-labelledby="errorHeading">
+
+          <div class="error-badge">
+            <span class="badge-dot" aria-hidden="true">&#9670;</span>
+            <span class="badge-text">404 &bull; <span class="highlight-gold-subtle">ILLEGAL MOVE</span></span>
+          </div>
+
+          <div class="error-number-wrap">
+            <h1 class="error-glitch-number" id="errorHeading" aria-label="Error 404">404</h1>
+          </div>
+
+          <h2 class="error-title">
+            Oops! This Move Led <span class="highlight-gold">Nowhere.</span>
+          </h2>
+
+          <p class="error-desc">
+            The page you're looking for may have moved, changed, or <span class="highlight-gold-subtle">no longer exists</span>. Let's get you <span class="highlight-gold-subtle">back to the game</span>.
+          </p>
+
+          <div class="error-cta-group">
+
+            <a href="index.html" class="cta-btn cta-primary">
+              <svg class="btn-icon-lead" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+              <span>BACK TO HOME</span>
+              <svg class="btn-icon-tail" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M6 3L11 8L6 13" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+
+            <a href="programs.html" class="cta-btn cta-outline">
+              <svg class="btn-icon-lead" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+              </svg>
+              <span>Explore the Camp</span>
+            </a>
+
+          </div>
+
+          <div class="error-tactical-note" aria-hidden="true">
+            <span class="coord-tag">Rank 0 &bull; File &Oslash;</span>
+            <span class="coord-divider">&bull;</span>
+            <span class="coord-msg">Position off the board &mdash; Illegal square</span>
+          </div>
+
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <div class="page-toast" id="pageToast" role="status" aria-live="polite" hidden>
+    <div class="toast-indicator"></div>
+    <div class="toast-body">
+      <h4 class="toast-title" id="toastTitle">Notice</h4>
+      <p class="toast-message" id="toastMessage">Layout direction adjusted.</p>
+    </div>
+  </div>
+
+</body>
+</html>

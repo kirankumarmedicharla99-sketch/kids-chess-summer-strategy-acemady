@@ -1,0 +1,1688 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stratagem Kids Chess & Strategy Academy — Header & Footer Showcase</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="navigation/header.css">
+  <link rel="stylesheet" href="navigation/footer.css">
+
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="chess-3d-king.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="navigation/header.js"></script>
+  <script defer src="navigation/footer.js"></script>
+  <script defer src="index.js"></script>
+  <script defer src="chess-3d-king.js"></script>
+</head>
+
+<body>
+
+  <header class="strata-header" id="strataHeader">
+    <div class="strata-header-glow"></div>
+    <div class="strata-header-container">
+
+      <a href="index.html" class="strata-brand" aria-label="Stratagem Kids Chess & Strategy Academy Home">
+        <div class="brand-crest-wrapper">
+          <img src="assets/knight-logo.png" alt="Stratagem Chess Academy Knight Logo" class="brand-crest">
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">STRATAGEM</span>
+          <span class="brand-tagline">CHESS &amp; STRATEGY ACADEMY</span>
+        </div>
+      </a>
+
+      <nav class="strata-nav-desktop" id="desktopNav" aria-label="Main Navigation">
+        <ul class="nav-list">
+
+          <li class="nav-item has-dropdown" id="navHomeDropdown">
+            <button class="nav-link dropdown-toggle active" aria-expanded="false" aria-haspopup="true">
+              <span class="nav-text">Home</span>
+              <svg class="dropdown-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <div class="dropdown-menu">
+              <div class="dropdown-accent-line"></div>
+              <ul class="dropdown-list">
+                <li>
+                  <a href="index.html" class="dropdown-item">
+                    <div class="dropdown-icon-box">
+                      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 8.5L10 3L17 8.5V17H3V8.5Z" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8 17V11H12V17" stroke-linecap="round" />
+                      </svg>
+                    </div>
+                    <div class="dropdown-content">
+                      <span class="dropdown-title">Home 1 — Academy Overview</span>
+                      <span class="dropdown-desc">Grandmaster coaches, curriculum & campus philosophy</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="home2.html" class="dropdown-item highlighted">
+                    <div class="dropdown-icon-box">
+                      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M10 2L12.5 7L18 8L14 12L15 17.5L10 15L5 17.5L6 12L2 8L7.5 7L10 2Z"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <div class="dropdown-content">
+                      <span class="dropdown-title">
+                        Home 2 — Summer Camp Edition
+                        <span class="dropdown-badge">Exclusive</span>
+                      </span>
+                      <span class="dropdown-desc">Intensive camps, tactics workshops & tournament arenas</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="instructors.html" class="nav-link">
+              <span class="nav-text">Instructors</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="programs.html" class="nav-link">
+              <span class="nav-text">Programs</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="schedule.html" class="nav-link">
+              <span class="nav-text">Schedule</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">
+              <span class="nav-text">Contact</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="./dashboard.html" class="nav-link">
+              <span class="nav-text">Dashboard</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="strata-controls">
+
+        <button class="control-btn theme-toggle-btn circle-btn" id="themeToggleBtn" type="button"
+          aria-label="Toggle visual theme between Light and Dark mode" title="Toggle Light / Dark Mode">
+          <div class="icon-toggle-wrapper">
+
+            <svg class="theme-icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+
+            <svg class="theme-icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </div>
+        </button>
+
+        <button class="control-btn rtl-toggle-btn circle-btn" id="rtlToggleBtn" type="button"
+          aria-label="Toggle reading direction between LTR and RTL" title="Toggle RTL (Right-to-Left)">
+          <span class="rtl-label" id="rtlLabel">RTL</span>
+        </button>
+
+        <a href="./login.html" class="strata-login-btn desktop-only" id="headerLoginBtn" aria-label="Login">
+          <span class="btn-shimmer" aria-hidden="true"></span>
+          <span class="btn-text">Login</span>
+        </a>
+
+        <button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open mobile navigation menu"
+          aria-controls="mobileDrawer" aria-expanded="false">
+          <span class="hamburger-box">
+            <span class="hamburger-line line-1"></span>
+            <span class="hamburger-line line-2"></span>
+            <span class="hamburger-line line-3"></span>
+          </span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <div class="strata-drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <aside class="strata-mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <span class="drawer-brand-title">STRATAGEM</span>
+        <span class="drawer-brand-sub">KIDS CHESS &amp; STRATEGY</span>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" type="button" aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <nav class="mobile-nav-menu">
+        <ul class="mobile-nav-list">
+
+          <li class="mobile-nav-item mobile-accordion open" id="mobileHomeAccordion">
+            <button class="mobile-nav-link accordion-toggle" aria-expanded="true">
+              <span class="mobile-link-text">Home</span>
+              <svg class="accordion-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 6L8 10L12 6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="accordion-panel">
+              <a href="index.html" class="mobile-sublink active">
+                <span class="sublink-dot"></span>
+                <span class="sublink-title">Home 1 — Academy Overview</span>
+              </a>
+              <a href="home2.html" class="mobile-sublink">
+                <span class="sublink-dot"></span>
+                <span class="sublink-title">Home 2 — Summer Camp Edition</span>
+                <span class="sublink-tag">Featured</span>
+              </a>
+            </div>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="instructors.html" class="mobile-nav-link">
+              <span class="mobile-link-text">Instructors</span>
+            </a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="programs.html" class="mobile-nav-link">
+              <span class="mobile-link-text">Programs</span>
+            </a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="schedule.html" class="mobile-nav-link">
+              <span class="mobile-link-text">Schedule</span>
+            </a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="contact.html" class="mobile-nav-link">
+              <span class="mobile-link-text">Contact</span>
+            </a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="./dashboard.html" class="mobile-nav-link">
+              <span class="mobile-link-text">Dashboard</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="drawer-footer-actions">
+        <a href="./login.html" class="strata-login-btn mobile-drawer-login" id="drawerLoginBtn">
+          <span>Login</span>
+        </a>
+
+        <div class="drawer-credentials-badge">
+          <span class="cred-icon" aria-hidden="true">
+            <svg class="cred-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="6" />
+              <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+            </svg>
+          </span>
+          <span class="cred-text">FIDE Certified Grandmaster Mentors &bull; Summer 2026</span>
+        </div>
+      </div>
+
+    </div>
+
+  </aside>
+
+  <main class="home-main" id="homeMain">
+
+    <section class="home-section hero-section" id="hero">
+      <div class="home-container">
+        <div class="hero-grid">
+
+          <div class="hero-content reveal-on-scroll">
+            <div class="hero-badge">
+              <span class="eyebrow-ornament" aria-hidden="true">
+                <svg class="lucide-ornament" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+                </svg>
+              </span>
+              <span>Summer 2026 Admissions Open</span>
+            </div>
+
+            <h1 class="hero-title">
+              KIDS <span class="highlight-gold">CHESS &amp; STRATEGY</span><br>
+              SUMMER ACADEMY
+            </h1>
+
+            <p class="hero-statement">
+              Where young minds master the intellectual art of <span class="highlight-gold">forward thinking</span>.
+            </p>
+
+            <p class="hero-paragraph">
+              An immersive summer experience cultivating <span class="highlight-gold-subtle">cognitive rigor</span>,
+              <span class="highlight-gold-subtle">strategic foresight</span>, and <span
+                class="highlight-gold-subtle">emotional poise</span> in aspiring young thinkers ages 5–16.
+            </p>
+
+            <div class="hero-skills-strip" aria-label="Core Skill Pillars">
+              <span class="hero-skill-chip">Strategic Thinking</span>
+              <span class="hero-skill-chip">Focus</span>
+              <span class="hero-skill-chip">Confidence</span>
+              <span class="hero-skill-chip">Problem Solving</span>
+              <span class="hero-skill-chip">Decision Making</span>
+            </div>
+
+            <div class="cta-group">
+              <a href="#programs" class="home-btn-primary">
+                <span>Explore Programs</span>
+                <svg class="btn-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 3L11 8L6 13" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a href="instructors.html" class="home-btn-secondary">
+                <span>Meet Our Coaches</span>
+                <svg class="btn-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <path d="M6 3L11 8L6 13" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-cinema-stage reveal-on-scroll delay-1" id="heroCinemaStage"
+            aria-label="Interactive 3D King Chess Animation Stage">
+
+            <div class="cinema-ambient-glow" aria-hidden="true"></div>
+
+            <div class="cinema-viewport" id="chess3dViewport">
+
+              <canvas class="chess-3d-canvas" id="chess3dCanvas"
+                aria-label="Real-time 3D Chess King and Royal Pieces Reveal Animation"></canvas>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee-strip-section" id="runningStrip" aria-label="Camp Focus Areas">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span class="marquee-item">CHESS FUNDAMENTALS <span class="marquee-dot" aria-hidden="true"><svg
+                class="marquee-lucide" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 22 12 12 22 2 12" />
+              </svg></span></span>
+          <span class="marquee-item"><span class="highlight-gold">STRATEGIC THINKING</span> <span class="marquee-dot"
+              aria-hidden="true"><svg class="marquee-lucide" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 22 12 12 22 2 12" />
+              </svg></span></span>
+          <span class="marquee-item">TACTICAL TRAINING <span class="marquee-dot" aria-hidden="true"><svg
+                class="marquee-lucide" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 22 12 12 22 2 12" />
+              </svg></span></span>
+          <span class="marquee-item">CONFIDENCE <span class="highlight-gold">BUILDING</span> <span class="marquee-dot"
+              aria-hidden="true"><svg class="marquee-lucide" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 22 12 12 22 2 12" />
+              </svg></span></span>
+          <span class="marquee-item">PROBLEM SOLVING <span class="marquee-dot" aria-hidden="true"><svg
+                class="marquee-lucide" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 22 12 12 22 2 12" />
+              </svg></span></span>
+          <span class="marquee-item">TOURNAMENT <span class="highlight-gold">PREPARATION</span> <span
+              class="marquee-dot" aria-hidden="true"><svg class="marquee-lucide" viewBox="0 0 24 24"
+                fill="currentColor">
+                <polygon points="12 2 22 12 12 22 2 12" />
+              </svg></span></span>
+          <span class="marquee-item">CREATIVE THINKING <span class="marquee-dot" aria-hidden="true"><svg
+                class="marquee-lucide" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 22 12 12 22 2 12" />
+              </svg></span></span>
+          <span class="marquee-item"><span class="highlight-gold">LEADERSHIP</span> SKILLS <span class="marquee-dot"
+              aria-hidden="true"><svg class="marquee-lucide" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 22 12 12 22 2 12" />
+              </svg></span></span>
+        </div>
+
+        <div class="marquee-content" aria-hidden="true">
+          <span class="marquee-item">CHESS FUNDAMENTALS <span class="marquee-dot" aria-hidden="true"><svg
+                class="marquee-lucide" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 22 12 12 22 2 12" />
+              </svg></span></span>
+          <span class="marquee-item"><span class="highlight-gold">STRATEGIC THINKING</span> <span class="marquee-dot"
+              aria-hidden="true"><svg class="marquee-lucide" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 22 12 12 22 2 12" />
+              </svg></span></span>
+          <span class="marquee-item">TACTICAL TRAINING <span class="marquee-dot" aria-hidden="true"><svg
+                class="marquee-lucide" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 22 12 12 22 2 12" />
+              </svg></span></span>
+          <span class="marquee-item">CONFIDENCE <span class="highlight-gold">BUILDING</span> <span class="marquee-dot"
+              aria-hidden="true"><svg class="marquee-lucide" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 22 12 12 22 2 12" />
+              </svg></span></span>
+          <span class="marquee-item">PROBLEM SOLVING <span class="marquee-dot" aria-hidden="true"><svg
+                class="marquee-lucide" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 22 12 12 22 2 12" />
+              </svg></span></span>
+          <span class="marquee-item">TOURNAMENT <span class="highlight-gold">PREPARATION</span> <span
+              class="marquee-dot" aria-hidden="true"><svg class="marquee-lucide" viewBox="0 0 24 24"
+                fill="currentColor">
+                <polygon points="12 2 22 12 12 22 2 12" />
+              </svg></span></span>
+          <span class="marquee-item">CREATIVE THINKING <span class="marquee-dot" aria-hidden="true"><svg
+                class="marquee-lucide" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 22 12 12 22 2 12" />
+              </svg></span></span>
+          <span class="marquee-item"><span class="highlight-gold">LEADERSHIP</span> SKILLS <span class="marquee-dot"
+              aria-hidden="true"><svg class="marquee-lucide" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 22 12 12 22 2 12" />
+              </svg></span></span>
+        </div>
+      </div>
+    </div>
+
+    <section class="home-section section-alt" id="about">
+      <div class="home-container">
+        <div class="about-grid">
+
+          <div class="about-visual-stage reveal-on-scroll">
+            <div class="about-card-large">
+              <img src="assets/academy-learning.jpg" alt="Children engaged in masterclass strategy analysis"
+                class="img-cover" loading="lazy">
+            </div>
+            <div class="about-card-small">
+              <img src="assets/strategy-thinking.jpg" alt="Deep focus during an intensive chess match" class="img-cover"
+                loading="lazy">
+            </div>
+          </div>
+
+          <div class="about-editorial reveal-on-scroll delay-1">
+            <div class="section-eyebrow">
+              <span class="eyebrow-ornament" aria-hidden="true">
+                <svg class="lucide-ornament" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="6" />
+                  <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                </svg>
+              </span>
+              <span>About the Academy</span>
+            </div>
+
+            <h2 class="section-title">
+              MORE THAN A GAME.<br>
+              A <span class="highlight-gold">MINDSET FOR LIFE</span>.
+            </h2>
+
+            <p class="about-lead">
+              Stratagem is an elite summer sanctuary where <span class="highlight-gold-subtle">cognitive
+                discipline</span> converges with youthful curiosity. We believe that chess is the definitive laboratory
+              for <span class="highlight-gold-subtle">intellectual poise</span>, spatial foresight, and resilient
+              self-mastery.
+            </p>
+
+            <p class="about-paragraph">
+              Through mentor-led strategy circles, our campers learn to foresee consequences before committing to a
+              move. We cultivate <span class="highlight-gold-subtle">strategic thinking</span>, acute concentration,
+              <span class="highlight-gold-subtle">decision making under pressure</span>, and enduring sportsmanship that
+              transcends the 64 squares.
+            </p>
+
+            <div class="stats-row" aria-label="Academy Achievements">
+              <div class="stat-item">
+                <span class="stat-number highlight-gold">10+</span>
+                <span class="stat-label">Years of Guidance</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number highlight-gold">100+</span>
+                <span class="stat-label">Young Minds Mentored</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number highlight-gold">4</span>
+                <span class="stat-label">Age-Based Programs</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section" id="strategy">
+      <div class="home-container">
+        <div class="strategy-grid">
+
+          <div class="strategy-content reveal-on-scroll">
+            <div class="section-eyebrow">
+              <span class="eyebrow-ornament" aria-hidden="true">
+                <svg class="lucide-ornament" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                </svg>
+              </span>
+              <span>The Art of Strategy</span>
+            </div>
+
+            <h2 class="section-title">
+              THINK AHEAD.<br>
+              <span class="highlight-gold">PLAY SMARTER</span>.<br>
+              GROW STRONGER.
+            </h2>
+
+            <p class="section-subtitle">
+              Every grandmaster once started with a single pawn move. In a world of rapid digital distractions, chess
+              teaches children the invaluable superpowers of <span class="highlight-gold-subtle">deliberate
+                contemplation</span> and <span class="highlight-gold-subtle">multi-layered pattern recognition</span>.
+            </p>
+
+            <div class="strategy-pillars-list">
+              <div class="pillar-chip">
+                <span class="pillar-bullet" aria-hidden="true">
+                  <svg class="pillar-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </span>
+                <span>Planning &amp; Foresight</span>
+              </div>
+              <div class="pillar-chip">
+                <span class="pillar-bullet" aria-hidden="true">
+                  <svg class="pillar-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </span>
+                <span>Patience Under Tension</span>
+              </div>
+              <div class="pillar-chip">
+                <span class="pillar-bullet" aria-hidden="true">
+                  <svg class="pillar-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </span>
+                <span>Pattern Recognition</span>
+              </div>
+              <div class="pillar-chip">
+                <span class="pillar-bullet" aria-hidden="true">
+                  <svg class="pillar-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </span>
+                <span>Decisive Execution</span>
+              </div>
+              <div class="pillar-chip">
+                <span class="pillar-bullet" aria-hidden="true">
+                  <svg class="pillar-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </span>
+                <span>Sustained Focus</span>
+              </div>
+              <div class="pillar-chip">
+                <span class="pillar-bullet" aria-hidden="true">
+                  <svg class="pillar-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </span>
+                <span>Strategic Resilience</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="strategy-visual-stage reveal-on-scroll delay-1">
+            <div class="strategy-card-main">
+              <img src="assets/chess-details.jpg" alt="Artisanal chess knight and board craftsmanship" class="img-cover"
+                loading="lazy">
+            </div>
+            <div class="strategy-card-sub">
+              <img src="assets/camp-experience.jpg" alt="Children collaborating over tactical puzzles" class="img-cover"
+                loading="lazy">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section section-alt" id="programs">
+      <div class="home-container">
+
+        <div class="header-centered reveal-on-scroll">
+          <div class="section-eyebrow">
+            <span class="eyebrow-ornament" aria-hidden="true">
+              <svg class="lucide-ornament" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" />
+                <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" />
+                <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" />
+              </svg>
+            </span>
+            <span>Our Programs</span>
+          </div>
+          <h2 class="section-title">CHOOSE YOUR <span class="highlight-gold">NEXT MOVE</span>.</h2>
+          <p class="section-subtitle">
+            Age-based programs designed around each child's stage of learning, <span
+              class="highlight-gold-subtle">confidence</span>, and <span class="highlight-gold-subtle">strategic
+              mastery</span>.
+          </p>
+        </div>
+
+        <div class="programs-grid">
+
+          <article class="program-card reveal-on-scroll">
+            <div class="program-img-wrapper">
+              <img src="assets/program-foundations.jpg" alt="Young Pawns chess foundations program" class="program-img"
+                loading="lazy">
+              <span class="program-age-tag">Ages 5–7</span>
+            </div>
+            <div class="program-content">
+              <h3 class="program-title">CHESS FOUNDATIONS</h3>
+              <p class="program-desc">
+                Build confidence with <span class="highlight-gold-subtle">chess fundamentals</span>, board awareness,
+                piece values, and <span class="highlight-gold-subtle">playful strategic thinking</span> through gamified
+                challenges.
+              </p>
+              <a href="#cta" class="program-link">
+                <span>Explore Program</span>
+                <svg class="btn-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 3L11 8L6 13" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="program-card reveal-on-scroll delay-1">
+            <div class="program-img-wrapper">
+              <img src="assets/program-strategy.jpg" alt="Knight Tacticians strategy builders program"
+                class="program-img" loading="lazy">
+              <span class="program-age-tag">Ages 8–10</span>
+            </div>
+            <div class="program-content">
+              <h3 class="program-title">STRATEGY BUILDERS</h3>
+              <p class="program-desc">
+                Develop <span class="highlight-gold-subtle">tactical thinking</span>, multi-step planning,
+                concentration, and <span class="highlight-gold-subtle">thoughtful decision-making</span> through
+                structured daily challenges.
+              </p>
+              <a href="#cta" class="program-link">
+                <span>Explore Program</span>
+                <svg class="btn-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 3L11 8L6 13" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="program-card reveal-on-scroll delay-2">
+            <div class="program-img-wrapper">
+              <img src="assets/program-advanced.jpg" alt="Grandmaster Scholars advanced players program"
+                class="program-img" loading="lazy">
+              <span class="program-age-tag">Ages 11–14</span>
+            </div>
+            <div class="program-content">
+              <h3 class="program-title">ADVANCED PLAYERS</h3>
+              <p class="program-desc">
+                Strengthen <span class="highlight-gold-subtle">competitive thinking</span>, deeper opening strategy,
+                <span class="highlight-gold-subtle">positional calculation</span>, and tournament psychological
+                preparation.
+              </p>
+              <a href="#cta" class="program-link">
+                <span>Explore Program</span>
+                <svg class="btn-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 3L11 8L6 13" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section" id="whyChess">
+      <div class="home-container">
+
+        <div class="header-centered reveal-on-scroll">
+          <div class="section-eyebrow">
+            <span class="eyebrow-ornament" aria-hidden="true">
+              <svg class="lucide-ornament" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+                <path d="M9 18h6" />
+                <path d="M10 22h4" />
+              </svg>
+            </span>
+            <span>Why Chess</span>
+          </div>
+          <h2 class="section-title">SKILLS THAT MOVE <span class="highlight-gold">BEYOND THE BOARD</span>.</h2>
+          <p class="section-subtitle">
+            Strategic training teaches life habits that directly elevate <span class="highlight-gold-subtle">academic
+              rigor</span>, <span class="highlight-gold-subtle">emotional stability</span>, and <span
+              class="highlight-gold-subtle">intellectual clarity</span>.
+          </p>
+        </div>
+
+        <div class="why-chess-grid">
+
+          <div class="why-flip-card reveal-on-scroll" tabindex="0" role="region" aria-label="Skill 1: Focus">
+            <div class="why-flip-inner">
+
+              <div class="why-card-face why-card-front">
+                <div class="why-card-top">
+                  <span class="why-number">01</span>
+                  <span class="why-pill-badge">PILLAR I</span>
+                </div>
+
+                <div class="why-coin-wrapper">
+                  <div class="why-coin-frame">
+                    <span class="coin-corner corner-tl" aria-hidden="true"></span>
+                    <span class="coin-corner corner-tr" aria-hidden="true"></span>
+                    <span class="coin-corner corner-bl" aria-hidden="true"></span>
+                    <span class="coin-corner corner-br" aria-hidden="true"></span>
+                    <img src="assets/coin-knight-focus.jpg"
+                      alt="24K Gold Knight Chess Coin Medallion representing Focus"
+                      class="why-coin-img" width="160" height="160">
+                  </div>
+                </div>
+
+                <div class="why-card-front-footer">
+                  <h3 class="why-front-title">FOCUS</h3>
+                  <div class="why-flip-hint">
+                    <svg class="flip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true">
+                      <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                      <path d="M3 3v5h5" />
+                      <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
+                      <path d="M16 21h5v-5" />
+                    </svg>
+                    <span>Hover to reveal</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="why-card-face why-card-back">
+                <div class="why-card-top">
+                  <span class="why-number">01</span>
+                  <span class="why-pill-badge">TACTICAL DISCIPLINE</span>
+                </div>
+                <div class="why-back-body">
+                  <h3 class="why-back-title">DEEP FOCUS</h3>
+                  <p class="why-desc">
+                    Cultivating <span class="highlight-gold-subtle">deep immersion</span> and sustained attention span in an era of fleeting notifications.
+                  </p>
+                  <div class="why-metric-chip">
+                    <span class="metric-dot" aria-hidden="true"></span>
+                    <span class="metric-text">+38% Attention Span</span>
+                  </div>
+                </div>
+                <div class="why-back-footer">
+                  <span class="why-back-quote">"In chess, every distraction is a blunder."</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="why-flip-card reveal-on-scroll delay-1" tabindex="0" role="region" aria-label="Skill 2: Confidence">
+            <div class="why-flip-inner">
+
+              <div class="why-card-face why-card-front">
+                <div class="why-card-top">
+                  <span class="why-number">02</span>
+                  <span class="why-pill-badge">PILLAR II</span>
+                </div>
+
+                <div class="why-coin-wrapper">
+                  <div class="why-coin-frame">
+                    <span class="coin-corner corner-tl" aria-hidden="true"></span>
+                    <span class="coin-corner corner-tr" aria-hidden="true"></span>
+                    <span class="coin-corner corner-bl" aria-hidden="true"></span>
+                    <span class="coin-corner corner-br" aria-hidden="true"></span>
+                    <img src="assets/coin-queen-confidence.jpg"
+                      alt="24K Gold Queen Chess Coin Medallion representing Confidence"
+                      class="why-coin-img" width="160" height="160">
+                  </div>
+                </div>
+
+                <div class="why-card-front-footer">
+                  <h3 class="why-front-title">CONFIDENCE</h3>
+                  <div class="why-flip-hint">
+                    <svg class="flip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true">
+                      <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                      <path d="M3 3v5h5" />
+                      <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
+                      <path d="M16 21h5v-5" />
+                    </svg>
+                    <span>Hover to reveal</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="why-card-face why-card-back">
+                <div class="why-card-top">
+                  <span class="why-number">02</span>
+                  <span class="why-pill-badge">EMOTIONAL POISE</span>
+                </div>
+                <div class="why-back-body">
+                  <h3 class="why-back-title">CONFIDENCE</h3>
+                  <p class="why-desc">
+                    Building <span class="highlight-gold-subtle">quiet self-belief</span> rooted in competence, thorough preparation, and graceful resilience after setbacks.
+                  </p>
+                  <div class="why-metric-chip">
+                    <span class="metric-dot" aria-hidden="true"></span>
+                    <span class="metric-text">Poise Under Pressure</span>
+                  </div>
+                </div>
+                <div class="why-back-footer">
+                  <span class="why-back-quote">"Victory belongs to those who trust their preparation."</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="why-flip-card reveal-on-scroll delay-2" tabindex="0" role="region" aria-label="Skill 3: Problem Solving">
+            <div class="why-flip-inner">
+
+              <div class="why-card-face why-card-front">
+                <div class="why-card-top">
+                  <span class="why-number">03</span>
+                  <span class="why-pill-badge">PILLAR III</span>
+                </div>
+
+                <div class="why-coin-wrapper">
+                  <div class="why-coin-frame">
+                    <span class="coin-corner corner-tl" aria-hidden="true"></span>
+                    <span class="coin-corner corner-tr" aria-hidden="true"></span>
+                    <span class="coin-corner corner-bl" aria-hidden="true"></span>
+                    <span class="coin-corner corner-br" aria-hidden="true"></span>
+                    <img src="assets/coin-bishop-problem.jpg"
+                      alt="24K Gold Bishop Chess Coin Medallion representing Problem Solving"
+                      class="why-coin-img" width="160" height="160">
+                  </div>
+                </div>
+
+                <div class="why-card-front-footer">
+                  <h3 class="why-front-title">PROBLEM SOLVING</h3>
+                  <div class="why-flip-hint">
+                    <svg class="flip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true">
+                      <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                      <path d="M3 3v5h5" />
+                      <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
+                      <path d="M16 21h5v-5" />
+                    </svg>
+                    <span>Hover to reveal</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="why-card-face why-card-back">
+                <div class="why-card-top">
+                  <span class="why-number">03</span>
+                  <span class="why-pill-badge">CREATIVE LOGIC</span>
+                </div>
+                <div class="why-back-body">
+                  <h3 class="why-back-title">PROBLEM SOLVING</h3>
+                  <p class="why-desc">
+                    Dissecting intricate challenges into manageable parts to discover <span class="highlight-gold-subtle">non-obvious, creative solutions</span>.
+                  </p>
+                  <div class="why-metric-chip">
+                    <span class="metric-dot" aria-hidden="true"></span>
+                    <span class="metric-text">Pattern Recognition</span>
+                  </div>
+                </div>
+                <div class="why-back-footer">
+                  <span class="why-back-quote">"Tactics is knowing what to do when there is something to do."</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="why-flip-card reveal-on-scroll delay-3" tabindex="0" role="region" aria-label="Skill 4: Decision Making">
+            <div class="why-flip-inner">
+
+              <div class="why-card-face why-card-front">
+                <div class="why-card-top">
+                  <span class="why-number">04</span>
+                  <span class="why-pill-badge">PILLAR IV</span>
+                </div>
+
+                <div class="why-coin-wrapper">
+                  <div class="why-coin-frame">
+                    <span class="coin-corner corner-tl" aria-hidden="true"></span>
+                    <span class="coin-corner corner-tr" aria-hidden="true"></span>
+                    <span class="coin-corner corner-bl" aria-hidden="true"></span>
+                    <span class="coin-corner corner-br" aria-hidden="true"></span>
+                    <img src="assets/coin-king-decision.jpg"
+                      alt="24K Gold King Chess Coin Medallion representing Decision Making"
+                      class="why-coin-img" width="160" height="160">
+                  </div>
+                </div>
+
+                <div class="why-card-front-footer">
+                  <h3 class="why-front-title">DECISION MAKING</h3>
+                  <div class="why-flip-hint">
+                    <svg class="flip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true">
+                      <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                      <path d="M3 3v5h5" />
+                      <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
+                      <path d="M16 21h5v-5" />
+                    </svg>
+                    <span>Hover to reveal</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="why-card-face why-card-back">
+                <div class="why-card-top">
+                  <span class="why-number">04</span>
+                  <span class="why-pill-badge">STRATEGIC FORESIGHT</span>
+                </div>
+                <div class="why-back-body">
+                  <h3 class="why-back-title">DECISION MAKING</h3>
+                  <p class="why-desc">
+                    Understanding risk, reward, and responsibility by <span class="highlight-gold-subtle">evaluating future consequences</span> before touching a piece.
+                  </p>
+                  <div class="why-metric-chip">
+                    <span class="metric-dot" aria-hidden="true"></span>
+                    <span class="metric-text">Executive Accountability</span>
+                  </div>
+                </div>
+                <div class="why-back-footer">
+                  <span class="why-back-quote">"Every move has consequences beyond the board."</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section section-warm" id="journey">
+      <div class="home-container">
+
+        <div class="header-centered reveal-on-scroll">
+          <div class="section-eyebrow">
+            <span class="eyebrow-ornament" aria-hidden="true">
+              <svg class="lucide-ornament" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6H5a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h13l4-3.5L18 6Z" />
+                <path d="M12 13v8" />
+                <path d="M12 3v3" />
+              </svg>
+            </span>
+            <span>The Camp Journey</span>
+          </div>
+          <h2 class="section-title">FROM FIRST MOVE TO <span class="highlight-gold">CONFIDENT PLAY</span>.</h2>
+          <p class="section-subtitle">
+            A carefully sequenced pedagogical progression designed to turn <span class="highlight-gold-subtle">natural
+              curiosity</span> into <span class="highlight-gold-subtle">lifelong mastery</span>.
+          </p>
+        </div>
+
+        <div class="timeline-track reveal-on-scroll">
+
+          <div class="timeline-step">
+            <div class="step-node">01</div>
+            <div class="step-info">
+              <h3 class="step-title">DISCOVER</h3>
+              <p class="step-desc">Meet the game and understand the <span class="highlight-gold-subtle">core
+                  fundamentals</span> and geometries.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-node">02</div>
+            <div class="step-info">
+              <h3 class="step-title">LEARN</h3>
+              <p class="step-desc">Build board awareness, <span class="highlight-gold-subtle">piece synergy</span>, and
+                foundational tactics.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-node">03</div>
+            <div class="step-info">
+              <h3 class="step-title">STRATEGIZE</h3>
+              <p class="step-desc">Develop <span class="highlight-gold-subtle">foresight</span>, deep planning, and
+                critical decision-making.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-node">04</div>
+            <div class="step-info">
+              <h3 class="step-title">COMPETE</h3>
+              <p class="step-desc">Apply strategic skills through games and <span
+                  class="highlight-gold-subtle">supportive challenges</span>.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-node">05</div>
+            <div class="step-info">
+              <h3 class="step-title">GROW</h3>
+              <p class="step-desc">Build <span class="highlight-gold-subtle">unwavering confidence</span>, mental
+                discipline, and leadership.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section" id="experience">
+      <div class="home-container">
+
+        <div class="header-centered reveal-on-scroll">
+          <div class="section-eyebrow">
+            <span class="eyebrow-ornament" aria-hidden="true">
+              <svg class="lucide-ornament" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+            </span>
+            <span>The Camp Experience</span>
+          </div>
+          <h2 class="section-title">A SUMMER BUILT AROUND <span class="highlight-gold">STRATEGIC THINKING</span>.</h2>
+          <p class="section-subtitle">
+            Every day blends <span class="highlight-gold-subtle">intellectual rigor</span> with vibrant social
+            discovery, <span class="highlight-gold-subtle">expert mentorship</span>, and camaraderie.
+          </p>
+        </div>
+
+        <div class="experience-grid">
+
+          <div class="exp-card reveal-on-scroll">
+            <div class="exp-icon-box" aria-hidden="true">
+              <svg class="exp-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 2v7.31L4.1 19.33A2 2 0 0 0 5.8 22h12.4a2 2 0 0 0 1.7-2.67L14 9.31V2" />
+                <path d="M8.5 2h7" />
+                <path d="M7 16h10" />
+              </svg>
+            </div>
+            <h3 class="exp-title">STRATEGY LAB</h3>
+            <p class="exp-desc">
+              Hands-on chess challenges, interactive puzzles, and <span class="highlight-gold-subtle">tactile endgame
+                labs</span> designed to make strategic thinking deeply thrilling and intuitive.
+            </p>
+          </div>
+
+          <div class="exp-card reveal-on-scroll delay-1">
+            <div class="exp-icon-box" aria-hidden="true">
+              <svg class="exp-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+                <path d="M22 10v6" />
+                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+              </svg>
+            </div>
+            <h3 class="exp-title">COACH-LED LEARNING</h3>
+            <p class="exp-desc">
+              Small-group mentorship capped at 6:1 ratios, ensuring <span class="highlight-gold-subtle">personalized
+                feedback</span>, patience, and bespoke intellectual milestones for each child.
+            </p>
+          </div>
+
+          <div class="exp-card reveal-on-scroll delay-2">
+            <div class="exp-icon-box" aria-hidden="true">
+              <svg class="exp-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+                <path d="M4 22h16" />
+                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+              </svg>
+            </div>
+            <h3 class="exp-title">PLAY &amp; COMPETE</h3>
+            <p class="exp-desc">
+              Friendly blitz arenas, team match strategies, and encouraging mini-tournaments that build <span
+                class="highlight-gold-subtle">graceful sportsmanship</span> and real confidence.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section section-alt" id="instructors">
+      <div class="home-container">
+
+        <div class="header-centered reveal-on-scroll">
+          <div class="section-eyebrow">
+            <span class="eyebrow-ornament" aria-hidden="true">
+              <svg class="lucide-ornament" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="6" />
+                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+              </svg>
+            </span>
+            <span>Meet the Coaches</span>
+          </div>
+          <h2 class="section-title">GUIDANCE FROM PEOPLE WHO <span class="highlight-gold">PLAY TO THINK</span>.</h2>
+          <p class="section-subtitle">
+            Our faculty combines <span class="highlight-gold-subtle">championship-caliber credentials</span> with deep
+            pedagogical empathy and <span class="highlight-gold-subtle">child-development expertise</span>.
+          </p>
+        </div>
+
+        <div class="coaches-grid">
+
+          <article class="coach-card reveal-on-scroll">
+            <div class="coach-img-wrapper">
+              <img src="assets/coach-01.jpg" alt="Coach Arjun, FIDE Rated Coach" class="coach-img" loading="lazy">
+              <span class="coach-experience-badge">10+ Years Experience</span>
+            </div>
+            <div class="coach-details">
+              <h3 class="coach-name">COACH ARJUN</h3>
+              <span class="coach-title">FIDE Rated Coach</span>
+              <p class="coach-credential">
+                Former state champion dedicated to developing <span class="highlight-gold-subtle">spatial
+                  intuition</span>, calm tactical calculation, and <span class="highlight-gold-subtle">endgame
+                  mastery</span> in young scholars.
+              </p>
+            </div>
+          </article>
+
+          <article class="coach-card reveal-on-scroll delay-1">
+            <div class="coach-img-wrapper">
+              <img src="assets/coach-02.jpg" alt="Coach Maya, National Chess Trainer" class="coach-img" loading="lazy">
+              <span class="coach-experience-badge">8+ Years Experience</span>
+            </div>
+            <div class="coach-details">
+              <h3 class="coach-name">COACH MAYA</h3>
+              <span class="coach-title">National Chess Trainer</span>
+              <p class="coach-credential">
+                Specializes in <span class="highlight-gold-subtle">youth psychology</span> and beginner foundations,
+                creating a supportive, joyful environment where young minds flourish.
+              </p>
+            </div>
+          </article>
+
+          <article class="coach-card reveal-on-scroll delay-2">
+            <div class="coach-img-wrapper">
+              <img src="assets/coach-03.jpg" alt="Coach Rahul, Tournament Coach" class="coach-img" loading="lazy">
+              <span class="coach-experience-badge">12+ Years Experience</span>
+            </div>
+            <div class="coach-details">
+              <h3 class="coach-name">COACH RAHUL</h3>
+              <span class="coach-title">Tournament Coach</span>
+              <p class="coach-credential">
+                Senior tournament strategist who prepares junior players for <span
+                  class="highlight-gold-subtle">competitive FIDE ratings</span>, rapid clocks, and <span
+                  class="highlight-gold-subtle">opening theory</span>.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section" id="testimonials">
+      <div class="home-container">
+
+        <div class="header-centered reveal-on-scroll">
+          <div class="section-eyebrow">
+            <span class="eyebrow-ornament" aria-hidden="true">
+              <svg class="lucide-ornament" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                <path d="M8 12a2 2 0 0 0 2-2V8H8" />
+                <path d="M14 12a2 2 0 0 0 2-2V8h-2" />
+              </svg>
+            </span>
+            <span>Parent Experiences</span>
+          </div>
+          <h2 class="section-title">WHAT FAMILIES <span class="highlight-gold">ARE SAYING</span>.</h2>
+          <p class="section-subtitle">
+            Reflections from parents whose children have experienced the <span class="highlight-gold-subtle">cognitive
+              and personal transformation</span> at Stratagem.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+
+          <div class="testimonial-card reveal-on-scroll">
+            <div class="card-header-row">
+              <div class="quote-mark" aria-hidden="true">
+                <svg class="quote-lucide" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm11 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+                </svg>
+              </div>
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              </div>
+            </div>
+            <p class="quote-text">
+              Stratagem transformed how Leo approaches schoolwork and puzzles. He doesn't rush anymore—he pauses,
+              evaluates his options, and moves with <span class="highlight-gold-subtle">calm certainty</span>.
+            </p>
+            <div class="quote-author">
+              <span class="author-name">Elena Vance</span>
+              <span class="author-meta">Parent of 7-Year-Old &bull; Chess Foundations</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal-on-scroll delay-1">
+            <div class="card-header-row">
+              <div class="quote-mark" aria-hidden="true">
+                <svg class="quote-lucide" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm11 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+                </svg>
+              </div>
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              </div>
+            </div>
+            <p class="quote-text">
+              The coaches treat the children with incredible intellectual respect. Maya learned not just to win
+              gracefully, but to <span class="highlight-gold-subtle">analyze her defeats without fear</span>.
+            </p>
+            <div class="quote-author">
+              <span class="author-name">David Sterling</span>
+              <span class="author-meta">Parent of 10-Year-Old &bull; Strategy Builders</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal-on-scroll delay-2">
+            <div class="card-header-row">
+              <div class="quote-mark" aria-hidden="true">
+                <svg class="quote-lucide" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm11 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+                </svg>
+              </div>
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              </div>
+            </div>
+            <p class="quote-text">
+              A world-class camp experience. The balance of <span class="highlight-gold-subtle">rigorous FIDE
+                strategy</span> with playful camaraderie is unlike any other youth program in the country.
+            </p>
+            <div class="quote-author">
+              <span class="author-name">Dr. Priya Nair</span>
+              <span class="author-meta">Parent of 13-Year-Old &bull; Advanced Players</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta-section" id="cta">
+      <div class="home-container">
+        <div class="cta-box reveal-on-scroll">
+          <div class="cta-emblem" aria-hidden="true">
+            <svg class="cta-lucide-crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.735H5.81a1 1 0 0 1-.957-.735L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" />
+              <path d="M5 21h14" />
+            </svg>
+          </div>
+          <div class="section-eyebrow">
+            <span>Summer 2026</span>
+          </div>
+          <h2 class="cta-title">READY FOR THEIR <span class="highlight-gold">NEXT MOVE</span>?</h2>
+          <p class="cta-desc">
+            Give your child a summer of <span class="highlight-gold-subtle">strategy</span>, <span
+              class="highlight-gold-subtle">confidence</span>, curiosity, and <span
+              class="highlight-gold-subtle">meaningful growth</span>. Limited to small cohorts for personalized
+            mentorship.
+          </p>
+          <div class="cta-actions">
+            <a href="#programs" class="cta-btn-gold">
+              <span>Explore Programs</span>
+              <svg class="btn-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 3L11 8L6 13" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="contact.html" class="cta-btn-outline">
+              <span>Talk to Our Team</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="strata-footer" id="strataFooter">
+
+    <div class="footer-top-accent">
+      <div class="accent-line"></div>
+      <div class="accent-chess-emblem" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L15 8H9L12 2Z" fill="#C6A15B" />
+          <circle cx="12" cy="10" r="1.8" fill="#E4C98A" />
+          <path d="M7 14C7 11.5 9 10 12 10C15 10 17 11.5 17 14C17 16 15.5 17.5 14 18H10C8.5 17.5 7 16 7 14Z"
+            fill="#C6A15B" />
+          <rect x="6" y="19" width="12" height="3" rx="1.5" fill="#E4C98A" />
+        </svg>
+      </div>
+      <div class="accent-line"></div>
+    </div>
+
+    <div class="strata-footer-container">
+
+      <div class="footer-grid">
+
+        <div class="footer-col col-brand">
+          <a href="index.html" class="footer-brand" aria-label="Stratagem Kids Chess Academy Home">
+            <div class="brand-crest-wrapper">
+              <img src="assets/knight-logo.png" alt="Stratagem Chess Academy Knight Logo" class="brand-crest">
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-title">STRATAGEM</span>
+              <span class="brand-tagline">CHESS &amp; STRATEGY ACADEMY</span>
+            </div>
+          </a>
+
+          <p class="brand-paratext">
+            Nurturing young minds through the venerable tradition of chess. We cultivate <span
+              class="highlight-gold-subtle">tactical foresight</span>, resilient critical thinking, and <span
+              class="highlight-gold-subtle">refined sportsmanship</span> for the next generation of visionary thinkers.
+          </p>
+
+          <div class="social-links-wrapper" aria-label="Social media channels">
+
+            <a href="https://instagram.com" class="social-icon-btn" aria-label="Follow us on Instagram" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+
+            <a href="https://linkedin.com" class="social-icon-btn" aria-label="Connect on LinkedIn" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+
+            <a href="https://youtube.com" class="social-icon-btn" aria-label="Watch our Masterclasses on YouTube"
+              target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+
+            <a href="https://x.com" class="social-icon-btn" aria-label="Follow us on X" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+
+            <a href="https://facebook.com" class="social-icon-btn" aria-label="Visit our Facebook Community"
+              target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col col-programs">
+          <h3 class="col-heading">
+            <span class="heading-ornament" aria-hidden="true">
+              <svg class="footer-heading-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+              </svg>
+            </span>
+            Camp Programs
+          </h3>
+          <ul class="footer-nav-list">
+            <li>
+              <a href="programs-details.html?program=young-pawns" class="footer-nav-link">
+                <span class="link-label">Young Pawns</span>
+                <span class="link-meta">Ages 5–7</span>
+              </a>
+            </li>
+            <li>
+              <a href="programs-details.html?program=knight-tacticians" class="footer-nav-link">
+                <span class="link-label">Knight Tacticians</span>
+                <span class="link-meta">Ages 8–11</span>
+              </a>
+            </li>
+            <li>
+              <a href="programs-details.html?program=grandmaster-scholars" class="footer-nav-link">
+                <span class="link-label">Grandmaster Scholars</span>
+                <span class="link-meta">Ages 12–16</span>
+              </a>
+            </li>
+            <li>
+              <a href="programs-details.html?program=strategy-masterclass" class="footer-nav-link">
+                <span class="link-label">Masterclass Strategy Immersion</span>
+              </a>
+            </li>
+            <li>
+              <a href="programs-details.html?program=fide-tournament-prep" class="footer-nav-link">
+                <span class="link-label">FIDE Tournament Prep</span>
+              </a>
+            </li>
+            <li>
+              <a href="programs-details.html?program=weekend-blitz" class="footer-nav-link">
+                <span class="link-label">Summer Blitz &amp; Problem Solving</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col col-portals">
+          <h3 class="col-heading">
+            <span class="heading-ornament" aria-hidden="true">
+              <svg class="footer-heading-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </span>
+            Academy Portals
+          </h3>
+          <ul class="footer-nav-list">
+            <li>
+              <a href="coming-soon.html" class="footer-nav-link">
+                <span class="link-label">Coming Soon</span>
+                <span class="status-pill status-upcoming">Launch</span>
+              </a>
+            </li>
+            <li>
+              <a href="404.html" class="footer-nav-link">
+                <span class="link-label">404 Error Page</span>
+                <span class="status-pill status-demo">Interactive</span>
+              </a>
+            </li>
+            <li>
+              <a href="dashboard.html" class="footer-nav-link highlight-link">
+                <span class="link-label">Parent Dashboard</span>
+                <span class="status-pill status-portal">Portal</span>
+              </a>
+            </li>
+            <li>
+              <a href="signup.html" class="footer-nav-link highlight-link">
+                <span class="link-label">Sign Up / Register</span>
+                <span class="status-pill status-register">Enroll</span>
+              </a>
+            </li>
+            <li>
+              <a href="login.html" class="footer-nav-link">
+                <span class="link-label">Parent Login</span>
+                <span class="status-pill status-portal">Access</span>
+              </a>
+            </li>
+            <li>
+              <a href="index.html#curriculum" class="footer-nav-link">
+                <span class="link-label">FIDE Accredited Syllabus</span>
+              </a>
+            </li>
+            <li>
+              <a href="index.html#parent-faq" class="footer-nav-link">
+                <span class="link-label">Tuition &amp; Financial Aid FAQ</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col col-contact">
+          <h3 class="col-heading">
+            <span class="heading-ornament" aria-hidden="true">
+              <svg class="footer-heading-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5a9 9 0 0 1 18 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" />
+              </svg>
+            </span>
+            Camp Concierge
+          </h3>
+
+          <div class="contact-card-list">
+
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Academy Campus</span>
+                <address class="contact-value">
+                  742 Grandmaster Boulevard, Suite 500<br>
+                  Silicon Valley, CA 94025
+                </address>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Admissions &amp; Inquiries</span>
+                <a href="mailto:admissions@stratagemchess.com" class="contact-value contact-link">
+                  admissions@stratagemchess.com
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Direct Concierge</span>
+                <a href="tel:+18005432437" class="contact-value contact-link">
+                  +1 (800) 543-CHESS
+                </a>
+                <span class="contact-sub">+1 (415) 890-2437</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Academy &amp; Concierge Timings</span>
+                <span class="contact-value">
+                  Mon – Fri: 8:00 AM – 6:00 PM PST<br>
+                  Sat: 9:00 AM – 2:00 PM PST
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+
+        <div class="bottom-legal-copy">
+          <p class="copyright-text">
+            &copy; 2026 Stratagem Kids Chess &amp; Strategy Summer Camp. All Rights Reserved.
+          </p>
+          <p class="accreditation-text">
+            FIDE Certified Grandmaster Mentorship &bull; SafeSport Certified &bull; Official Youth Strategy Partner
+          </p>
+        </div>
+
+        <div class="bottom-utility-links">
+          <a href="index.html#privacy" class="utility-link">Privacy Policy</a>
+          <span class="sep-dot">&bull;</span>
+          <a href="index.html#terms" class="utility-link">Terms of Enrollment</a>
+          <span class="sep-dot">&bull;</span>
+          <a href="index.html#safeguarding" class="utility-link">Child Safeguarding</a>
+        </div>
+
+        <button class="scroll-top-btn" id="scrollTopBtn" type="button" aria-label="Return to top of page"
+          title="Scroll to top">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M10 15V5M5 10l5-5 5 5" />
+          </svg>
+        </button>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

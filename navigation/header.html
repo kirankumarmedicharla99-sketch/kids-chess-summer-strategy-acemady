@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stratagem Kids Chess Academy - Header Navigation</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="header.css">
+  <script defer src="header.js"></script>
+</head>
+<body>
+
+  <header class="strata-header" id="strataHeader">
+    <div class="strata-header-glow"></div>
+    <div class="strata-header-container">
+
+      <a href="index.html" class="strata-brand" aria-label="Stratagem Kids Chess & Strategy Academy Home">
+        <div class="brand-crest-wrapper">
+          <img src="../assets/knight-logo.png" alt="Stratagem Chess Academy Knight Logo" class="brand-crest">
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">STRATAGEM</span>
+          <span class="brand-tagline">CHESS &amp; STRATEGY ACADEMY</span>
+        </div>
+      </a>
+
+      <nav class="strata-nav-desktop" id="desktopNav" aria-label="Main Navigation">
+        <ul class="nav-list">
+
+          <li class="nav-item has-dropdown" id="navHomeDropdown">
+            <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              <span class="nav-text">Home</span>
+              <svg class="dropdown-chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="dropdown-menu">
+              <div class="dropdown-accent-line"></div>
+              <ul class="dropdown-list">
+                <li>
+                  <a href="index.html" class="dropdown-item">
+                    <div class="dropdown-icon-box">
+                      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 8.5L10 3L17 8.5V17H3V8.5Z" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 17V11H12V17" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                    <div class="dropdown-content">
+                      <span class="dropdown-title">Home 1 — Academy Overview</span>
+                      <span class="dropdown-desc">Grandmaster coaches, curriculum & campus philosophy</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="home2.html" class="dropdown-item highlighted">
+                    <div class="dropdown-icon-box">
+                      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M10 2L12.5 7L18 8L14 12L15 17.5L10 15L5 17.5L6 12L2 8L7.5 7L10 2Z" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                    <div class="dropdown-content">
+                      <span class="dropdown-title">
+                        Home 2 — Summer Camp Edition
+                        <span class="dropdown-badge">Exclusive</span>
+                      </span>
+                      <span class="dropdown-desc">Intensive camps, tactics workshops & tournament arenas</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="instructors.html" class="nav-link">
+              <span class="nav-text">Instructors</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="programs.html" class="nav-link">
+              <span class="nav-text">Programs</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="schedule.html" class="nav-link">
+              <span class="nav-text">Schedule</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">
+              <span class="nav-text">Contact</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="index.html#dashboard" class="nav-link">
+              <span class="nav-text">Dashboard</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="strata-controls">
+
+        <button class="control-btn theme-toggle-btn circle-btn" id="themeToggleBtn" type="button" aria-label="Toggle visual theme between Light and Dark mode" title="Toggle Light / Dark Mode">
+          <div class="icon-toggle-wrapper">
+
+            <svg class="theme-icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+
+            <svg class="theme-icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </div>
+        </button>
+
+        <button class="control-btn rtl-toggle-btn circle-btn" id="rtlToggleBtn" type="button" aria-label="Toggle reading direction between LTR and RTL" title="Toggle RTL (Right-to-Left)">
+          <span class="rtl-label" id="rtlLabel">RTL</span>
+        </button>
+
+        <a href="index.html#login" class="strata-login-btn desktop-only" id="headerLoginBtn" aria-label="Login">
+          <span class="btn-shimmer" aria-hidden="true"></span>
+          <span class="btn-text">Login</span>
+        </a>
+
+        <button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open mobile navigation menu" aria-controls="mobileDrawer" aria-expanded="false">
+          <span class="hamburger-box">
+            <span class="hamburger-line line-1"></span>
+            <span class="hamburger-line line-2"></span>
+            <span class="hamburger-line line-3"></span>
+          </span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <div class="strata-drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <aside class="strata-mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <span class="drawer-brand-title">STRATAGEM</span>
+        <span class="drawer-brand-sub">KIDS CHESS &amp; STRATEGY</span>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" type="button" aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <nav class="mobile-nav-menu">
+        <ul class="mobile-nav-list">
+
+          <li class="mobile-nav-item mobile-accordion open" id="mobileHomeAccordion">
+            <button class="mobile-nav-link accordion-toggle" aria-expanded="true">
+              <span class="mobile-link-text">Home</span>
+              <svg class="accordion-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 6L8 10L12 6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="accordion-panel">
+              <a href="index.html" class="mobile-sublink">
+                <span class="sublink-dot"></span>
+                <span class="sublink-title">Home 1 — Academy Overview</span>
+              </a>
+              <a href="home2.html" class="mobile-sublink active">
+                <span class="sublink-dot"></span>
+                <span class="sublink-title">Home 2 — Summer Camp Edition</span>
+                <span class="sublink-tag">Featured</span>
+              </a>
+            </div>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="instructors.html" class="mobile-nav-link">
+              <span class="mobile-link-text">Instructors</span>
+            </a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="programs.html" class="mobile-nav-link">
+              <span class="mobile-link-text">Programs</span>
+            </a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="schedule.html" class="mobile-nav-link">
+              <span class="mobile-link-text">Schedule</span>
+            </a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="contact.html" class="mobile-nav-link">
+              <span class="mobile-link-text">Contact</span>
+            </a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="index.html#dashboard" class="mobile-nav-link">
+              <span class="mobile-link-text">Dashboard</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="drawer-footer-actions">
+        <a href="index.html#login" class="strata-login-btn mobile-drawer-login" id="drawerLoginBtn">
+          <span>Login</span>
+        </a>
+
+        <div class="drawer-credentials-badge">
+          <span class="cred-icon" aria-hidden="true">
+            <svg class="cred-lucide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+            </svg>
+          </span>
+          <span class="cred-text">FIDE Certified Grandmaster Mentors &bull; Summer 2026</span>
+        </div>
+      </div>
+
+    </div>
+
+  </aside>
+
+  <main style="padding: 120px 24px 60px; max-width: 1200px; margin: 0 auto; text-align: center; font-family: var(--font-body, sans-serif);">
+    <span style="display: inline-block; padding: 6px 16px; border-radius: 99px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; background: var(--warm-neutral); color: var(--primary-dark); border: 1px solid var(--border-light); margin-bottom: 20px;">
+      Standalone Header Preview
+    </span>
+    <h1 style="font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3.2rem); color: var(--primary-dark); margin-bottom: 16px; font-weight: 700; letter-spacing: -0.02em;">
+      Stratagem Kids Chess & Strategy Academy
+    </h1>
+    <p style="max-width: 680px; margin: 0 auto 32px; color: var(--muted-dark-text); font-size: 1.1rem; line-height: 1.7;">
+      Test the luxury navigation bar above: try hovering the <strong>Home</strong> menu to inspect <em>Home 2</em>, toggling between <strong>Light and Dark</strong> modes, switching to <strong>RTL mode</strong>, or resizing to mobile to preview the responsive slide-over drawer!
+    </p>
+  </main>
+
+</body>
+</html>

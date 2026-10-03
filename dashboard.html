@@ -1,0 +1,1495 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent Portal — Stratagem Kids Chess &amp; Strategy Academy</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dash-body">
+
+  <div class="dash-shell" id="dashShell">
+
+    <div class="dash-sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+    <aside class="dash-sidebar" id="dashSidebar" aria-label="Portal Navigation">
+      <div class="sidebar-inner">
+
+        <div class="sidebar-brand-wrapper">
+          <a href="index.html" class="sidebar-brand" title="Stratagem Chess Academy Home">
+            <div class="brand-crest-wrapper">
+              <img src="assets/knight-logo.png" alt="Stratagem Chess Academy Knight Logo" class="brand-crest">
+            </div>
+            <div class="sidebar-brand-text">
+              <span class="brand-title">STRATAGEM</span>
+              <span class="brand-portal-pill">PARENT PORTAL</span>
+            </div>
+          </a>
+
+          <button class="sidebar-close-btn" id="sidebarCloseBtn" aria-label="Close navigation drawer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="sidebar-parent-profile">
+          <div class="profile-avatar-wrap">
+            <img src="assets/coach-03.jpg" alt="Alex Morgan Avatar" class="profile-avatar-img">
+            <span class="profile-status-indicator" title="Active guardian account"></span>
+          </div>
+          <div class="profile-meta">
+            <span class="profile-name">Alex Morgan</span>
+            <span class="profile-role">alex.morgan@email.com</span>
+            <span class="profile-tag">Primary Guardian</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Main Portal Sections">
+          <ul class="nav-list" role="menubar">
+
+            <li class="nav-item" role="none">
+              <button class="nav-link active" data-view="overview" role="menuitem" aria-current="page">
+                <span class="nav-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+                    <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+                    <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+                    <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+                  </svg>
+                </span>
+                <span class="nav-text">Overview</span>
+              </button>
+            </li>
+
+            <li class="nav-item" role="none">
+              <button class="nav-link" data-view="children" role="menuitem">
+                <span class="nav-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </span>
+                <span class="nav-text">My Children</span>
+                <span class="nav-badge" title="2 children enrolled">2</span>
+              </button>
+            </li>
+
+            <li class="nav-item" role="none">
+              <button class="nav-link" data-view="schedule" role="menuitem">
+                <span class="nav-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                </span>
+                <span class="nav-text">Schedule</span>
+                <span class="nav-dot" title="Active session scheduled today"></span>
+              </button>
+            </li>
+
+            <li class="nav-item" role="none">
+              <button class="nav-link" data-view="gallery" role="menuitem">
+                <span class="nav-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <polyline points="21 15 16 10 5 21"></polyline>
+                  </svg>
+                </span>
+                <span class="nav-text">Gallery</span>
+              </button>
+            </li>
+
+            <li class="nav-item" role="none">
+              <button class="nav-link" data-view="payments" role="menuitem">
+                <span class="nav-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                    <line x1="2" y1="10" x2="22" y2="10"></line>
+                  </svg>
+                </span>
+                <span class="nav-text">Payments</span>
+                <span class="nav-alert-chip" title="1 pending invoice">Due</span>
+              </button>
+            </li>
+
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="index.html" class="sidebar-website-btn" title="Back to Stratagem public website">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            <span>Back to Website</span>
+          </a>
+
+          <button class="sidebar-logout-btn" id="sidebarLogoutBtn" aria-label="Log out of parent portal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline points="16 17 21 12 16 7"></polyline>
+              <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+            <span>Sign Out</span>
+          </button>
+        </div>
+
+      </div>
+    </aside>
+
+    <main class="dash-workspace" id="dashWorkspace">
+
+      <header class="dash-header" id="dashHeader">
+        <div class="dash-header-inner">
+
+          <div class="header-left">
+            <button class="header-mobile-toggle" id="headerMobileToggle" aria-label="Open portal navigation">
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+            </button>
+
+            <div class="header-titles">
+              <div class="header-greeting-line">
+                <span class="header-welcome-badge" id="headerWelcomeBadge">Welcome back, Alex! ♟️</span>
+                <span class="header-demo-tag">PROTOTYPE PORTAL</span>
+              </div>
+              <h1 class="header-page-title" id="headerPageTitle">Overview</h1>
+              <p class="header-page-subtitle" id="headerPageSubtitle">Here's your family's chess camp activity, progress, and upcoming schedule at a glance.</p>
+            </div>
+          </div>
+
+          <div class="header-right">
+
+            <button class="header-action-btn rtl-btn" id="rtlToggleBtn" aria-label="Toggle Right-to-Left Layout" title="Toggle RTL / LTR layout">
+              <span class="rtl-text-label" id="rtlLabel">RTL</span>
+            </button>
+
+            <button class="header-action-btn theme-btn" id="themeToggleBtn" aria-label="Switch Theme Mode" title="Toggle Light / Dark mode">
+              <span class="theme-icon sun-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+              </span>
+              <span class="theme-icon moon-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+              </span>
+            </button>
+
+            <div class="header-dropdown-wrap">
+              <button class="header-action-btn notif-btn" id="notifBtn" aria-expanded="false" aria-haspopup="true" aria-label="View notifications">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                </svg>
+                <span class="notif-badge-count" id="notifBadge">3</span>
+              </button>
+
+              <div class="dash-dropdown-panel notif-dropdown" id="notifDropdown" role="dialog" aria-label="Notifications Panel">
+                <div class="dropdown-header">
+                  <div class="dropdown-title-group">
+                    <span class="dropdown-title">Notifications</span>
+                    <span class="dropdown-count-tag" id="notifCountTag">3 New</span>
+                  </div>
+                  <button class="dropdown-mark-read-btn" id="markAllReadBtn">Mark all as read</button>
+                </div>
+                <div class="notif-list" id="notifList">
+
+                </div>
+                <div class="dropdown-footer">
+                  <span class="notif-footer-note">Simulated Guardian Notifications</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="header-dropdown-wrap">
+              <button class="header-profile-btn" id="profileBtn" aria-expanded="false" aria-haspopup="true" aria-label="Account menu for Alex Morgan">
+                <img src="assets/coach-03.jpg" alt="" class="header-avatar-img">
+                <span class="header-profile-name">Alex M.</span>
+                <svg class="chevron-icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+
+              <div class="dash-dropdown-panel profile-dropdown" id="profileDropdown" role="menu">
+                <div class="profile-card-dropdown">
+                  <div class="profile-card-avatar">
+                    <img src="assets/coach-03.jpg" alt="Alex Morgan">
+                  </div>
+                  <div class="profile-card-text">
+                    <span class="p-card-name">Alex Morgan</span>
+                    <span class="p-card-email">alex.morgan@email.com</span>
+                    <span class="p-card-id">Guardian ID: #GRD-4821</span>
+                  </div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <ul class="profile-menu-links">
+                  <li>
+                    <button class="profile-link-item" data-action="open-account-modal">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                      </svg>
+                      <span>My Account Details</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="profile-link-item" data-action="open-preferences-modal">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                      </svg>
+                      <span>Notification Preferences</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="profile-link-item" data-action="open-support-modal">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                      </svg>
+                      <span>Help &amp; Academy Support</span>
+                    </button>
+                  </li>
+                </ul>
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-logout-wrap">
+                  <button class="profile-link-logout" id="profileLogoutBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                      <polyline points="16 17 21 12 16 7"></polyline>
+                      <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    <span>Sign Out</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </header>
+
+      <div class="dash-content-area" id="dashContentArea">
+
+        <section class="dash-view active" id="view-overview" data-view="overview" aria-labelledby="headerPageTitle">
+
+          <div class="welcome-banner-card">
+            <div class="banner-ambient-glow" aria-hidden="true"></div>
+            <div class="banner-content">
+              <div class="banner-eyebrow">
+                <span class="eyebrow-dot"></span>
+                <span>SUMMER COHORT 2026 ACTIVE</span>
+              </div>
+              <h2 class="banner-title">Welcome back, <span class="highlight-gold">Alex!</span></h2>
+              <p class="banner-desc">
+                Leo and Maya are advancing steadily in their <span class="highlight-gold-subtle">tactical evaluations</span>. Leo has 2 active sessions scheduled this week with GM Vance, and 1 invoice is pending review.
+              </p>
+              <div class="banner-actions">
+                <button class="dash-btn-gold" data-action="open-enroll-modal">
+                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10 4v12M4 10h12" />
+                  </svg>
+                  <span>Enroll in a Camp</span>
+                </button>
+                <button class="dash-btn-outline" data-action="navigate-view" data-target="schedule">
+                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="14" height="13" rx="2" />
+                    <line x1="3" y1="8" x2="17" y2="8" />
+                  </svg>
+                  <span>View Schedule</span>
+                </button>
+              </div>
+            </div>
+            <div class="banner-graphic-wrap">
+              <img src="assets/home2-hero.jpg" alt="Artisan Chess Salon" class="banner-graphic-img">
+              <div class="banner-badge-floating">
+                <span class="f-badge-val">78%</span>
+                <span class="f-badge-lbl">Tactical Mastery</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="metrics-grid">
+
+            <div class="metric-card">
+              <div class="metric-card-top">
+                <span class="metric-label">Enrolled Children</span>
+                <div class="metric-icon-box gold">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-value-row">
+                <span class="metric-value">2</span>
+                <span class="metric-trend positive" title="Active summer camp enrollments">
+                  <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 3.5l4.5 5.5h-9L8 3.5z"/></svg>
+                  Active
+                </span>
+              </div>
+              <p class="metric-subtext">Leo (Age 9) &bull; Maya (Age 7)</p>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-card-top">
+                <span class="metric-label">Active Sessions</span>
+                <div class="metric-icon-box teal">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-value-row">
+                <span class="metric-value">3</span>
+                <span class="metric-trend neutral">Next: Tomorrow</span>
+              </div>
+              <p class="metric-subtext">2 this week &bull; 1 Saturday tournament</p>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-card-top">
+                <span class="metric-label">Skill Progress</span>
+                <div class="metric-icon-box gold">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                    <polyline points="17 6 23 6 23 12"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-value-row">
+                <span class="metric-value">78%</span>
+                <span class="metric-trend positive">
+                  <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 3.5l4.5 5.5h-9L8 3.5z"/></svg>
+                  +14%
+                </span>
+              </div>
+              <p class="metric-subtext">Tactical rating progression (demo data)</p>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-card-top">
+                <span class="metric-label">Pending Payments</span>
+                <div class="metric-icon-box amber">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                    <line x1="2" y1="10" x2="22" y2="10"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-value-row">
+                <span class="metric-value">$280.00</span>
+                <span class="metric-trend warning">Due July 5</span>
+              </div>
+              <p class="metric-subtext">1 demo invoice outstanding</p>
+            </div>
+
+          </div>
+
+          <div class="charts-primary-grid">
+
+            <div class="dash-card chart-card-large">
+              <div class="card-header-split">
+                <div>
+                  <h3 class="dash-card-title">Chess Skill Progression</h3>
+                  <p class="dash-card-subtitle">Tactical ELO rating and puzzle accuracy over time (illustrative sample)</p>
+                </div>
+                <div class="chart-controls">
+
+                  <select class="chart-select" id="skillChartChildSelect" aria-label="Select Child for Chart">
+                    <option value="leo">Leo Morgan (Intermediate)</option>
+                    <option value="maya">Maya Morgan (Beginner)</option>
+                    <option value="both">Both Children</option>
+                  </select>
+
+                  <div class="chart-time-pills">
+                    <button class="time-pill" data-range="7d">7D</button>
+                    <button class="time-pill active" data-range="30d">30D</button>
+                    <button class="time-pill" data-range="3m">3M</button>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-canvas-container">
+                <canvas id="skillProgressChart"></canvas>
+              </div>
+              <div class="chart-footer-legend">
+                <span class="legend-item"><span class="legend-dot gold"></span> Tactical Accuracy (%)</span>
+                <span class="legend-item"><span class="legend-dot teal"></span> ELO Equivalent Score</span>
+                <span class="legend-note">*Illustrative prototype simulation</span>
+              </div>
+            </div>
+
+            <div class="dash-card chart-card-donut">
+              <div class="card-header-split">
+                <div>
+                  <h3 class="dash-card-title">Tactical Mastery</h3>
+                  <p class="dash-card-subtitle">Skill distribution across disciplines</p>
+                </div>
+              </div>
+              <div class="donut-chart-wrap">
+                <canvas id="skillDonutChart"></canvas>
+              </div>
+              <div class="donut-breakdown-list">
+                <div class="donut-stat-row">
+                  <span class="donut-cat"><span class="cat-dot" style="background:#C6A15B;"></span> Tactics &amp; Forks</span>
+                  <span class="donut-pct">40%</span>
+                </div>
+                <div class="donut-stat-row">
+                  <span class="donut-cat"><span class="cat-dot" style="background:#0E5552;"></span> King Safety &amp; Castling</span>
+                  <span class="donut-pct">25%</span>
+                </div>
+                <div class="donut-stat-row">
+                  <span class="donut-cat"><span class="cat-dot" style="background:#E4C98A;"></span> Endgame Technique</span>
+                  <span class="donut-pct">20%</span>
+                </div>
+                <div class="donut-stat-row">
+                  <span class="donut-cat"><span class="cat-dot" style="background:#526765;"></span> Opening Principles</span>
+                  <span class="donut-pct">15%</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="overview-secondary-grid">
+
+            <div class="dash-card">
+              <div class="card-header-split">
+                <div>
+                  <h3 class="dash-card-title">Weekly Participation</h3>
+                  <p class="dash-card-subtitle">Hours dedicated to core camp training modules</p>
+                </div>
+                <span class="card-chip">This Week</span>
+              </div>
+              <div class="chart-canvas-container">
+                <canvas id="campActivityBarChart"></canvas>
+              </div>
+              <div class="chart-footer-legend">
+                <span class="legend-item"><span class="legend-dot gold"></span> Leo Morgan (5.5 hrs)</span>
+                <span class="legend-item"><span class="legend-dot teal"></span> Maya Morgan (4.0 hrs)</span>
+              </div>
+            </div>
+
+            <div class="dash-card">
+              <div class="card-header-split">
+                <div>
+                  <h3 class="dash-card-title">Upcoming Sessions</h3>
+                  <p class="dash-card-subtitle">Next scheduled training &amp; match workshops</p>
+                </div>
+                <button class="dash-link-btn" data-action="navigate-view" data-target="schedule">View All &rarr;</button>
+              </div>
+
+              <div class="upcoming-sessions-list">
+
+                <div class="upcoming-session-item">
+                  <div class="session-date-box">
+                    <span class="s-month">JUL</span>
+                    <span class="s-day">01</span>
+                  </div>
+                  <div class="session-info">
+                    <div class="session-title-line">
+                      <h4 class="s-title">Tactical Openings &amp; King Safety</h4>
+                      <span class="s-status-badge confirmed">Confirmed</span>
+                    </div>
+                    <p class="s-meta">Leo Morgan &bull; Coach Marcus Vance (GM)</p>
+                    <p class="s-time">Tomorrow &bull; 9:30 AM – 11:30 AM &bull; Salon Alpha</p>
+                  </div>
+                </div>
+
+                <div class="upcoming-session-item">
+                  <div class="session-date-box">
+                    <span class="s-month">JUL</span>
+                    <span class="s-day">03</span>
+                  </div>
+                  <div class="session-info">
+                    <div class="session-title-line">
+                      <h4 class="s-title">Pawn Endgames &amp; Spatial Control</h4>
+                      <span class="s-status-badge confirmed">Confirmed</span>
+                    </div>
+                    <p class="s-meta">Maya Morgan &bull; Coach Elena Rostova (WGM)</p>
+                    <p class="s-time">Thursday &bull; 10:00 AM – 12:00 PM &bull; Room 204</p>
+                  </div>
+                </div>
+
+                <div class="upcoming-session-item">
+                  <div class="session-date-box">
+                    <span class="s-month">JUL</span>
+                    <span class="s-day">05</span>
+                  </div>
+                  <div class="session-info">
+                    <div class="session-title-line">
+                      <h4 class="s-title">Master Blitz &amp; Rapid Strategy Lab</h4>
+                      <span class="s-status-badge scheduled">Scheduled</span>
+                    </div>
+                    <p class="s-meta">Leo Morgan &bull; Coach Marcus Vance (GM)</p>
+                    <p class="s-time">Saturday &bull; 1:00 PM – 3:30 PM &bull; Main Arena</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="overview-triplet-grid">
+
+            <div class="dash-card">
+              <div class="card-header-split">
+                <h3 class="dash-card-title">Children Snapshot</h3>
+                <button class="dash-link-btn" data-action="navigate-view" data-target="children">Manage &rarr;</button>
+              </div>
+              <div class="snapshot-child-card">
+                <div class="snap-avatar-row">
+                  <div class="snap-avatar">LM</div>
+                  <div class="snap-details">
+                    <h4 class="snap-name">Leo Morgan</h4>
+                    <span class="snap-level">Intermediate Strategist &bull; Age 9</span>
+                  </div>
+                </div>
+                <div class="snap-progress-bar-wrap">
+                  <div class="snap-bar-label">
+                    <span>Grandmaster Readiness</span>
+                    <span class="snap-bar-val">82%</span>
+                  </div>
+                  <div class="snap-bar-track">
+                    <div class="snap-bar-fill" style="width: 82%;"></div>
+                  </div>
+                </div>
+                <div class="snap-badge-pill">
+                  <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Recent: Knight's Fork Prodigy</span>
+                </div>
+                <button class="dash-btn-outline w-100 mt-10" data-action="open-child-progress" data-child="leo">
+                  View Full Evaluation
+                </button>
+              </div>
+            </div>
+
+            <div class="dash-card">
+              <div class="card-header-split">
+                <h3 class="dash-card-title">Recent Activity</h3>
+                <span class="card-chip">Past 48h</span>
+              </div>
+              <ul class="activity-timeline">
+                <li class="activity-item">
+                  <div class="act-icon-dot gold">
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.5 6L7 10.5 4.5 8 5.9 6.6 7 7.7l3.1-3.1L11.5 6z"/></svg>
+                  </div>
+                  <div class="act-body">
+                    <p class="act-text"><strong>Leo</strong> completed tactical assessment: <strong>14/15</strong> correct.</p>
+                    <span class="act-time">2 hours ago</span>
+                  </div>
+                </li>
+                <li class="activity-item">
+                  <div class="act-icon-dot teal">
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 2a6 6 0 100 12A6 6 0 008 2zM1 8a7 7 0 1114 0A7 7 0 011 8z"/></svg>
+                  </div>
+                  <div class="act-body">
+                    <p class="act-text"><strong>Maya</strong> unlocked badge <em>"Pawn Shield Explorer"</em>.</p>
+                    <span class="act-time">Yesterday at 4:15 PM</span>
+                  </div>
+                </li>
+                <li class="activity-item">
+                  <div class="act-icon-dot gold">
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H4zm0 1h8a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1z"/></svg>
+                  </div>
+                  <div class="act-body">
+                    <p class="act-text"><strong>54 new photos</strong> added to <em>Summer Grandmaster</em> album.</p>
+                    <span class="act-time">2 days ago</span>
+                  </div>
+                </li>
+                <li class="activity-item">
+                  <div class="act-icon-dot amber">
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3z"/></svg>
+                  </div>
+                  <div class="act-body">
+                    <p class="act-text">Invoice <strong>#INV-2026-084</strong> generated ($280.00).</p>
+                    <span class="act-time">3 days ago</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dash-card">
+              <div class="card-header-split">
+                <h3 class="dash-card-title">Billing Status</h3>
+                <span class="s-status-badge pending">1 Due</span>
+              </div>
+              <div class="payment-snapshot-box">
+                <span class="p-snap-label">Outstanding Tuition</span>
+                <span class="p-snap-amount">$280.00</span>
+                <div class="p-snap-meta">
+                  <div class="p-snap-meta-row">
+                    <span>Invoice:</span>
+                    <strong>#INV-2026-084</strong>
+                  </div>
+                  <div class="p-snap-meta-row">
+                    <span>Due Date:</span>
+                    <strong>July 5, 2026</strong>
+                  </div>
+                  <div class="p-snap-meta-row">
+                    <span>Program:</span>
+                    <span>Grandmaster Tactics Lab</span>
+                  </div>
+                </div>
+                <div class="p-snap-actions">
+                  <button class="dash-btn-gold w-100" data-action="open-pay-modal" data-invoice="INV-2026-084" data-amount="280.00">
+                    Pay Now ($280.00)
+                  </button>
+                  <button class="dash-btn-outline w-100 mt-8" data-action="navigate-view" data-target="payments">
+                    View Invoices
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="dash-view" id="view-children" data-view="children" aria-labelledby="headerPageTitle">
+
+          <div class="section-title-action-bar">
+            <div>
+              <h2 class="view-sec-title">Enrolled Children &amp; <span class="highlight-gold">Progress</span></h2>
+              <p class="view-sec-subtitle">Manage tactical learning profiles, mentor evaluations, and camp program registration.</p>
+            </div>
+            <div class="header-action-group">
+              <button class="dash-btn-outline" data-action="open-enroll-modal">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="10 2 12.5 7.5 18 8.3 14 12.2 15 17.8 10 15 5 17.8 6 12.2 2 8.3 7.5 7.5 10 2" />
+                </svg>
+                <span>Enroll in a Camp</span>
+              </button>
+              <button class="dash-btn-gold" data-action="open-add-child-modal">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="10" y1="4" x2="10" y2="16"></line>
+                  <line x1="4" y1="10" x2="16" y2="10"></line>
+                </svg>
+                <span>Add Child</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="children-cards-grid" id="childrenCardsGrid">
+
+            <div class="child-profile-card" data-child-id="leo">
+              <div class="child-card-header">
+                <div class="child-avatar-box">
+                  <img src="assets/hero-child-chess.jpg" alt="Leo Morgan" class="child-avatar-img">
+                  <span class="child-level-badge">Intermediate</span>
+                </div>
+                <div class="child-primary-meta">
+                  <div class="child-name-row">
+                    <h3 class="child-name">Leo Morgan</h3>
+                    <span class="child-age-pill">Age 9</span>
+                  </div>
+                  <span class="child-elo-tag">Tactical Rating: <strong>1240 ELO (Demo)</strong></span>
+                  <span class="child-program-tag">
+                    <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="4"/></svg>
+                    Grandmaster Tactics &amp; Strategic Openings
+                  </span>
+                </div>
+              </div>
+
+              <div class="child-card-body">
+
+                <div class="child-progress-block">
+                  <div class="cp-header">
+                    <span>Curriculum Mastery</span>
+                    <span class="cp-val">82%</span>
+                  </div>
+                  <div class="cp-track">
+                    <div class="cp-fill" style="width: 82%;"></div>
+                  </div>
+                </div>
+
+                <div class="child-details-grid">
+                  <div class="c-detail-item">
+                    <span class="cd-label">Next Session</span>
+                    <span class="cd-val">Tomorrow, 9:30 AM</span>
+                  </div>
+                  <div class="c-detail-item">
+                    <span class="cd-label">Mentor</span>
+                    <span class="cd-val">GM Marcus Vance</span>
+                  </div>
+                  <div class="c-detail-item">
+                    <span class="cd-label">Puzzle Accuracy</span>
+                    <span class="cd-val">88% (44/50)</span>
+                  </div>
+                  <div class="c-detail-item">
+                    <span class="cd-label">Status</span>
+                    <span class="cd-status active">Active Summer</span>
+                  </div>
+                </div>
+
+                <div class="child-recent-achievement">
+                  <div class="ach-icon">🏅</div>
+                  <div class="ach-text">
+                    <span class="ach-title">Knight's Fork Prodigy</span>
+                    <span class="ach-desc">Solved 15/15 dual-attack puzzles in under 12 minutes.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="child-card-footer">
+                <button class="dash-btn-gold btn-sm" data-action="open-child-progress" data-child="leo">
+                  View Progress
+                </button>
+                <button class="dash-btn-outline btn-sm" data-action="edit-child" data-child="leo">
+                  Edit Profile
+                </button>
+                <button class="dash-btn-outline btn-sm" data-action="filter-schedule-child" data-child="leo">
+                  Schedule
+                </button>
+              </div>
+            </div>
+
+            <div class="child-profile-card" data-child-id="maya">
+              <div class="child-card-header">
+                <div class="child-avatar-box">
+                  <img src="assets/instructor-02.jpg" alt="Maya Morgan" class="child-avatar-img">
+                  <span class="child-level-badge beginner">Beginner</span>
+                </div>
+                <div class="child-primary-meta">
+                  <div class="child-name-row">
+                    <h3 class="child-name">Maya Morgan</h3>
+                    <span class="child-age-pill">Age 7</span>
+                  </div>
+                  <span class="child-elo-tag">Tactical Rating: <strong>890 ELO (Demo)</strong></span>
+                  <span class="child-program-tag">
+                    <svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="4"/></svg>
+                    Young Knights Foundations &amp; Creative Logic
+                  </span>
+                </div>
+              </div>
+
+              <div class="child-card-body">
+
+                <div class="child-progress-block">
+                  <div class="cp-header">
+                    <span>Curriculum Mastery</span>
+                    <span class="cp-val">64%</span>
+                  </div>
+                  <div class="cp-track">
+                    <div class="cp-fill" style="width: 64%;"></div>
+                  </div>
+                </div>
+
+                <div class="child-details-grid">
+                  <div class="c-detail-item">
+                    <span class="cd-label">Next Session</span>
+                    <span class="cd-val">Thursday, 10:00 AM</span>
+                  </div>
+                  <div class="c-detail-item">
+                    <span class="cd-label">Mentor</span>
+                    <span class="cd-val">WGM Elena Rostova</span>
+                  </div>
+                  <div class="c-detail-item">
+                    <span class="cd-label">Puzzle Accuracy</span>
+                    <span class="cd-val">76% (38/50)</span>
+                  </div>
+                  <div class="c-detail-item">
+                    <span class="cd-label">Status</span>
+                    <span class="cd-status active">Active Summer</span>
+                  </div>
+                </div>
+
+                <div class="child-recent-achievement">
+                  <div class="ach-icon">🌟</div>
+                  <div class="ach-text">
+                    <span class="ach-title">Pawn Shield Explorer</span>
+                    <span class="ach-desc">Successfully mastered checkmate using King and Rook.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="child-card-footer">
+                <button class="dash-btn-gold btn-sm" data-action="open-child-progress" data-child="maya">
+                  View Progress
+                </button>
+                <button class="dash-btn-outline btn-sm" data-action="edit-child" data-child="maya">
+                  Edit Profile
+                </button>
+                <button class="dash-btn-outline btn-sm" data-action="filter-schedule-child" data-child="maya">
+                  Schedule
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="sibling-promo-box mt-24">
+            <div class="promo-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <div class="promo-text">
+              <h4>Sibling &amp; Multi-Session Advantage</h4>
+              <p>Enrolling more than one child automatically applies a <strong>15% family tuition reduction</strong> on all additional camp sessions.</p>
+            </div>
+            <button class="dash-btn-gold" data-action="open-enroll-modal">
+              Enroll Another Session
+            </button>
+          </div>
+
+        </section>
+
+        <section class="dash-view" id="view-schedule" data-view="schedule" aria-labelledby="headerPageTitle">
+
+          <div class="section-title-action-bar">
+            <div>
+              <h2 class="view-sec-title">Camp Schedule &amp; <span class="highlight-gold">Activity Timetable</span></h2>
+              <p class="view-sec-subtitle">Review daily tactical workshop timelines, instructor assignments, and practice tournament schedules.</p>
+            </div>
+
+            <div class="schedule-view-switcher">
+              <button class="sched-switch-btn active" data-mode="timeline" id="schedTimelineBtn">
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                </svg>
+                <span>Daily Timeline</span>
+              </button>
+              <button class="sched-switch-btn" data-mode="calendar" id="schedCalendarBtn">
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                </svg>
+                <span>Weekly Calendar</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="dash-card schedule-filter-card mb-20">
+            <div class="sched-filters-row">
+
+              <div class="filter-control-item">
+                <label for="schedChildFilter" class="filter-lbl">Child:</label>
+                <select id="schedChildFilter" class="dash-select">
+                  <option value="all">All Children (Leo &amp; Maya)</option>
+                  <option value="leo">Leo Morgan (Intermediate)</option>
+                  <option value="maya">Maya Morgan (Beginner)</option>
+                </select>
+              </div>
+
+              <div class="filter-control-item">
+                <label for="schedActivityFilter" class="filter-lbl">Activity:</label>
+                <select id="schedActivityFilter" class="dash-select">
+                  <option value="all">All Activity Types</option>
+                  <option value="tactics">Tactics &amp; Lessons</option>
+                  <option value="matches">Practice Matches</option>
+                  <option value="workshop">Strategy Workshops</option>
+                  <option value="recreation">Lunch &amp; Recreation</option>
+                </select>
+              </div>
+
+              <div class="filter-date-navigator">
+                <button class="date-nav-btn" id="schedPrevDayBtn" aria-label="Previous day">
+                  <svg viewBox="0 0 16 16" fill="currentColor"><path d="M11 2L5 8l6 6V2z"/></svg>
+                </button>
+                <span class="active-date-display" id="schedCurrentDateDisplay">Wednesday, July 1, 2026</span>
+                <button class="date-nav-btn" id="schedNextDayBtn" aria-label="Next day">
+                  <svg viewBox="0 0 16 16" fill="currentColor"><path d="M5 2l6 6-6 6V2z"/></svg>
+                </button>
+              </div>
+
+              <button class="dash-link-btn" id="schedClearFiltersBtn">Reset Filters</button>
+
+            </div>
+          </div>
+
+          <div class="schedule-timeline-container" id="scheduleTimelineView">
+            <div class="timeline-day-header">
+              <h3 class="t-day-heading">Today's Camp Itinerary &bull; Full Day Session</h3>
+              <span class="t-day-badge">Session 03 of 10</span>
+            </div>
+
+            <div class="timeline-stream" id="timelineStream">
+
+            </div>
+          </div>
+
+          <div class="schedule-calendar-container" id="scheduleCalendarView" style="display: none;">
+            <div class="calendar-nav-bar">
+              <div class="cal-nav-left">
+                <button class="dash-btn-outline btn-sm" id="calPrevWeekBtn">&larr; Prev Week</button>
+                <span class="cal-week-label" id="calWeekLabel">July 29 – July 5, 2026</span>
+                <button class="dash-btn-outline btn-sm" id="calNextWeekBtn">Next Week &rarr;</button>
+              </div>
+              <button class="dash-btn-gold btn-sm" id="calTodayBtn">Current Week</button>
+            </div>
+
+            <div class="weekly-grid-table" id="weeklyGridTable">
+
+            </div>
+          </div>
+
+        </section>
+
+        <section class="dash-view" id="view-gallery" data-view="gallery" aria-labelledby="headerPageTitle">
+
+          <div class="section-title-action-bar">
+            <div>
+              <h2 class="view-sec-title">Camp Memories &amp; <span class="highlight-gold">Tactical Highlights</span></h2>
+              <p class="view-sec-subtitle">Private visual log of coaching moments, match celebrations, and tactical breakthroughs.</p>
+            </div>
+
+            <div class="gallery-privacy-chip">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Private Guardian Access</span>
+            </div>
+          </div>
+
+          <div class="gallery-featured-banner">
+            <div class="feat-banner-img-wrap">
+              <img src="assets/camp-experience.jpg" alt="Featured Summer Chess Album" class="feat-banner-img">
+              <div class="feat-banner-overlay"></div>
+            </div>
+            <div class="feat-banner-content">
+              <span class="feat-album-pill">FEATURED COHORT ALBUM</span>
+              <h3 class="feat-album-title">Summer Grandmaster Masterclass 2026</h3>
+              <p class="feat-album-desc">
+                High-definition photography capturing focused blindfold exercises, masterclass game reviews, and Leo &amp; Maya's first rated summer tournament rounds.
+              </p>
+              <div class="feat-album-meta">
+                <span>📸 24 Captured Moments</span>
+                <span>&bull;</span>
+                <span>📅 June 24 – July 2, 2026</span>
+                <span>&bull;</span>
+                <span>🏆 Masterclass Cohort Alpha</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-controls-bar mt-20 mb-20">
+            <div class="gallery-album-pills" id="galleryAlbumFilter">
+              <button class="album-pill active" data-album="all">All Photos</button>
+              <button class="album-pill" data-album="tactics">Tactical Training</button>
+              <button class="album-pill" data-album="matches">Tournament Matches</button>
+              <button class="album-pill" data-album="workshops">Strategy Workshops</button>
+              <button class="album-pill" data-album="celebration">Awards &amp; Milestones</button>
+            </div>
+
+            <div class="gallery-search-wrap">
+              <input type="text" id="gallerySearchInput" class="dash-input gallery-search" placeholder="Search activities or tags...">
+            </div>
+          </div>
+
+          <div class="gallery-photo-grid" id="galleryPhotoGrid">
+
+          </div>
+
+        </section>
+
+        <section class="dash-view" id="view-payments" data-view="payments" aria-labelledby="headerPageTitle">
+
+          <div class="section-title-action-bar">
+            <div>
+              <h2 class="view-sec-title">Tuition, Invoices &amp; <span class="highlight-gold">Payments</span></h2>
+              <p class="view-sec-subtitle">Review transparent fee breakdowns, download invoices, and manage session payments securely.</p>
+            </div>
+            <div class="header-action-group">
+              <button class="dash-btn-gold" data-action="open-enroll-modal">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10 4v12M4 10h12" />
+                </svg>
+                <span>Enroll in New Session</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="metrics-grid mb-24">
+
+            <div class="metric-card">
+              <div class="metric-card-top">
+                <span class="metric-label">Total Camp Fees</span>
+                <div class="metric-icon-box gold">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-value-row">
+                <span class="metric-value">$1,450.00</span>
+              </div>
+              <p class="metric-subtext">Cumulative season enrollment</p>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-card-top">
+                <span class="metric-label">Amount Paid</span>
+                <div class="metric-icon-box teal">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-value-row">
+                <span class="metric-value text-success" id="summaryAmountPaid">$1,170.00</span>
+              </div>
+              <p class="metric-subtext">3 invoices successfully settled</p>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-card-top">
+                <span class="metric-label">Outstanding Balance</span>
+                <div class="metric-icon-box amber">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-value-row">
+                <span class="metric-value text-warning" id="summaryOutstanding">$280.00</span>
+              </div>
+              <p class="metric-subtext">1 demo invoice due on July 5</p>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-card-top">
+                <span class="metric-label">Next Due Date</span>
+                <div class="metric-icon-box gold">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                </div>
+              </div>
+              <div class="metric-value-row">
+                <span class="metric-value font-base">July 5, 2026</span>
+              </div>
+              <p class="metric-subtext">Invoice #INV-2026-084</p>
+            </div>
+
+          </div>
+
+          <div class="dash-card">
+
+            <div class="card-header-split">
+              <div>
+                <h3 class="dash-card-title">Payment &amp; Invoice Ledger</h3>
+                <p class="dash-card-subtitle">Transparent record of academy tuition, materials, and discounts</p>
+              </div>
+
+              <div class="table-controls-wrap">
+                <input type="text" id="invoiceSearchInput" class="dash-input table-search" placeholder="Search by invoice #, child or program...">
+                <select id="invoiceStatusFilter" class="dash-select">
+                  <option value="all">All Statuses</option>
+                  <option value="pending">Pending</option>
+                  <option value="paid">Paid</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="dash-table-responsive">
+              <table class="dash-table" id="invoicesTable">
+                <thead>
+                  <tr>
+                    <th>Invoice ID</th>
+                    <th>Child</th>
+                    <th>Program</th>
+                    <th>Date</th>
+                    <th>Due Date</th>
+                    <th>Amount</th>
+                    <th>Method</th>
+                    <th>Status</th>
+                    <th class="text-right">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="invoicesTableBody">
+
+                </tbody>
+              </table>
+            </div>
+
+            <div class="table-footer-notice">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+              </svg>
+              <span>Demo Billing Sandbox: Payments and invoices are simulated illustrative records for review.</span>
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <div class="dash-modal" id="childModal" role="dialog" aria-modal="true" aria-labelledby="childModalTitle">
+    <div class="dash-modal-backdrop" data-action="close-modal"></div>
+    <div class="dash-modal-container">
+      <div class="dash-modal-header">
+        <h3 class="modal-title" id="childModalTitle">Add Child Profile</h3>
+        <button class="modal-close-btn" data-action="close-modal" aria-label="Close modal">&times;</button>
+      </div>
+      <form id="childForm" class="modal-form" novalidate>
+        <input type="hidden" id="childFormMode" value="add">
+        <input type="hidden" id="childFormId" value="">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="childFullName" class="form-label">Full Name <span class="required">*</span></label>
+            <input type="text" id="childFullName" class="dash-input" placeholder="e.g., Samuel Morgan" required>
+            <span class="form-error" id="childNameError">Please enter the child's full name.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="childAge" class="form-label">Age <span class="required">*</span></label>
+            <input type="number" id="childAge" class="dash-input" min="4" max="17" placeholder="e.g., 8" required>
+            <span class="form-error" id="childAgeError">Age must be between 5 and 16.</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="childSkillLevel" class="form-label">Experience Level <span class="required">*</span></label>
+            <select id="childSkillLevel" class="dash-select" required>
+              <option value="">Select Level</option>
+              <option value="Beginner">Beginner (Rules &amp; Piece Movements)</option>
+              <option value="Developing">Developing (Pawn Structure &amp; Simple Tactics)</option>
+              <option value="Intermediate">Intermediate (Rated Play &amp; Tactical Combinations)</option>
+              <option value="Advanced">Advanced (Tournament Preparation &amp; Deep Strategy)</option>
+            </select>
+            <span class="form-error" id="childSkillError">Please select an experience level.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="childProgram" class="form-label">Preferred Program <span class="required">*</span></label>
+            <select id="childProgram" class="dash-select" required>
+              <option value="">Select Camp Program</option>
+              <option value="Grandmaster Tactics &amp; Strategic Openings">Grandmaster Tactics &amp; Strategic Openings</option>
+              <option value="Young Knights Foundations &amp; Creative Logic">Young Knights Foundations &amp; Creative Logic</option>
+              <option value="Masterclass Strategy &amp; Tournament Blitz">Masterclass Strategy &amp; Tournament Blitz</option>
+            </select>
+            <span class="form-error" id="childProgError">Please choose a preferred program.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="childNotes" class="form-label">Parent / Guardian Notes</label>
+          <textarea id="childNotes" class="dash-textarea" rows="3" placeholder="Learning goals, tournament ambitions, or special requirements..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="childEmergencyPhone" class="form-label">Emergency Contact Phone</label>
+          <input type="tel" id="childEmergencyPhone" class="dash-input" placeholder="+1 (555) 019-2834">
+        </div>
+
+        <div class="modal-form-actions">
+          <button type="button" class="dash-btn-outline" data-action="close-modal">Cancel</button>
+          <button type="submit" class="dash-btn-gold">Save Child Profile</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="dash-modal" id="childProgressModal" role="dialog" aria-modal="true" aria-labelledby="progModalTitle">
+    <div class="dash-modal-backdrop" data-action="close-modal"></div>
+    <div class="dash-modal-container modal-lg">
+      <div class="dash-modal-header">
+        <div class="modal-title-group">
+          <h3 class="modal-title" id="progModalTitle">Child Tactical Evaluation</h3>
+          <span class="modal-subtitle" id="progModalSubtitle">Grandmaster Mentorship Evaluation &bull; Summer 2026</span>
+        </div>
+        <button class="modal-close-btn" data-action="close-modal" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body" id="childProgressModalBody">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="dash-modal" id="enrollModal" role="dialog" aria-modal="true" aria-labelledby="enrollModalTitle">
+    <div class="dash-modal-backdrop" data-action="close-modal"></div>
+    <div class="dash-modal-container">
+      <div class="dash-modal-header">
+        <h3 class="modal-title" id="enrollModalTitle">Enroll in a Chess Camp</h3>
+        <button class="modal-close-btn" data-action="close-modal" aria-label="Close modal">&times;</button>
+      </div>
+      <form id="enrollForm" class="modal-form">
+        <div class="form-group">
+          <label for="enrollChildSelect" class="form-label">Select Child <span class="required">*</span></label>
+          <select id="enrollChildSelect" class="dash-select" required>
+            <option value="leo">Leo Morgan (Age 9)</option>
+            <option value="maya">Maya Morgan (Age 7)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="enrollProgramSelect" class="form-label">Choose Academy Program <span class="required">*</span></label>
+          <select id="enrollProgramSelect" class="dash-select" required>
+            <option value="Grandmaster Tactics Lab ($450)" data-price="450">Grandmaster Tactics &amp; Opening Lab — $450.00</option>
+            <option value="Young Knights Foundations ($400)" data-price="400">Young Knights Foundations &amp; Creative Logic — $400.00</option>
+            <option value="Tournament Blitz Bootcamp ($420)" data-price="420">Tournament Blitz &amp; Clock Mastery — $420.00</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="enrollSessionSelect" class="form-label">Select Camp Session Date <span class="required">*</span></label>
+          <select id="enrollSessionSelect" class="dash-select" required>
+            <option value="July 07 - July 11, 2026 (Morning)">July 07 – July 11, 2026 (Morning: 9:00 AM – 1:00 PM)</option>
+            <option value="July 14 - July 18, 2026 (Full Day)">July 14 – July 18, 2026 (Full Day: 9:00 AM – 4:00 PM)</option>
+            <option value="July 21 - July 25, 2026 (Afternoon)">July 21 – July 25, 2026 (Afternoon: 1:00 PM – 5:00 PM)</option>
+          </select>
+        </div>
+
+        <div class="enroll-summary-box">
+          <div class="e-sum-row">
+            <span>Session Tuition:</span>
+            <span id="enrollBaseFee">$450.00</span>
+          </div>
+          <div class="e-sum-row">
+            <span>Family Loyalty Discount:</span>
+            <span class="text-success">-$50.00</span>
+          </div>
+          <div class="e-sum-row total">
+            <span>Estimated Total:</span>
+            <span class="total-val" id="enrollTotalFee">$400.00</span>
+          </div>
+        </div>
+
+        <div class="modal-form-actions">
+          <button type="button" class="dash-btn-outline" data-action="close-modal">Cancel</button>
+          <button type="submit" class="dash-btn-gold">Confirm Demo Enrollment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="dash-modal" id="sessionModal" role="dialog" aria-modal="true" aria-labelledby="sessionModalTitle">
+    <div class="dash-modal-backdrop" data-action="close-modal"></div>
+    <div class="dash-modal-container">
+      <div class="dash-modal-header">
+        <h3 class="modal-title" id="sessionModalTitle">Session Details</h3>
+        <button class="modal-close-btn" data-action="close-modal" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="sessionModalBody">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="dash-modal" id="invoiceModal" role="dialog" aria-modal="true" aria-labelledby="invoiceModalTitle">
+    <div class="dash-modal-backdrop" data-action="close-modal"></div>
+    <div class="dash-modal-container modal-lg">
+      <div class="dash-modal-header">
+        <h3 class="modal-title" id="invoiceModalTitle">Official Camp Invoice</h3>
+        <button class="modal-close-btn" data-action="close-modal" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="invoiceModalBody">
+
+      </div>
+      <div class="modal-footer-actions">
+        <button class="dash-btn-outline" id="printInvoiceBtn">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M5 4v3H4a2 2 0 00-2 2v3a2 2 0 002 2h1v2a2 2 0 002 2h6a2 2 0 002-2v-2h1a2 2 0 002-2V9a2 2 0 00-2-2h-1V4a2 2 0 00-2-2H7a2 2 0 00-2 2zm8 0H7v3h6V4zm0 8H7v4h6v-4z" clip-rule="evenodd"/>
+          </svg>
+          <span>Print / Save PDF (Demo)</span>
+        </button>
+        <button class="dash-btn-gold" id="invoicePayNowBtn">
+          <span>Pay Balance</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dash-modal" id="payModal" role="dialog" aria-modal="true" aria-labelledby="payModalTitle">
+    <div class="dash-modal-backdrop" data-action="close-modal"></div>
+    <div class="dash-modal-container">
+      <div class="dash-modal-header">
+        <h3 class="modal-title" id="payModalTitle">Simulated Payment Checkout</h3>
+        <button class="modal-close-btn" data-action="close-modal" aria-label="Close modal">&times;</button>
+      </div>
+      <form id="payForm" class="modal-form">
+        <input type="hidden" id="payInvoiceId" value="">
+        <input type="hidden" id="payAmountVal" value="">
+
+        <div class="pay-honest-notice">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+          </svg>
+          <span><strong>Prototype Sandbox:</strong> No actual monetary transaction takes place. Test card values are accepted.</span>
+        </div>
+
+        <div class="pay-summary-callout">
+          <span class="p-callout-lbl">Invoice Payment For:</span>
+          <span class="p-callout-val" id="payTargetInvoice">#INV-2026-084</span>
+          <span class="p-callout-amount" id="payTargetAmount">$280.00</span>
+        </div>
+
+        <div class="form-group">
+          <label for="payCardNumber" class="form-label">Card Number</label>
+          <input type="text" id="payCardNumber" class="dash-input" placeholder="4242 &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 4242" value="4242 •••• •••• 4242" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="payExpiry" class="form-label">Expiration Date</label>
+            <input type="text" id="payExpiry" class="dash-input" placeholder="MM/YY" value="08/28" required>
+          </div>
+          <div class="form-group">
+            <label for="payCVC" class="form-label">Security CVC</label>
+            <input type="text" id="payCVC" class="dash-input" placeholder="CVC" value="382" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="payName" class="form-label">Cardholder Name</label>
+          <input type="text" id="payName" class="dash-input" value="Alex Morgan" required>
+        </div>
+
+        <div class="modal-form-actions">
+          <button type="button" class="dash-btn-outline" data-action="close-modal">Cancel</button>
+          <button type="submit" class="dash-btn-gold" id="paySubmitBtn">
+            <span>Authorize Demo Payment</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="dash-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Photo Lightbox" style="display: none;">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-stage">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close Lightbox">&times;</button>
+
+      <button class="lightbox-nav-btn prev" id="lightboxPrevBtn" aria-label="Previous photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <div class="lightbox-media-container">
+        <img src="" alt="" class="lightbox-img" id="lightboxImg">
+        <div class="lightbox-caption-bar">
+          <div class="lightbox-caption-text">
+            <h4 class="lightbox-title" id="lightboxTitle">Tactical Evaluation Session</h4>
+            <p class="lightbox-desc" id="lightboxDesc">Grandmaster Marcus Vance observing Leo’s calculated pawn sacrifice.</p>
+          </div>
+          <div class="lightbox-meta-tags">
+            <span class="lightbox-badge" id="lightboxTag">Tactics Lab</span>
+            <span class="lightbox-counter" id="lightboxCounter">1 of 12</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="lightbox-nav-btn next" id="lightboxNextBtn" aria-label="Next photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="dash-modal" id="logoutModal" role="dialog" aria-modal="true" aria-labelledby="logoutModalTitle">
+    <div class="dash-modal-backdrop" data-action="close-modal"></div>
+    <div class="dash-modal-container modal-sm">
+      <div class="dash-modal-header">
+        <h3 class="modal-title" id="logoutModalTitle">Confirm Sign Out</h3>
+        <button class="modal-close-btn" data-action="close-modal" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-14">Are you sure you wish to exit the Stratagem Parent Portal?</p>
+        <p class="text-muted font-sm">This is a prototype demonstration portal. Signing out will return you to the academy home page.</p>
+      </div>
+      <div class="modal-form-actions">
+        <button class="dash-btn-outline" data-action="close-modal">Stay in Portal</button>
+        <a href="index.html" class="dash-btn-gold">Sign Out to Website</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="dash-modal" id="accountModal" role="dialog" aria-modal="true" aria-labelledby="accountModalTitle">
+    <div class="dash-modal-backdrop" data-action="close-modal"></div>
+    <div class="dash-modal-container">
+      <div class="dash-modal-header">
+        <h3 class="modal-title" id="accountModalTitle">Guardian Account Details</h3>
+        <button class="modal-close-btn" data-action="close-modal" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="acc-detail-row">
+          <span class="acc-lbl">Primary Guardian:</span>
+          <strong>Alex Morgan</strong>
+        </div>
+        <div class="acc-detail-row">
+          <span class="acc-lbl">Email Address:</span>
+          <strong>alex.morgan@email.com</strong>
+        </div>
+        <div class="acc-detail-row">
+          <span class="acc-lbl">Guardian ID:</span>
+          <span class="acc-code">#GRD-4821</span>
+        </div>
+        <div class="acc-detail-row">
+          <span class="acc-lbl">Enrolled Children:</span>
+          <span>Leo Morgan (9), Maya Morgan (7)</span>
+        </div>
+        <div class="acc-detail-row">
+          <span class="acc-lbl">Academy Cohort:</span>
+          <span>Summer 2026 Season</span>
+        </div>
+        <div class="acc-detail-row">
+          <span class="acc-lbl">Account Verification:</span>
+          <span class="text-success font-weight-bold">&check; Verified Family Account</span>
+        </div>
+      </div>
+      <div class="modal-form-actions">
+        <button class="dash-btn-gold" data-action="close-modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dash-toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

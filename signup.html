@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent Registration — Stratagem Kids Chess &amp; Strategy Summer Camp</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="signup.css">
+
+  <script defer src="signup.js"></script>
+</head>
+<body>
+
+  <div class="auth-viewport-wrapper">
+
+    <div class="auth-outside-controls" role="toolbar" aria-label="Display Controls">
+
+      <button class="control-btn theme-toggle-btn circle-btn" id="themeToggleBtn" type="button" aria-label="Switch to Dark Mode" title="Switch Theme">
+        <div class="theme-icon-slot">
+
+          <svg class="theme-icon icon-sun sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+
+          <svg class="theme-icon icon-moon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </div>
+      </button>
+
+      <button class="control-btn rtl-toggle-btn circle-btn" id="rtlToggleBtn" type="button" aria-label="Toggle layout direction" title="Switch between Left-to-Right and Right-to-Left layout">
+        <span class="rtl-label" id="rtlLabel">RTL</span>
+      </button>
+    </div>
+
+    <aside class="auth-visual-column" aria-label="Stratagem Academy Showcase">
+      <div class="visual-background-wrap">
+        <img src="assets/chess-learning.jpg" alt="Mentorship and grandmaster chess strategy learning session" class="visual-img">
+        <div class="visual-vignette-overlay" aria-hidden="true"></div>
+        <div class="visual-gold-flare" aria-hidden="true"></div>
+      </div>
+
+      <div class="visual-top-bar">
+        <a href="index.html" class="visual-brand-back" aria-label="Return to Stratagem Home">
+          <div class="brand-crest-symbol" aria-hidden="true">
+            <img src="assets/knight-logo.png" alt="Stratagem Chess Academy Knight Logo" class="brand-crest">
+          </div>
+          <div class="visual-brand-text">
+            <span class="v-brand-name">STRATAGEM</span>
+            <span class="v-brand-sub">CHESS ACADEMY</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="visual-editorial-bottom">
+        <div class="visual-eyebrow">
+          <span class="v-spark" aria-hidden="true">&#10022;</span>
+          <span>NEW FAMILY ENROLLMENT</span>
+        </div>
+        <h2 class="visual-heading">
+          Start Their Journey.<br>Make Every Move <span class="highlight-gold">Count.</span>
+        </h2>
+        <p class="visual-supporting">
+          Join our chess community and help your child build confidence, focus, and strategic thinking.
+        </p>
+
+        <div class="visual-meta-pills" aria-label="Camp Accreditation">
+          <span class="v-pill">FIDE Certified Curriculum</span>
+          <span class="v-pill-dot" aria-hidden="true">&bull;</span>
+          <span class="v-pill">Ages 5–16</span>
+          <span class="v-pill-dot" aria-hidden="true">&bull;</span>
+          <span class="v-pill">Parent Dashboard Access</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="auth-form-column" id="authMain">
+
+      <div class="auth-card-stage">
+
+        <div class="auth-card" id="authCard">
+
+          <div class="auth-card-topbar">
+
+            <a href="index.html" class="card-brand" title="Stratagem Academy Home">
+              <div class="card-brand-crest" aria-hidden="true">
+                <img src="assets/knight-logo.png" alt="Stratagem Chess Academy Knight Logo" class="brand-crest">
+              </div>
+              <div class="card-brand-info">
+                <span class="card-brand-title">STRATAGEM</span>
+                <span class="card-brand-sub">CHESS &amp; STRATEGY ACADEMY</span>
+              </div>
+            </a>
+
+          </div>
+
+          <div class="auth-card-intro">
+            <h1 class="auth-heading">Create Your Account</h1>
+            <p class="auth-subtitle">
+              Join our parent community and get started with your child's chess learning journey.
+            </p>
+          </div>
+
+          <div class="auth-alert-box" id="authAlertBox" role="alert" aria-live="polite" hidden>
+            <span class="alert-icon" id="alertIcon" aria-hidden="true">&#9888;</span>
+            <span class="alert-text" id="alertMessage"></span>
+          </div>
+
+          <form class="auth-form" id="signupForm" novalidate>
+
+            <div class="form-row-2col">
+
+              <div class="form-group" id="groupFullName">
+                <label for="signupFullName" class="form-label">
+                  <span>Parent / Guardian Name</span>
+                  <span class="required-indicator" aria-hidden="true">*</span>
+                </label>
+
+                <div class="input-shell">
+                  <span class="input-lead-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  </span>
+
+                  <input
+                    type="text"
+                    id="signupFullName"
+                    name="fullname"
+                    class="auth-input"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    required
+                    aria-required="true"
+                    aria-describedby="fullNameError">
+                </div>
+                <span class="form-error-msg" id="fullNameError" role="alert"></span>
+              </div>
+
+              <div class="form-group" id="groupEmail">
+                <label for="signupEmail" class="form-label">
+                  <span>Email Address</span>
+                  <span class="required-indicator" aria-hidden="true">*</span>
+                </label>
+
+                <div class="input-shell">
+                  <span class="input-lead-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"/>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    </svg>
+                  </span>
+
+                  <input
+                    type="email"
+                    id="signupEmail"
+                    name="email"
+                    class="auth-input"
+                    placeholder="Enter your email address"
+                    autocomplete="email"
+                    required
+                    aria-required="true"
+                    aria-describedby="emailError">
+                </div>
+                <span class="form-error-msg" id="emailError" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-row-2col">
+
+              <div class="form-group" id="groupPassword">
+                <label for="signupPassword" class="form-label">
+                  <span>Create Password</span>
+                  <span class="required-indicator" aria-hidden="true">*</span>
+                </label>
+
+                <div class="input-shell">
+                  <span class="input-lead-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    </svg>
+                  </span>
+
+                  <input
+                    type="password"
+                    id="signupPassword"
+                    name="password"
+                    class="auth-input"
+                    placeholder="Create a password"
+                    autocomplete="new-password"
+                    required
+                    aria-required="true"
+                    aria-describedby="passwordError passwordHint">
+
+                  <button
+                    type="button"
+                    class="password-toggle-btn"
+                    id="togglePasswordBtn"
+                    aria-label="Show password as plain text"
+                    title="Toggle password visibility">
+
+                    <svg class="eye-icon eye-show" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                      <circle cx="12" cy="12" r="3"/>
+                    </svg>
+
+                    <svg class="eye-icon eye-hide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden style="display: none;">
+                      <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/>
+                      <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/>
+                      <path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/>
+                      <line x1="2" y1="2" x2="22" y2="22"/>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="password-strength-wrap" id="passwordStrengthWrap">
+                  <div class="strength-meter-bar" aria-hidden="true">
+                    <span class="strength-step step-1"></span>
+                    <span class="strength-step step-2"></span>
+                    <span class="strength-step step-3"></span>
+                    <span class="strength-step step-4"></span>
+                  </div>
+                  <div class="strength-status-row">
+                    <span class="strength-text" id="strengthText">Strength: Too weak</span>
+                    <span class="strength-hint" id="passwordHint">Min 8 chars</span>
+                  </div>
+                </div>
+
+                <span class="form-error-msg" id="passwordError" role="alert"></span>
+              </div>
+
+              <div class="form-group" id="groupConfirmPassword">
+                <label for="signupConfirmPassword" class="form-label">
+                  <span>Confirm Password</span>
+                  <span class="required-indicator" aria-hidden="true">*</span>
+                </label>
+
+                <div class="input-shell">
+                  <span class="input-lead-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    </svg>
+                  </span>
+
+                  <input
+                    type="password"
+                    id="signupConfirmPassword"
+                    name="confirmPassword"
+                    class="auth-input"
+                    placeholder="Re-enter password"
+                    autocomplete="new-password"
+                    required
+                    aria-required="true"
+                    aria-describedby="confirmPasswordError">
+
+                  <button
+                    type="button"
+                    class="password-toggle-btn"
+                    id="toggleConfirmPasswordBtn"
+                    aria-label="Show confirm password as plain text"
+                    title="Toggle password visibility">
+
+                    <svg class="eye-icon eye-show" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                      <circle cx="12" cy="12" r="3"/>
+                    </svg>
+
+                    <svg class="eye-icon eye-hide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden style="display: none;">
+                      <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/>
+                      <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/>
+                      <path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/>
+                      <line x1="2" y1="2" x2="22" y2="22"/>
+                    </svg>
+                  </button>
+                </div>
+                <span class="form-error-msg" id="confirmPasswordError" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-group terms-group" id="groupTerms">
+              <label class="custom-checkbox-wrap" for="termsCheckbox">
+                <input type="checkbox" id="termsCheckbox" name="terms" required aria-required="true" aria-describedby="termsError">
+                <span class="checkbox-box" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                  </svg>
+                </span>
+                <span class="checkbox-label">
+                  I agree to the
+                  <button type="button" class="legal-modal-trigger" id="termsTrigger">Terms of Service</button>
+                  and
+                  <button type="button" class="legal-modal-trigger" id="privacyTrigger">Privacy Policy</button>.
+                </span>
+              </label>
+              <span class="form-error-msg" id="termsError" role="alert"></span>
+            </div>
+
+            <button type="submit" class="auth-submit-btn" id="signupSubmitBtn">
+              <span class="btn-text">CREATE ACCOUNT</span>
+              <span class="btn-spinner" aria-hidden="true" hidden></span>
+              <svg class="btn-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M6 3L11 8L6 13" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+          </form>
+
+          <div class="social-divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <span class="divider-text">Or sign up with</span>
+            <span class="divider-line"></span>
+          </div>
+
+          <div class="social-auth-row">
+
+            <button type="button" class="social-btn google-btn" id="googleSignupBtn" data-provider="Google" aria-label="Sign up with Google">
+              <svg class="social-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.66v3.04h3.88c2.27-2.09 3.66-5.17 3.66-9.14z"/>
+                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.04c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.94H1.27v3.13C3.27 21.36 7.35 24 12 24z"/>
+                <path fill="#FBBC05" d="M5.28 14.27a7.22 7.22 0 0 1 0-4.54V6.6H1.27a11.96 11.96 0 0 0 0 10.8l4.01-3.13z"/>
+                <path fill="#EA4335" d="M12 4.77c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.35 0 3.27 2.64 1.27 6.6l4.01 3.13c.95-2.84 3.6-4.96 6.72-4.96z"/>
+              </svg>
+              <span>Continue with Google</span>
+            </button>
+
+            <button type="button" class="social-btn apple-btn" id="appleSignupBtn" data-provider="Apple" aria-label="Sign up with Apple">
+              <svg class="social-icon apple-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.85-.92.04-2.02.62-2.66 1.37-.56.65-1.06 1.71-.93 2.73 1.03.08 2.06-.5 2.67-1.25z"/>
+              </svg>
+              <span>Continue with Apple</span>
+            </button>
+
+          </div>
+
+          <div class="auth-switch-prompt">
+            <span>Already have an account?</span>
+            <a href="login.html" class="auth-link" id="toLoginLink">Login</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <div class="auth-modal-backdrop" id="legalModal" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle" hidden>
+    <div class="auth-modal-window legal-modal-window">
+
+      <div class="modal-header">
+        <div class="modal-emblem" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </div>
+        <h2 class="modal-title" id="legalModalTitle">Terms of Service &amp; Privacy Notice</h2>
+        <p class="modal-desc">Stratagem Academy Parent Portal Governance &amp; Youth Safeguards</p>
+        <button type="button" class="modal-close-btn" id="closeLegalModalBtn" aria-label="Close modal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body-scrollable" id="legalModalContent">
+
+        <div class="legal-article">
+          <h3>1. Parent Account Responsibilities</h3>
+          <p>The Stratagem Parent Portal is designed exclusively for verified parents and legal guardians registering youth students (ages 5–16) for instructional chess programs and summer camps. Parents agree to provide accurate guardian contact details for safety and emergency notifications.</p>
+
+          <h3>2. Youth Safety &amp; SafeSport Standards</h3>
+          <p>Stratagem Academy adheres strictly to USCF and FIDE SafeSport guidelines. Student progress analytics, match logs, and camp photo galleries are restricted to registered guardians with authenticated credentials.</p>
+
+          <h3>3. Privacy &amp; Data Protection</h3>
+          <p>We do not sell, license, or share student or family data with third-party advertisers. All guardian credentials and enrollment records are encrypted under industry best practices.</p>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="dash-btn-primary" id="acceptLegalBtn">
+          <span>I UNDERSTAND &amp; AGREE</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="auth-toast" id="authToast" role="status" aria-live="polite" hidden>
+    <div class="toast-indicator" id="toastIndicator"></div>
+    <div class="toast-content">
+      <h4 class="toast-title" id="toastTitle">Notification</h4>
+      <p class="toast-message" id="toastMessage">Action completed successfully.</p>
+    </div>
+    <button type="button" class="toast-dismiss" id="toastDismiss" aria-label="Dismiss notification">&times;</button>
+  </div>
+
+</body>
+</html>
