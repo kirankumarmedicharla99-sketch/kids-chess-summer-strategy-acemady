@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   'use strict';
 
   const CAMP_SESSIONS = [
@@ -498,6 +498,42 @@
         'Season Trophy Presentation'
       ],
       location: 'Main Auditorium & Courtyard'
+    },
+    {
+      id: 'event-openings-masterclass',
+      category: 'masterclass',
+      categoryLabel: 'SPECIAL COACHING',
+      featured: false,
+      title: 'Dynamic Opening Repertoire & Initiative Masterclass',
+      date: 'Saturday, August 22, 2026',
+      time: '1:00 PM – 4:00 PM PST',
+      ageGroup: 'Ages 9–16 (Intermediate & Advanced)',
+      instructor: 'WGM Sarah Chen',
+      image: 'assets/hero-chess-board.jpg',
+      format: 'Interactive Masterclass & Position Sparring',
+      capacity: '14 of 24 Seats Claimed',
+      seatsRemaining: '10 Seats Left',
+      capacityPercent: 58,
+      statusBadge: '10 Seats Left',
+      desc: 'Build an aggressive opening repertoire with deep positional plans, initiative development, and tactical conversion drills.',
+      specs: [
+        { label: 'Focus System', val: 'Sicilian Defense & King\'s Indian' },
+        { label: 'Practical Drills', val: 'Tabiya Thematic Sparring' },
+        { label: 'Study Compendium', val: 'Annotated Opening Tree & PGN' },
+        { label: 'Rating Target', val: 'Rating 900–1700' }
+      ],
+      highlights: [
+        'Curated master opening repertoire for White and Black',
+        'Model game analysis of world champions',
+        'Live thematic sparring with instant instructor review'
+      ],
+      perks: [
+        'Complete Digital PGN Study Database',
+        'Personal Opening Portfolio Review',
+        'Post-Session Thematic Blitz',
+        'Commemorative Completion Certificate'
+      ],
+      location: 'Theory Lecture Hall • West Wing'
     }
   ];
 
@@ -509,7 +545,7 @@
   };
 
   let currentEventCategory = 'all';
-  let activeSecondaryIndex = 0;
+  let currentEventSlide = 0;
   let activeModalSession = null;
   let activeModalEvent = null;
 
@@ -657,31 +693,17 @@
     if (!track) return;
 
     track.innerHTML = DAILY_TIMELINE.map((item, index) => {
-      const isTop = item.side === 'top';
       return `
-        <div class="sch-timeline-col ${isTop ? 'col-top' : 'col-bottom'} reveal-on-scroll" data-step="${item.stepNum}">
+        <div class="sch-timeline-row reveal-on-scroll" data-step="${item.stepNum}">
 
-          <!-- Top Row Slot -->
-          <div class="timeline-slot slot-top">
-            ${isTop ? `
-              <div class="node-card">
-                <div class="node-time-strip">
-                  <span class="node-time">${item.time}</span>
-                  <span class="node-piece-tag">${item.piece}</span>
-                </div>
-                <h4 class="node-title">${item.title}</h4>
-                <p class="node-focus">${item.focus}</p>
-                <div class="node-highlight-box">
-                  <span class="highlight-icon" aria-hidden="true">&#9733;</span>
-                  <span class="highlight-text">${item.highlight}</span>
-                </div>
-              </div>
-              <div class="timeline-connector-stem stem-down" aria-hidden="true"></div>
-            ` : ''}
+          <!-- Left Time Column -->
+          <div class="timeline-time-col">
+            <span class="timeline-time-badge">${item.time}</span>
+            <span class="timeline-format-label">${item.format ? item.format.split('•')[0].trim() : ''}</span>
           </div>
 
-          <!-- Central Fixed Milestone Marker Row -->
-          <div class="timeline-marker-row">
+          <!-- Central Milestone Marker Column on Axis Line -->
+          <div class="timeline-marker-col">
             <div class="node-milestone-marker" aria-label="Step ${item.stepNum}: ${item.title} (${item.piece})">
               <div class="marker-circle">
                 ${item.pieceSvg}
@@ -690,23 +712,21 @@
             </div>
           </div>
 
-          <!-- Bottom Row Slot -->
-          <div class="timeline-slot slot-bottom">
-            ${!isTop ? `
-              <div class="timeline-connector-stem stem-up" aria-hidden="true"></div>
-              <div class="node-card">
-                <div class="node-time-strip">
-                  <span class="node-time">${item.time}</span>
-                  <span class="node-piece-tag">${item.piece}</span>
-                </div>
-                <h4 class="node-title">${item.title}</h4>
-                <p class="node-focus">${item.focus}</p>
-                <div class="node-highlight-box">
-                  <span class="highlight-icon" aria-hidden="true">&#9733;</span>
-                  <span class="highlight-text">${item.highlight}</span>
-                </div>
+          <!-- Right Content Card Column -->
+          <div class="timeline-card-col">
+            <div class="node-card">
+              <div class="node-time-strip">
+                <span class="node-time">${item.time}</span>
+                <span class="node-piece-tag">${item.piece}</span>
+                <span class="node-studio-tag">${item.format || ''}</span>
               </div>
-            ` : ''}
+              <h4 class="node-title">${item.title}</h4>
+              <p class="node-focus">${item.focus}</p>
+              <div class="node-highlight-box">
+                <span class="highlight-icon" aria-hidden="true">&#9733;</span>
+                <span class="highlight-text">${item.highlight}</span>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -715,8 +735,8 @@
   }
 
   function renderEvents() {
-    const grid = document.getElementById('eventsGridContainer');
-    if (!grid) return;
+    const container = document.getElementById('eventsGridContainer');
+    if (!container) return;
 
     const filteredEvents = CAMP_EVENTS.filter(evt => {
       if (currentEventCategory === 'all') return true;
@@ -724,7 +744,7 @@
     });
 
     if (filteredEvents.length === 0) {
-      grid.innerHTML = `
+      container.innerHTML = `
         <div class="events-empty-box">
           <p>No special events currently scheduled in this category. Please check back soon or browse our full summer tournament calendar.</p>
         </div>
@@ -732,152 +752,85 @@
       return;
     }
 
-    const primary = filteredEvents.find(e => e.featured) || filteredEvents[0];
-    let secondaries = filteredEvents.filter(e => e.id !== primary.id);
+    const cardsHTML = filteredEvents.map(evt => `
+      <article class="event-compact-card reveal-on-scroll" data-event-id="${evt.id}">
+        <div class="compact-media-frame">
+          <img src="${evt.image}" alt="${evt.title}" class="compact-img" loading="lazy">
+          <div class="compact-overlay"></div>
+          <span class="compact-category-badge">${evt.categoryLabel}</span>
+          <span class="compact-status-badge">
+            <span class="status-pulse-dot" aria-hidden="true"></span>
+            <span>${evt.seatsRemaining || evt.statusBadge}</span>
+          </span>
+        </div>
 
-    if (secondaries.length === 0) {
-      secondaries = CAMP_EVENTS.filter(e => e.id !== primary.id);
-    }
-
-    if (activeSecondaryIndex >= secondaries.length) {
-      activeSecondaryIndex = 0;
-    }
-    const secondary = secondaries[activeSecondaryIndex] || secondaries[0];
-
-    function createCardHTML(evt, isPrimary) {
-      const isTournament = evt.category === 'tournament';
-      const regButtonText = isTournament ? 'Register for Tournament' : 'Reserve Seat';
-      const briefButtonText = isTournament ? 'View Tournament Brief' : 'View Session Brief';
-      const capacityLabel = isTournament ? 'Tournament Capacity' : 'Seat Availability';
-      const capacityState = isTournament ? 'Registered' : 'Reserved';
-      const highlightsHeading = isTournament ? 'Championship Highlights &amp; Features:' : 'Session Highlights &amp; Takeaways:';
-
-      return `
-        <article class="event-featured-card reveal-on-scroll" data-event-id="${evt.id}">
-          <div class="featured-media-frame event-media-frame">
-            <img src="${evt.image}" alt="${evt.title}" class="featured-img event-img" loading="lazy">
-            <div class="featured-overlay event-overlay"></div>
-            <div class="featured-category-badge event-category-badge">${evt.categoryLabel}</div>
-            <div class="featured-status-pill event-status-pill">
-              <span class="pulse-dot" aria-hidden="true"></span>
-              <span>${evt.statusBadge}</span>
-            </div>
-            ${isPrimary ? `
-              <div class="event-media-nav event-featured-tag">
-                <span class="featured-star" aria-hidden="true">&#9733;</span>
-                <span>HEADLINE EVENT</span>
-              </div>
-            ` : (secondaries.length > 1 ? `
-              <div class="event-media-nav" aria-label="Event session navigation">
-                <button type="button" class="sec-nav-btn sec-nav-prev" data-dir="-1" title="Previous Session" aria-label="Previous Session">&lsaquo;</button>
-                <span class="sec-nav-indicator">Session ${activeSecondaryIndex + 1} of ${secondaries.length}</span>
-                <button type="button" class="sec-nav-btn sec-nav-next" data-dir="1" title="Next Session" aria-label="Next Session">&rsaquo;</button>
-              </div>
-            ` : '')}
+        <div class="compact-card-body">
+          <div class="compact-date-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            <span>${evt.date} &bull; ${evt.time}</span>
           </div>
 
-          <div class="featured-content event-card-content">
-            <div class="event-date-row">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
-                <line x1="3" y1="10" x2="21" y2="10"/>
+          <h3 class="compact-title" title="${evt.title}">${evt.title}</h3>
+
+          <div class="compact-meta-row">
+            <span class="compact-meta-pill" title="Lead Instructor">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
               </svg>
-              <span class="event-date-text">${evt.date} &bull; ${evt.time}</span>
-            </div>
-
-            <h3 class="featured-title event-card-title">${evt.title}</h3>
-
-            <div class="event-meta-pill-row">
-              <span class="event-meta-chip">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                ${evt.ageGroup}
-              </span>
-              <span class="event-meta-chip">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                ${evt.location}
-              </span>
-              <span class="event-meta-chip mentor-chip">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                ${evt.instructor}
-              </span>
-              <span class="event-meta-chip format-chip">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                ${evt.format}
-              </span>
-            </div>
-
-            <p class="featured-desc event-card-desc">${evt.desc}</p>
-
-            <!-- Specifications Matrix -->
-            <div class="event-spec-matrix">
-              ${evt.specs.map(s => `
-                <div class="matrix-spec-item">
-                  <span class="matrix-spec-label">${s.label}</span>
-                  <strong class="matrix-spec-val" title="${s.val}">${s.val}</strong>
-                </div>
-              `).join('')}
-            </div>
-
-            <!-- Highlights List -->
-            <div class="featured-highlights-list event-highlights-list">
-              <span class="highlights-box-title">${highlightsHeading}</span>
-              ${evt.highlights.map(h => `
-                <div class="highlight-bullet">
-                  <span class="h-check" aria-hidden="true">&#10003;</span>
-                  <span>${h}</span>
-                </div>
-              `).join('')}
-            </div>
-
-            <!-- Live Registration Capacity Meter -->
-            <div class="event-capacity-container">
-              <div class="capacity-header-row">
-                <span class="capacity-info-text">
-                  <strong>${capacityLabel}:</strong> ${evt.capacity} (${evt.capacityPercent}% ${capacityState})
-                </span>
-                <span class="capacity-pill-highlight">${evt.seatsRemaining}</span>
-              </div>
-              <div class="capacity-track" role="progressbar" aria-valuenow="${evt.capacityPercent}" aria-valuemin="0" aria-valuemax="100">
-                <div class="capacity-fill" style="width: ${evt.capacityPercent}%;"></div>
-              </div>
-            </div>
-
-            <!-- Included Amenities & Perks -->
-            <div class="event-perks-row">
-              ${evt.perks.map(p => `
-                <span class="perk-chip">
-                  <span class="perk-star" aria-hidden="true">&#10022;</span>
-                  <span>${p}</span>
-                </span>
-              `).join('')}
-            </div>
-
-            <!-- Bottom Actions Row (Pinned to Bottom) -->
-            <div class="featured-actions-row event-actions-row">
-              <button type="button" class="sch-btn-primary event-register-btn" data-event-id="${evt.id}">
-                <span>${regButtonText}</span>
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true">
-                  <path d="M6 3L11 8L6 13" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </button>
-              <button type="button" class="sch-btn-secondary event-details-btn" data-event-id="${evt.id}">
-                <span>${briefButtonText}</span>
-              </button>
-            </div>
+              ${evt.instructor}
+            </span>
+            <span class="compact-meta-pill" title="Location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+              ${evt.location}
+            </span>
           </div>
-        </article>
-      `;
-    }
 
-    grid.innerHTML = `
-      <!-- LEFT / FEATURED PRIMARY EVENT CARD -->
-      ${createCardHTML(primary, true)}
+          <p class="compact-desc">${evt.desc}</p>
 
-      <!-- RIGHT / COMPANION EVENT CARD -->
-      ${createCardHTML(secondary, false)}
+          <div class="compact-actions-row">
+            <button type="button" class="sch-btn-primary compact-btn-reg event-register-btn" data-event-id="${evt.id}">
+              <span>Register</span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12" aria-hidden="true">
+                <path d="M6 3L11 8L6 13" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button type="button" class="sch-btn-secondary compact-btn-det event-details-btn" data-event-id="${evt.id}">
+              <span>Details</span>
+            </button>
+          </div>
+        </div>
+      </article>
+    `).join('');
 
-      <!-- Full-Width Bottom Ticker Banner Spanning Both Columns -->
+    container.innerHTML = `
+      <div class="events-carousel-viewport" id="eventsCarouselViewport">
+        <div class="events-carousel-track" id="eventsCarouselTrack">
+          ${cardsHTML}
+        </div>
+      </div>
+
+      <div class="events-carousel-controls" id="eventsCarouselControls" aria-label="Event slide controls">
+        <button type="button" class="carousel-arrow-btn prev" id="eventsPrevBtn" aria-label="Previous events" title="Previous event">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="carousel-dots-list" id="eventsDotsList" role="tablist" aria-label="Events Carousel Navigation"></div>
+
+        <button type="button" class="carousel-arrow-btn next" id="eventsNextBtn" aria-label="Next events" title="Next event">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
       <div class="event-ticker-card reveal-on-scroll">
         <div class="ticker-icon" aria-hidden="true">&#9670;</div>
         <div class="ticker-text">
@@ -886,40 +839,176 @@
       </div>
     `;
 
-    const prevBtn = grid.querySelector('.sec-nav-prev');
-    const nextBtn = grid.querySelector('.sec-nav-next');
+    function getVisibleCardsCount() {
+      if (window.innerWidth <= 640) return 1;
+      if (window.innerWidth <= 992) return 2;
+      return 3;
+    }
+
+    function syncCarousel() {
+      const track = document.getElementById('eventsCarouselTrack');
+      const viewport = document.getElementById('eventsCarouselViewport');
+      const prevBtn = document.getElementById('eventsPrevBtn');
+      const nextBtn = document.getElementById('eventsNextBtn');
+      const controls = document.getElementById('eventsCarouselControls');
+      const dotsList = document.getElementById('eventsDotsList');
+      if (!track || !viewport) return;
+
+      const cards = track.querySelectorAll('.event-compact-card');
+      const totalCards = cards.length;
+      const visible = getVisibleCardsCount();
+      const maxSlide = Math.max(0, totalCards - visible);
+
+      if (currentEventSlide > maxSlide) {
+        currentEventSlide = maxSlide;
+      }
+      if (currentEventSlide < 0) {
+        currentEventSlide = 0;
+      }
+
+      if (controls) {
+        if (totalCards <= visible) {
+          controls.style.display = 'none';
+        } else {
+          controls.style.display = 'flex';
+        }
+      }
+
+      if (dotsList) {
+        const dotCount = maxSlide + 1;
+        if (dotCount > 1) {
+          dotsList.innerHTML = Array.from({ length: dotCount }, (_, i) => `
+            <button type="button" class="carousel-dot ${i === currentEventSlide ? 'active' : ''}" data-index="${i}" aria-label="Go to slide ${i + 1}"></button>
+          `).join('');
+
+          dotsList.querySelectorAll('.carousel-dot').forEach(dot => {
+            dot.addEventListener('click', (e) => {
+              e.stopPropagation();
+              currentEventSlide = parseInt(dot.getAttribute('data-index'), 10);
+              syncCarousel();
+            });
+          });
+        } else {
+          dotsList.innerHTML = '';
+        }
+      }
+
+      const gap = window.innerWidth <= 640 ? 16 : 24;
+      const firstCard = cards[0];
+      const cardWidth = firstCard ? firstCard.getBoundingClientRect().width : 0;
+      const shiftPx = currentEventSlide * (cardWidth + gap);
+
+      const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+      track.style.transform = isRtl ? `translateX(${shiftPx}px)` : `translateX(-${shiftPx}px)`;
+
+      if (prevBtn) {
+        prevBtn.disabled = (currentEventSlide === 0 && maxSlide === 0);
+        prevBtn.classList.toggle('is-disabled', currentEventSlide === 0 && maxSlide === 0);
+      }
+      if (nextBtn) {
+        nextBtn.disabled = (currentEventSlide >= maxSlide && maxSlide === 0);
+        nextBtn.classList.toggle('is-disabled', currentEventSlide >= maxSlide && maxSlide === 0);
+      }
+    }
+
+    const prevBtn = document.getElementById('eventsPrevBtn');
+    const nextBtn = document.getElementById('eventsNextBtn');
+
     if (prevBtn) {
       prevBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        activeSecondaryIndex = (activeSecondaryIndex - 1 + secondaries.length) % secondaries.length;
-        renderEvents();
+        const visible = getVisibleCardsCount();
+        const maxSlide = Math.max(0, filteredEvents.length - visible);
+        if (currentEventSlide > 0) {
+          currentEventSlide--;
+        } else {
+          currentEventSlide = maxSlide;
+        }
+        syncCarousel();
       });
     }
+
     if (nextBtn) {
       nextBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        activeSecondaryIndex = (activeSecondaryIndex + 1) % secondaries.length;
-        renderEvents();
+        const visible = getVisibleCardsCount();
+        const maxSlide = Math.max(0, filteredEvents.length - visible);
+        if (currentEventSlide < maxSlide) {
+          currentEventSlide++;
+        } else {
+          currentEventSlide = 0;
+        }
+        syncCarousel();
       });
     }
 
-    const regBtns = grid.querySelectorAll('.event-register-btn');
-    regBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
+    const viewport = document.getElementById('eventsCarouselViewport');
+    if (viewport) {
+      let touchStartX = 0;
+      viewport.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      viewport.addEventListener('touchend', (e) => {
+        const touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        const visible = getVisibleCardsCount();
+        const maxSlide = Math.max(0, filteredEvents.length - visible);
+        if (Math.abs(diff) > 40) {
+          if (diff > 0) {
+            if (currentEventSlide < maxSlide) currentEventSlide++;
+            else currentEventSlide = 0;
+          } else {
+            if (currentEventSlide > 0) currentEventSlide--;
+            else currentEventSlide = maxSlide;
+          }
+          syncCarousel();
+        }
+      }, { passive: true });
+    }
+
+    container.querySelectorAll('.event-register-btn, .event-details-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
         const id = btn.getAttribute('data-event-id');
-        const evt = CAMP_EVENTS.find(e => e.id === id);
+        const evt = CAMP_EVENTS.find(item => item.id === id);
         if (evt) openEventModal(evt);
       });
     });
 
-    const detBtns = grid.querySelectorAll('.event-details-btn');
-    detBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const id = btn.getAttribute('data-event-id');
-        const evt = CAMP_EVENTS.find(e => e.id === id);
-        if (evt) openEventModal(evt);
+    syncCarousel();
+
+    if (!window.__eventsCarouselDirAttached) {
+      window.__eventsCarouselDirAttached = true;
+      window.addEventListener('strataDirChanged', () => {
+        syncCarousel();
       });
-    });
+    }
+
+    if (!window.__eventsCarouselResizeAttached) {
+      window.__eventsCarouselResizeAttached = true;
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          const track = document.getElementById('eventsCarouselTrack');
+          const cards = track ? track.querySelectorAll('.event-compact-card') : null;
+          if (track && cards && cards.length > 0) {
+            let vis = 3;
+            if (window.innerWidth <= 640) vis = 1;
+            else if (window.innerWidth <= 992) vis = 2;
+            const maxS = Math.max(0, cards.length - vis);
+            if (currentEventSlide > maxS) currentEventSlide = maxS;
+            const gap = window.innerWidth <= 640 ? 16 : 24;
+            const cardW = cards[0].getBoundingClientRect().width;
+            const isR = document.documentElement.getAttribute('dir') === 'rtl';
+            track.style.transform = isR
+              ? `translateX(${currentEventSlide * (cardW + gap)}px)`
+              : `translateX(-${currentEventSlide * (cardW + gap)}px)`;
+          }
+        }, 60);
+      });
+    }
 
     initScrollReveal();
   }
@@ -1131,7 +1220,7 @@
         tab.classList.add('active');
         tab.setAttribute('aria-selected', 'true');
         currentEventCategory = tab.getAttribute('data-category');
-        activeSecondaryIndex = 0;
+        currentEventSlide = 0;
         renderEvents();
       });
     });

@@ -1,4 +1,4 @@
-﻿:root {
+:root {
 
   --primary-dark: #073B3A;
   --primary-accent: #C6A15B;
@@ -36,17 +36,17 @@
   --shadow-brass-glow: 0 0 20px rgba(198, 161, 91, 0.24);
 
   --theme-bg: var(--light-bg);
-  --theme-header-bg: rgba(255, 253, 248, 0.92);
+  --theme-header-bg: #FFFFFF;
   --theme-header-border: rgba(216, 201, 167, 0.45);
   --theme-nav-text: var(--primary-dark);
   --theme-nav-text-hover: var(--primary-accent);
   --theme-nav-active-bar: var(--primary-accent);
-  --theme-dropdown-bg: var(--card-light);
+  --theme-dropdown-bg: #FFFFFF;
   --theme-dropdown-hover-bg: rgba(220, 234, 231, 0.4);
   --theme-control-bg: rgba(7, 59, 58, 0.05);
   --theme-control-border: var(--border-light);
   --theme-control-text: var(--primary-dark);
-  --theme-drawer-bg: #FFFDF8;
+  --theme-drawer-bg: #FFFFFF;
 }
 
 [data-theme="dark"] {

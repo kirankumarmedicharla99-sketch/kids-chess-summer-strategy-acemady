@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   'use strict';
 
   const footer = document.getElementById('strataFooter');
@@ -28,6 +28,13 @@
   }
 
   function initSync() {
+    const syncAttributes = () => {
+      if (!footer) return;
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
+      footer.setAttribute('data-theme', currentTheme);
+      footer.setAttribute('dir', currentDir);
+    };
 
     window.addEventListener('strataThemeChanged', (e) => {
       const theme = e.detail?.theme;
@@ -43,11 +50,17 @@
       }
     });
 
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-    const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
-    if (footer) {
-      footer.setAttribute('data-theme', currentTheme);
-      footer.setAttribute('dir', currentDir);
+    syncAttributes();
+
+    if (window.MutationObserver) {
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.attributeName === 'data-theme' || mutation.attributeName === 'dir') {
+            syncAttributes();
+          }
+        });
+      });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'dir'] });
     }
   }
 

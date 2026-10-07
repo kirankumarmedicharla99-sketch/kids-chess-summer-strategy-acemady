@@ -1,4 +1,4 @@
-﻿:root {
+:root {
 
   --primary-dark: #073B3A;
   --primary-accent: #C6A15B;
@@ -638,6 +638,27 @@ button {
   border-color: var(--primary-accent);
   box-shadow: 0 0 0 3px rgba(198, 161, 91, 0.22);
   background-color: var(--theme-card-bg);
+}
+
+/* Remove duplicate browser native password reveal eye icon (Edge / IE / Chromium) */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+.auth-input::-ms-reveal,
+.auth-input::-ms-clear {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button,
+.auth-input::-webkit-credentials-auto-fill-button {
+  visibility: hidden !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  right: 0 !important;
 }
 
 .input-shell:focus-within .input-lead-icon {

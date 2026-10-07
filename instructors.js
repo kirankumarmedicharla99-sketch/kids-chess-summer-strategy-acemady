@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   'use strict';
 
   const COACH_DATA = {
@@ -69,6 +69,8 @@
   }
 
   function initTimeline() {
+    const track = document.querySelector('.journey-timeline-track');
+    const railLine = document.querySelector('.journey-rail-line');
     const journeyCols = document.querySelectorAll('.journey-col');
     if (!journeyCols.length) return;
 
@@ -83,6 +85,51 @@
         col.classList.add('active');
       });
     });
+
+    function updateJourneyRail() {
+      if (!track || !railLine) return;
+      if (window.innerWidth > 900) {
+        railLine.style.left = '';
+        railLine.style.right = '';
+        railLine.style.width = '';
+        railLine.style.height = '';
+        railLine.style.top = '';
+        railLine.style.bottom = '';
+        return;
+      }
+
+      const firstDisc = track.querySelector('.journey-col .journey-piece-disc');
+      if (!firstDisc) return;
+
+      const trackRect = track.getBoundingClientRect();
+      const discRect = firstDisc.getBoundingClientRect();
+      const center = (discRect.left + discRect.width / 2) - trackRect.left;
+
+      railLine.style.left = center + 'px';
+      railLine.style.right = 'auto';
+      railLine.style.width = '2px';
+      railLine.style.height = 'auto';
+      railLine.style.top = '26px';
+      railLine.style.bottom = '26px';
+    }
+
+    updateJourneyRail();
+    window.addEventListener('resize', updateJourneyRail);
+    window.addEventListener('strataDirChanged', () => {
+      requestAnimationFrame(updateJourneyRail);
+    });
+
+    if (window.MutationObserver) {
+      const dirObserver = new MutationObserver((mutations) => {
+        for (const m of mutations) {
+          if (m.attributeName === 'dir') {
+            requestAnimationFrame(updateJourneyRail);
+            break;
+          }
+        }
+      });
+      dirObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['dir'] });
+    }
   }
 
   function initFilterBar() {

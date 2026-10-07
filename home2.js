@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   'use strict';
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -108,7 +108,7 @@
         cards.forEach(card => {
           const cardTier = card.getAttribute('data-tier');
           if (filter === 'all' || cardTier === filter) {
-            card.style.display = 'flex';
+            card.style.display = '';
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
           } else {

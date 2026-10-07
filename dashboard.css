@@ -1,4 +1,4 @@
-﻿:root {
+:root {
 
   --primary-dark: #073B3A;
   --primary-accent: #C6A15B;
@@ -2001,23 +2001,42 @@ img {
 .child-name-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .child-name {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.25rem);
   font-weight: 700;
   color: var(--theme-text);
+  line-height: 1.2;
+  margin: 0;
 }
 
 .child-age-pill {
-  font-size: 0.68rem;
-  font-weight: 700;
-  padding: 1px 7px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 2px 10px;
+  height: 22px;
   border-radius: 99px;
-  background: rgba(198, 161, 91, 0.15);
+  background: rgba(198, 161, 91, 0.14);
+  border: 1px solid rgba(198, 161, 91, 0.32);
   color: var(--primary-accent);
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+[data-theme="dark"] .child-age-pill {
+  background: rgba(228, 201, 138, 0.16);
+  border-color: rgba(228, 201, 138, 0.35);
+  color: var(--soft-brass);
 }
 
 .child-elo-tag {
@@ -3655,6 +3674,32 @@ img {
     width: 100%;
   }
 
+  .section-title-action-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .header-action-group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .header-action-group .dash-btn-outline,
+  .header-action-group .dash-btn-gold {
+    flex: 1 1 0;
+    min-width: 125px;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 0.74rem;
+    letter-spacing: 0.03em;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+  }
+
   .dash-toast-container {
     left: 16px;
     right: 16px;
@@ -3765,6 +3810,33 @@ img {
   .child-card-footer button {
     width: 100%;
   }
+
+  .header-action-group .dash-btn-outline,
+  .header-action-group .dash-btn-gold {
+    min-width: 115px;
+    padding: 0 8px;
+    font-size: 0.71rem;
+    height: 38px;
+  }
+
+  .child-profile-card {
+    padding: 16px;
+  }
+
+  .child-card-header {
+    gap: 12px;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+  }
+
+  .child-avatar-box {
+    width: 64px;
+    height: 64px;
+  }
+
+  .child-name {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 360px) {
@@ -3843,6 +3915,13 @@ img {
     width: 13px;
     height: 13px;
     flex-shrink: 0;
+  }
+
+  .header-action-group .dash-btn-outline,
+  .header-action-group .dash-btn-gold {
+    min-width: 105px;
+    padding: 0 6px;
+    font-size: 0.67rem;
   }
 }
 

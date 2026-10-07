@@ -1,4 +1,4 @@
-﻿.home-main {
+.home-main {
   width: 100%;
   overflow-x: hidden;
   background-color: var(--light-bg);
@@ -833,6 +833,9 @@
   letter-spacing: 0.04em;
   color: var(--primary-dark);
   margin-bottom: 10px;
+  min-height: 2.5em;
+  display: flex;
+  align-items: flex-start;
 }
 
 [data-theme="dark"] .program-title {

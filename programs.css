@@ -1,4 +1,4 @@
-﻿.programs-main {
+.programs-main {
   width: 100%;
   overflow-x: hidden;
   background-color: var(--light-bg);
@@ -937,6 +937,9 @@
   color: var(--primary-dark);
   margin: 0 0 10px;
   letter-spacing: 0.01em;
+  min-height: 2.6em;
+  display: flex;
+  align-items: flex-start;
 }
 
 [data-theme="dark"] .prog-card-title {
@@ -948,7 +951,7 @@
   line-height: 1.6;
   color: var(--muted-dark-text);
   margin: 0 0 18px;
-  flex-grow: 1;
+  flex: 1 1 auto;
 }
 
 [data-theme="dark"] .prog-card-desc {
@@ -962,6 +965,7 @@
   margin: 0 0 20px;
   padding-top: 14px;
   border-top: 1px dashed var(--border-light);
+  min-height: 94px;
 }
 
 [data-theme="dark"] .prog-outcomes-list {
@@ -993,6 +997,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: auto;
 }
 
 [data-theme="dark"] .prog-card-footer {
