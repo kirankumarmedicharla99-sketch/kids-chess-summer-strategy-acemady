@@ -22,7 +22,7 @@
       badgeClass: 'status-available',
       badgeText: 'Filling Fast',
       price: '$495 / 2-Wk Cohort',
-      image: 'assets/hero-child-chess.jpg',
+      image: 'assets/program-young-pawns.jpg',
       shortDesc: 'Montessori-inspired physical piece discovery, vibrant story-based character journeys, and tactile wooden boards designed for our youngest strategic minds.',
       modules: [
         'Piece personalities, rules of legal movement, and value equations',
@@ -57,7 +57,7 @@
       badgeClass: 'status-limited',
       badgeText: 'Almost Full',
       price: '$545 / 2-Wk Cohort',
-      image: 'assets/chess-learning.jpg',
+      image: 'assets/program-knight-tactics.jpg',
       shortDesc: 'Transition from basic rules into active tactical hunting, double attacks, knight forks, pinning mechanics, and disciplined board calculation.',
       modules: [
         'Tactical motifs: pins, skewers, discovered attacks, and deflection',
@@ -127,7 +127,7 @@
       badgeClass: 'status-available',
       badgeText: 'High Demand',
       price: '$825 / 2-Wk Cohort',
-      image: 'assets/strategy-thinking.jpg',
+      image: 'assets/program-endgame-strategy.jpg',
       shortDesc: 'Elevated strategic training focusing on pawn structure imbalances, rook open files, minor piece trades, and essential theoretical endgames.',
       modules: [
         'Evaluating positional imbalances and long-range strategic plans',
@@ -162,7 +162,7 @@
       badgeClass: 'status-available',
       badgeText: 'Advanced Track',
       price: '$595 / 2-Wk Cohort',
-      image: 'assets/academy-learning.jpg',
+      image: 'assets/program-gm-scholars.jpg',
       shortDesc: 'Intense afternoon immersion for ambitious teens focusing on complex combinational sacrifices, initiative maintenance, and psychological match poise.',
       modules: [
         'Dynamic sacrifices for sustained positional initiative',
@@ -197,7 +197,7 @@
       badgeClass: 'status-limited',
       badgeText: 'Top Tier Cohort',
       price: '$895 / 2-Wk Cohort',
-      image: 'assets/chess-academy.jpg',
+      image: 'assets/program-fide-prep.jpg',
       shortDesc: 'Our highest echelon youth training camp. Deep repertoire building, engine-assisted preparation routines, psychological resilience, and tournament mastery.',
       modules: [
         'Professional opening preparation using modern database techniques',
@@ -232,7 +232,7 @@
       badgeClass: 'status-available',
       badgeText: 'Weekend Special',
       price: '$345 / Weekend Cohort',
-      image: 'assets/hero-chess-board.jpg',
+      image: 'assets/program-summer-blitz.jpg',
       shortDesc: 'High-octane weekend camp centered on rapid calculation, speed puzzle rushes, blitz survival arenas, and instinctual tactical decision making under pressure.',
       modules: [
         'Speed pattern recognition and eliminating tactical blunders',
@@ -329,7 +329,7 @@
       time: '10:00 AM – 3:00 PM PST',
       ageGroup: 'Ages 6–16 (Sections by Rating)',
       instructor: 'GM Marcus Sterling & WGM Sarah Chen',
-      image: 'assets/chess-academy.jpg',
+      image: 'assets/event-championship.jpg',
       format: '5-Round Rated Swiss • G/15 + 10s Digital Increment',
       capacity: '38 of 50 Competitors Registered',
       seatsRemaining: '12 Slots Open',
@@ -365,7 +365,7 @@
       time: '1:00 PM – 4:00 PM PST',
       ageGroup: 'Ages 8–16 (Novice to Advanced)',
       instructor: 'GM Alexey Volkov',
-      image: 'assets/instructor-coaching.jpg',
+      image: 'assets/event-simul-exhibition.jpg',
       format: '20-Board Simultaneous Clock Challenge',
       capacity: '16 of 20 Boards Reserved',
       seatsRemaining: 'Only 4 Boards Left',
@@ -401,7 +401,7 @@
       time: '10:30 AM – 1:30 PM PST',
       ageGroup: 'Ages 9–16 (Intermediate & Advanced)',
       instructor: 'IM Elena Rostova',
-      image: 'assets/strategy-thinking.jpg',
+      image: 'assets/event-endgame-workshop.jpg',
       format: 'Interactive Calculation & Theoretical Lab',
       capacity: '19 of 24 Seats Claimed',
       seatsRemaining: '5 Seats Remaining',
@@ -437,7 +437,7 @@
       time: '2:00 PM – 5:00 PM PST',
       ageGroup: 'Ages 7–15 (All Skill Brackets)',
       instructor: 'IM David Vance',
-      image: 'assets/hero-chess-board.jpg',
+      image: 'assets/hero-child-chess.jpg',
       format: 'Speed Tactics Gauntlet & 4-Player Relays',
       capacity: '22 of 30 Spots Reserved',
       seatsRemaining: '8 Spots Open',
@@ -509,7 +509,7 @@
       time: '1:00 PM – 4:00 PM PST',
       ageGroup: 'Ages 9–16 (Intermediate & Advanced)',
       instructor: 'WGM Sarah Chen',
-      image: 'assets/hero-chess-board.jpg',
+      image: 'assets/home2-strategy.jpg',
       format: 'Interactive Masterclass & Position Sparring',
       capacity: '14 of 24 Seats Claimed',
       seatsRemaining: '10 Seats Left',
@@ -696,13 +696,11 @@
       return `
         <div class="sch-timeline-row reveal-on-scroll" data-step="${item.stepNum}">
 
-          <!-- Left Time Column -->
           <div class="timeline-time-col">
             <span class="timeline-time-badge">${item.time}</span>
             <span class="timeline-format-label">${item.format ? item.format.split('•')[0].trim() : ''}</span>
           </div>
 
-          <!-- Central Milestone Marker Column on Axis Line -->
           <div class="timeline-marker-col">
             <div class="node-milestone-marker" aria-label="Step ${item.stepNum}: ${item.title} (${item.piece})">
               <div class="marker-circle">
@@ -712,7 +710,6 @@
             </div>
           </div>
 
-          <!-- Right Content Card Column -->
           <div class="timeline-card-col">
             <div class="node-card">
               <div class="node-time-strip">
@@ -1270,6 +1267,38 @@
     }
   }
 
+  function initBoardParallax() {
+    const stage = document.getElementById('schBoardStage');
+    const stickerWrap = document.querySelector('.sch-board-sticker-wrap');
+
+    if (!stage || !stickerWrap || window.innerWidth < 1024) return;
+
+    let ticking = false;
+    let targetX = 0;
+    let targetY = 0;
+
+    stage.addEventListener('mousemove', (e) => {
+      const rect = stage.getBoundingClientRect();
+      const xNorm = (e.clientX - rect.left) / rect.width - 0.5;
+      const yNorm = (e.clientY - rect.top) / rect.height - 0.5;
+
+      targetX = xNorm * 18;
+      targetY = yNorm * 14;
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          stickerWrap.style.transform = `perspective(1000px) rotateY(${targetX * 0.45}deg) rotateX(${-targetY * 0.35}deg) translate3d(${targetX * 0.3}px, ${targetY * 0.25}px, 12px)`;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    stage.addEventListener('mouseleave', () => {
+      stickerWrap.style.transform = '';
+    });
+  }
+
   function init() {
     renderSessions();
     renderDailyTimeline();
@@ -1278,9 +1307,9 @@
     initModals();
     initSmoothScroll();
     initScrollReveal();
+    initBoardParallax();
 
     window.addEventListener('strataThemeChanged', () => {
-
       initScrollReveal();
     });
   }
@@ -1292,3 +1321,4 @@
   }
 
 })();
+

@@ -254,11 +254,51 @@
     });
   }
 
+  function initHeroParallax() {
+    const heroStage = document.getElementById('instKingStage');
+    const stickerWrapper = document.querySelector('.inst-sticker-wrapper');
+    const boardGrid = document.querySelector('.inst-floating-board-grid');
+
+    if (!heroStage || !stickerWrapper || window.innerWidth < 1024) return;
+
+    let ticking = false;
+    let targetX = 0;
+    let targetY = 0;
+
+    heroStage.addEventListener('mousemove', (e) => {
+      const rect = heroStage.getBoundingClientRect();
+      const xNorm = (e.clientX - rect.left) / rect.width - 0.5;
+      const yNorm = (e.clientY - rect.top) / rect.height - 0.5;
+
+      targetX = xNorm * 18;
+      targetY = yNorm * 14;
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          stickerWrapper.style.transform = `perspective(800px) rotateY(${targetX * 0.4}deg) rotateX(${-targetY * 0.4}deg) translate3d(${targetX * 0.4}px, ${targetY * 0.3}px, 15px)`;
+          if (boardGrid) {
+            boardGrid.style.transform = `rotate(9deg) skewX(-4deg) translate3d(${-targetX * 0.5}px, ${-targetY * 0.3}px, 0)`;
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    heroStage.addEventListener('mouseleave', () => {
+      stickerWrapper.style.transform = '';
+      if (boardGrid) {
+        boardGrid.style.transform = '';
+      }
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initTimeline();
     initFilterBar();
     initModal();
+    initHeroParallax();
   });
 
 })();

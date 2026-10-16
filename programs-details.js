@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   'use strict';
 
   const PROGRAMS_DATA = {
@@ -14,7 +14,7 @@
       format: 'Small Group Studio (Max 6:1 Ratio)',
       tuition: 'Contact for Pricing',
       tuitionNote: 'Sibling bursary & early registration options available',
-      heroImage: 'assets/instructor-coaching.jpg',
+      heroImage: 'assets/program-young-pawns.jpg',
       heroAlt: 'Young Pawns early childhood chess discovery and board awareness',
       shortDesc: 'An engaging introduction to chess where young learners develop board awareness, understand the rules, explore their first strategies, and build confidence through guided play.',
       about: 'The Young Pawns program is specially crafted for our youngest thinkers aged 5 to 7. Utilizing Montessori-inspired physical piece discovery, vibrant story-based character journeys, and tactile wooden boards, our certified junior coaches demystify the royal game. Children develop sustained concentration, spatial reasoning, emotional composure, and the pure joy of tactical discovery in a nurturing, playful environment.',
@@ -66,7 +66,7 @@
       ],
       gallery: [
         { src: 'assets/hero-child-chess.jpg', title: 'Tactile Learning', caption: 'Individual tactile piece guidance with dedicated mentors.' },
-        { src: 'assets/chess-learning.jpg', title: 'Studio Collaboration', caption: 'Children analyzing opening moves in small cohorts.' },
+        { src: 'assets/academy-learning.jpg', title: 'Studio Collaboration', caption: 'Children analyzing opening moves in small cohorts.' },
         { src: 'assets/camp-experience.jpg', title: 'Joyful Achievement', caption: 'Daily milestones celebrated with peer camaraderie.' }
       ],
       plans: [
@@ -156,7 +156,7 @@
       format: 'Tactical Studio & Lab (Max 8:1 Ratio)',
       tuition: 'Contact for Pricing',
       tuitionNote: 'Tuition includes tournament notation diary & puzzle handbook',
-      heroImage: 'assets/chess-learning.jpg',
+      heroImage: 'assets/program-knight-tactics.jpg',
       heroAlt: 'Knight Tacticians tactical calculation and multi-step foresight',
       shortDesc: 'Master essential tactical weapons — forks, pins, skewers, and discoveries — while cultivating multi-step calculation, opening balance, and calm tournament clock discipline.',
       about: 'Knight Tacticians is our premier intermediate program for children aged 8 to 11 who understand chess rules and are ready to calculate like true strategists. Students explore the core tactical motifs that decide over 85% of competitive youth games. Under the tutelage of FIDE certified masters, scholars learn how to spot vulnerabilities, coordinate minor pieces, and maintain psychological composure under clock constraints.',
@@ -209,7 +209,7 @@
       gallery: [
         { src: 'assets/strategy-thinking.jpg', title: 'Tactical Analysis', caption: 'Scholars evaluating candidate move trees.' },
         { src: 'assets/instructor-coaching.jpg', title: 'Master Mentorship', caption: 'Individual post-game game notation review.' },
-        { src: 'assets/chess-academy.jpg', title: 'Studio Environment', caption: 'Quiet concentration in our Silicon Valley tactical studio.' }
+        { src: 'assets/chess-details.jpg', title: 'Studio Environment', caption: 'Quiet concentration in our Silicon Valley tactical studio.' }
       ],
       plans: [
         {
@@ -298,7 +298,7 @@
       format: 'Advanced Seminar & Master Studio (Max 6:1 Ratio)',
       tuition: 'Contact for Pricing',
       tuitionNote: 'Includes Grandmaster engine-free analysis and symposium materials',
-      heroImage: 'assets/chess-academy.jpg',
+      heroImage: 'assets/program-gm-scholars.jpg',
       heroAlt: 'Grandmaster Scholars advanced calculation, evaluation, and endgames',
       shortDesc: 'Rigorous training in deep positional evaluation, pawn skeleton dynamics, prophylactic defense, and master endgame technique guided by senior FIDE trainers.',
       about: 'Grandmaster Scholars is an intellectually immersive fellowship for dedicated young chess scholars aged 12 to 16. Stepping beyond short-term tactical strikes, scholars study positional harmony, imbalances, prophylactic maneuvering (preventing opponent ideas before they manifest), and the exacting science of endgame conversions. Designed to build the intellectual foundation of national master candidates.',
@@ -351,7 +351,7 @@
       gallery: [
         { src: 'assets/chess-academy.jpg', title: 'Grandmaster Studio', caption: 'Collegiate seminar environment with international masters.' },
         { src: 'assets/luxury-knight.jpg', title: 'Positional Study', caption: 'Analyzing strategic outposts on executive Staunton boards.' },
-        { src: 'assets/camp-experience.jpg', title: 'Scholarly Debate', caption: 'Scholars defending candidate evaluations in peer symposiums.' }
+        { src: 'assets/cinematic-frame-4.jpg', title: 'Scholarly Debate', caption: 'Scholars defending candidate evaluations in peer symposiums.' }
       ],
       plans: [
         {
@@ -440,7 +440,7 @@
       format: 'Collegiate Masterclass (Max 8:1 Ratio)',
       tuition: 'Contact for Pricing',
       tuitionNote: 'Includes Decision Science Workbook & Game Theory case study dossier',
-      heroImage: 'assets/home2-strategy.jpg',
+      heroImage: 'assets/program-endgame-strategy.jpg',
       heroAlt: 'Masterclass Strategy Immersion decision modeling and grandmaster psychology',
       shortDesc: 'Bridges grandmaster chess strategy with real-world decision modeling, game theory, risk assessment, and executive psychological composure.',
       about: 'Masterclass Strategy Immersion is a transformative seminar that extends chess mastery into high-stakes real-world thinking. Students examine how the principles of the 64 squares — capital allocation, time value, risk vs. reward, strategic equilibrium, and psychological warfare — mirror strategic decision-making in competitive academia, leadership, and negotiation.',
@@ -491,9 +491,9 @@
         'Lifelong framework for evaluating choices, calculating risks, and achieving goals'
       ],
       gallery: [
-        { src: 'assets/chess-details.jpg', title: 'Macro Strategy', caption: 'Deconstructing global board imbalances.' },
+        { src: 'assets/home2-strategy.jpg', title: 'Macro Strategy', caption: 'Deconstructing global board imbalances.' },
         { src: 'assets/instructor-hero.jpg', title: 'Executive Lecture', caption: 'Grandmaster guest seminars on psychological resilience.' },
-        { src: 'assets/chess-learning.jpg', title: 'Interactive Seminar', caption: 'Collaborative team decision modeling workshops.' }
+        { src: 'assets/cinematic-frame-6.jpg', title: 'Interactive Seminar', caption: 'Collaborative team decision modeling workshops.' }
       ],
       plans: [
         {
@@ -582,7 +582,7 @@
       format: 'Simulated Tournament Arena (Max 8:1 Ratio)',
       tuition: 'Contact for Pricing',
       tuitionNote: 'Includes official FIDE rated simulation events & arbiter reviews',
-      heroImage: 'assets/instructor-hero.jpg',
+      heroImage: 'assets/program-fide-prep.jpg',
       heroAlt: 'FIDE Tournament Prep official competitive readiness and clock mastery',
       shortDesc: 'Comprehensive championship preparation: build custom opening repertoires, master increment clock management, and simulate official FIDE rated conditions.',
       about: 'FIDE Tournament Prep is an intensive championship training camp engineered for ambitious junior players preparing for state championships, national qualifiers, and international FIDE rated opens. Under the guidance of certified FIDE arbiters and international trainers, players master official tournament protocols, time controls with increment, psychological endurance, and custom opening repertoires.',
@@ -633,8 +633,8 @@
         'Significant upward momentum in official national and international ratings'
       ],
       gallery: [
-        { src: 'assets/chess-academy.jpg', title: 'Tournament Hall', caption: 'Strict tournament lighting and regulation digital clocks.' },
-        { src: 'assets/luxury-knight.jpg', title: 'Repertoire Building', caption: 'Individual opening preparation with international trainers.' },
+        { src: 'assets/event-championship.jpg', title: 'Tournament Hall', caption: 'Strict tournament lighting and regulation digital clocks.' },
+        { src: 'assets/cinematic-frame-8.jpg', title: 'Repertoire Building', caption: 'Individual opening preparation with international trainers.' },
         { src: 'assets/instructor-03.jpg', title: 'Arbiter Guidance', caption: 'Certified instruction in official FIDE competition guidelines.' }
       ],
       plans: [
@@ -724,7 +724,7 @@
       format: 'Rapid Arena & Puzzle Rush Lab (Max 10:1 Ratio)',
       tuition: 'Contact for Pricing',
       tuitionNote: 'Flexible 1-week, 2-week, or drop-in pass options available',
-      heroImage: 'assets/home2-hero.jpg',
+      heroImage: 'assets/program-summer-blitz.jpg',
       heroAlt: 'Summer Blitz and Problem Solving high-speed tactical calculations and puzzle rush',
       shortDesc: 'High-octane rapid chess, puzzle rush competitions, creative pattern recognition, and instinctual tactical combinations in an energetic summer arena.',
       about: 'Summer Blitz & Problem Solving is our most vibrant, high-energy program! Perfect for players who love fast-paced calculations, thrilling tactical puzzle rushes, and rapid games with clocks. Students sharpen their intuitive pattern recognition, learn how to calculate in split seconds, and experience the joyous thrill of tournament blitz in a positive, supportive team atmosphere.',
@@ -775,9 +775,9 @@
         'Huge boost in chess enthusiasm, love for the game, and lasting friendships'
       ],
       gallery: [
-        { src: 'assets/hero-child-chess.jpg', title: 'Puzzle Rush Fun', caption: 'High-energy tactical puzzle rush solving.' },
-        { src: 'assets/strategy-thinking.jpg', title: 'Blitz Matches', caption: 'Exciting rapid games with tournament digital clocks.' },
-        { src: 'assets/camp-experience.jpg', title: 'Camaraderie & Awards', caption: 'Daily celebratory medals and sportsmanship honors.' }
+        { src: 'assets/hero-chess-board.jpg', title: 'Puzzle Rush Fun', caption: 'High-energy tactical puzzle rush solving.' },
+        { src: 'assets/cinematic-frame-2.jpg', title: 'Blitz Matches', caption: 'Exciting rapid games with tournament digital clocks.' },
+        { src: 'assets/home2-tournament-cadets.jpg', title: 'Camaraderie & Awards', caption: 'Daily celebratory medals and sportsmanship honors.' }
       ],
       plans: [
         {

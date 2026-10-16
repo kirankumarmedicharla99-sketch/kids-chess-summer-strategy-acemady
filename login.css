@@ -640,7 +640,6 @@ button {
   background-color: var(--theme-card-bg);
 }
 
-/* Remove duplicate browser native password reveal eye icon (Edge / IE / Chromium) */
 input[type="password"]::-ms-reveal,
 input[type="password"]::-ms-clear,
 .auth-input::-ms-reveal,
@@ -1077,19 +1076,57 @@ input[type="password"]::-webkit-credentials-auto-fill-button,
 .dash-btn-outline {
   flex: 1;
   height: 44px;
+  min-height: 44px;
+  padding: 0 20px;
+  box-sizing: border-box;
   border-radius: 99px;
-  background: transparent;
-  border: 1px solid var(--theme-ctrl-border);
+  background-color: rgba(7, 59, 58, 0.04);
+  border: 1.5px solid var(--theme-ctrl-border);
   color: var(--theme-text-primary);
+  font-family: var(--font-body);
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
   transition: all var(--trans-fast);
 }
 
+.modal-actions .auth-submit-btn {
+  flex: 1;
+  height: 44px;
+  min-height: 44px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border-radius: 99px;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  margin-top: 0;
+}
+
 .dash-btn-outline:hover {
+  background-color: rgba(198, 161, 91, 0.16);
   border-color: var(--primary-accent);
   color: var(--primary-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(7, 59, 58, 0.1);
+}
+
+[data-theme="dark"] .dash-btn-outline {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-color: rgba(198, 161, 91, 0.5);
+  color: var(--theme-text-primary);
+}
+
+[data-theme="dark"] .dash-btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--soft-brass);
+  color: var(--soft-brass);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .auth-toast {

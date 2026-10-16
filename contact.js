@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   'use strict';
 
   const CONTACT_CONFIG = {
@@ -366,6 +366,33 @@
     revealElements.forEach(el => observer.observe(el));
   }
 
+  function initLineupParallax() {
+    const stage = document.getElementById('contactLineupStage');
+    const wrap = document.querySelector('.contact-lineup-sticker-wrap');
+    if (!stage || !wrap || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    let rafId = null;
+
+    stage.addEventListener('mousemove', (e) => {
+      const rect = stage.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+
+      const rotateY = (x / (rect.width / 2)) * 7;
+      const rotateX = -(y / (rect.height / 2)) * 5;
+
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        wrap.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateZ(8px)`;
+      });
+    });
+
+    stage.addEventListener('mouseleave', () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      wrap.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+    });
+  }
+
   function init() {
     if (elements.form) {
       elements.form.addEventListener('submit', handleFormSubmit);
@@ -378,6 +405,7 @@
     initInputListeners();
     initSmoothScrollLinks();
     initScrollReveal();
+    initLineupParallax();
   }
 
   if (document.readyState === 'loading') {

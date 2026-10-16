@@ -1039,14 +1039,14 @@ img {
   border: 1px solid #EEDBB2;
   border-radius: 99px;
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(198, 161, 91, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+  box-shadow: 0 4px 18px rgba(198, 161, 91, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.45);
   transition: all var(--trans-fast);
   white-space: nowrap;
 }
@@ -1066,13 +1066,33 @@ img {
 
 .dash-btn-gold:hover {
   background: linear-gradient(135deg, #D4AF37 0%, #F5E6B3 50%, #C6A15B 100%);
+  color: #052827;
   border-color: #FFF2D1;
-  box-shadow: 0 8px 24px rgba(198, 161, 91, 0.5), 0 0 16px rgba(228, 201, 138, 0.4);
+  box-shadow: 0 8px 26px rgba(198, 161, 91, 0.55), 0 0 18px rgba(228, 201, 138, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.6);
   transform: translateY(-2px);
 }
 
 .dash-btn-gold:hover::after {
   left: 140%;
+}
+
+.dash-btn-gold:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(198, 161, 91, 0.4);
+}
+
+[data-theme="dark"] .dash-btn-gold {
+  background: linear-gradient(135deg, #C6A15B 0%, #E4C98A 50%, #A68038 100%);
+  color: #052827;
+  border-color: #FFF0CA;
+  box-shadow: 0 4px 22px rgba(198, 161, 91, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+}
+
+[data-theme="dark"] .dash-btn-gold:hover {
+  background: linear-gradient(135deg, #E4C98A 0%, #FFF3D6 50%, #C6A15B 100%);
+  color: #052827;
+  border-color: #FFF2D1;
+  box-shadow: 0 8px 30px rgba(228, 201, 138, 0.65), 0 0 22px rgba(198, 161, 91, 0.55);
 }
 
 .dash-btn-gold.btn-sm {
@@ -1089,25 +1109,40 @@ img {
   gap: 8px;
   height: 42px;
   padding: 0 20px;
-  background-color: transparent;
+  background-color: rgba(7, 59, 58, 0.04);
   color: var(--theme-text);
-  border: 1px solid var(--theme-border);
+  border: 1.5px solid var(--theme-border);
   border-radius: 99px;
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
   transition: all var(--trans-fast);
   white-space: nowrap;
 }
 
 .dash-btn-outline:hover {
-  background-color: rgba(198, 161, 91, 0.12);
+  background-color: rgba(198, 161, 91, 0.16);
   border-color: var(--primary-accent);
   color: var(--primary-accent);
   transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(7, 59, 58, 0.1);
+}
+
+[data-theme="dark"] .dash-btn-outline {
+  background-color: rgba(255, 255, 255, 0.04);
+  color: var(--theme-text);
+  border-color: rgba(198, 161, 91, 0.5);
+}
+
+[data-theme="dark"] .dash-btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--soft-brass);
+  color: var(--soft-brass);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .dash-btn-outline.btn-sm {
@@ -1293,13 +1328,17 @@ img {
 }
 
 .banner-actions .dash-btn-outline {
+  background-color: rgba(255, 255, 255, 0.08);
   color: #FAF9F5;
-  border-color: rgba(228, 201, 138, 0.4);
+  border: 1.5px solid rgba(198, 161, 91, 0.6);
 }
 
 .banner-actions .dash-btn-outline:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(198, 161, 91, 0.22);
+  border-color: var(--soft-brass);
   color: var(--soft-brass);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
 }
 
 .banner-graphic-wrap {
@@ -2141,7 +2180,21 @@ img {
 }
 
 .ach-icon {
-  font-size: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: rgba(198, 161, 91, 0.16);
+  border: 1px solid rgba(198, 161, 91, 0.35);
+  color: var(--primary-accent);
+}
+
+.ach-icon .lucide-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .ach-text {
@@ -4175,4 +4228,40 @@ img {
   justify-content: space-between;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--theme-border);
+}
+
+.lucide-icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  vertical-align: -0.15em;
+}
+
+.header-welcome-badge,
+.t-tag,
+.eval-badge-pill span,
+.feat-album-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header-welcome-badge .lucide-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.t-tag .lucide-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.eval-badge-pill .lucide-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.feat-album-meta .lucide-icon {
+  width: 14px;
+  height: 14px;
 }

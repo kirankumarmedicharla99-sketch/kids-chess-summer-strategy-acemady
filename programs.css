@@ -214,28 +214,30 @@
 }
 
 .prog-btn-primary {
-  position: relative;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  height: 46px;
+  min-height: 46px;
+  padding: 0 26px;
+  box-sizing: border-box;
+  line-height: 1;
   background: linear-gradient(135deg, #C6A15B 0%, #D8B774 48%, #B89248 100%);
   color: #052827;
+  border: 1px solid #EEDBB2;
+  border-radius: 99px;
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 12px 24px;
-  border-radius: 99px;
-  border: 1px solid #EEDBB2;
-  box-shadow: 0 4px 18px rgba(198, 161, 91, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.45);
-  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
   cursor: pointer;
-  height: 44px;
-  min-height: 44px;
-  box-sizing: border-box;
+  position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 18px rgba(198, 161, 91, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 [data-theme="dark"] .prog-btn-primary {
@@ -260,10 +262,10 @@
 
 .prog-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 26px rgba(198, 161, 91, 0.55), 0 0 18px rgba(228, 201, 138, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.6);
   background: linear-gradient(135deg, #D4AF37 0%, #F5E6B3 50%, #C6A15B 100%);
   color: #052827;
   border-color: #FFF2D1;
+  box-shadow: 0 8px 26px rgba(198, 161, 91, 0.55), 0 0 18px rgba(228, 201, 138, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.6);
 }
 
 .prog-btn-primary:hover::after {
@@ -278,34 +280,46 @@
 .prog-btn-secondary {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: transparent;
+  justify-content: center;
+  gap: 10px;
+  height: 46px;
+  min-height: 46px;
+  padding: 0 26px;
+  box-sizing: border-box;
+  line-height: 1;
+  background-color: rgba(7, 59, 58, 0.04);
   color: var(--primary-dark);
+  border: 1.5px solid var(--border-dark);
+  border-radius: 99px;
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 12px 22px;
-  border-radius: 99px;
-  border: 1px solid var(--border-light);
-  transition: all 0.25s ease;
   text-decoration: none;
   cursor: pointer;
-  height: 44px;
-  min-height: 44px;
-  box-sizing: border-box;
-}
-
-[data-theme="dark"] .prog-btn-secondary {
-  color: var(--text-light);
-  border-color: rgba(198, 161, 91, 0.4);
+  transition: var(--transition-fast);
 }
 
 .prog-btn-secondary:hover {
+  background-color: rgba(198, 161, 91, 0.16);
   border-color: var(--primary-accent);
-  color: var(--primary-accent);
-  background: rgba(198, 161, 91, 0.08);
+  color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(7, 59, 58, 0.1);
+}
+
+[data-theme="dark"] .prog-btn-secondary {
+  background-color: rgba(255, 255, 255, 0.04);
+  color: var(--text-light);
+  border-color: rgba(198, 161, 91, 0.5);
+}
+
+[data-theme="dark"] .prog-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--soft-brass);
+  color: var(--soft-brass);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .prog-hero-metrics {
@@ -1258,15 +1272,15 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  height: 48px;
-  min-height: 48px;
-  padding: 0 28px;
+  height: 46px;
+  min-height: 46px;
+  padding: 0 26px;
   background: linear-gradient(135deg, #C6A15B 0%, #D8B774 48%, #B89248 100%) !important;
   color: #052827 !important;
   border: 1px solid #EEDBB2 !important;
   border-radius: 99px;
   font-family: var(--font-body);
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1311,17 +1325,17 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  height: 48px;
-  min-height: 48px;
-  padding: 0 26px;
+  height: 46px;
+  min-height: 46px;
+  padding: 0 24px;
   background-color: rgba(255, 255, 255, 0.08) !important;
   color: var(--base-white) !important;
   border: 1.5px solid rgba(198, 161, 91, 0.6) !important;
   border-radius: 99px;
   font-family: var(--font-body);
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;

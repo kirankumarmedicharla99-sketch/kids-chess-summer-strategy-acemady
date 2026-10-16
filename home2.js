@@ -11,11 +11,11 @@
   function initHeroParallax() {
     if (prefersReducedMotion) return;
 
-    const heroStage = document.querySelector('.hero2-stage');
-    const canvasFrame = document.querySelector('.hero2-canvas-frame');
-    const floatingBadge = document.querySelector('.hero2-floating-badge');
+    const heroStage = document.getElementById('hero2StickerStage');
+    const stickerWrapper = document.querySelector('.hero2-sticker-wrapper');
+    const bgSilhouette = document.querySelector('.hero2-bg-silhouette');
 
-    if (!heroStage || !canvasFrame || window.innerWidth < 1024) return;
+    if (!heroStage || !stickerWrapper || window.innerWidth < 1024) return;
 
     let ticking = false;
     let targetX = 0;
@@ -26,14 +26,14 @@
       const xNorm = (e.clientX - rect.left) / rect.width - 0.5;
       const yNorm = (e.clientY - rect.top) / rect.height - 0.5;
 
-      targetX = xNorm * 12;
-      targetY = yNorm * 10;
+      targetX = xNorm * 18;
+      targetY = yNorm * 14;
 
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          canvasFrame.style.transform = `perspective(1000px) rotateY(${targetX * 0.4}deg) rotateX(${-targetY * 0.4}deg) translate3d(${targetX * 0.5}px, ${targetY * 0.5}px, 0)`;
-          if (floatingBadge) {
-            floatingBadge.style.transform = `translate3d(${-targetX * 0.8}px, ${-targetY * 0.8}px, 0)`;
+          stickerWrapper.style.transform = `perspective(800px) rotateY(${targetX * 0.4}deg) rotateX(${-targetY * 0.4}deg) translate3d(${targetX * 0.4}px, ${targetY * 0.3}px, 15px)`;
+          if (bgSilhouette) {
+            bgSilhouette.style.transform = `translate3d(${-targetX * 0.6}px, ${-targetY * 0.4}px, 0)`;
           }
           ticking = false;
         });
@@ -42,9 +42,9 @@
     });
 
     heroStage.addEventListener('mouseleave', () => {
-      canvasFrame.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) translate3d(0, 0, 0)';
-      if (floatingBadge) {
-        floatingBadge.style.transform = 'translate3d(0, 0, 0)';
+      stickerWrapper.style.transform = '';
+      if (bgSilhouette) {
+        bgSilhouette.style.transform = '';
       }
     });
   }
